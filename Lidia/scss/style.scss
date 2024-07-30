@@ -1,0 +1,588 @@
+@use 'sass:math';
+
+// Шрифти
+
+@import url('https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:regular,500,700,800&display=swap');
+
+// Локальні шрифти
+
+// Обнулення
+
+@import '_reset.scss';
+
+// Міксіни
+
+@import '_mixins.scss';
+
+// Кольори
+
+@import '_colors.scss';
+
+///////////////////////////////////////////////////////////////
+// Налаштування адаптивної сітки
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1200;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+/////////////////////////////////////////////////////////////////////
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: $mainColor;
+  background-color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*='__container'] {
+  max-width: toRem($containerWidth);
+  padding-inline: toRem(15);
+  margin: 0 auto;
+}
+
+///////////////////////////////////////
+
+// Компоненти
+
+// Окремі компоненти
+
+// Окремі сторінки
+
+///////////////////////////////////////
+/// Header
+
+.menu-open body {
+  overflow: hidden;
+}
+
+.header {
+  z-index: 50;
+  top: toRem(-100);
+  left: 0;
+  width: 100%;
+  transition: all 1s ease-out;
+
+  &.fixed {
+    position: fixed;
+    transform: translateY(toRem(100));
+    background-color: $blueColor;
+    .header__container {
+      padding-block-start: toRem(20);
+      padding-block-end: toRem(20);
+    }
+    .header__logo {
+      padding: toRem(7.5) toRem(10);
+      border-radius: toRem(10);
+      background-color: #fff;
+      box-shadow: 0 0 toRem(20) rgba(0, 0, 0, 0.5);
+    }
+    .header__menu .menu__items {
+      background-color: #fff;
+      padding-block: toRem(13.5);
+      padding-inline: toRem(15);
+      border-radius: toRem(10);
+      box-shadow: 0 0 toRem(20) rgba(0, 0, 0, 0.5);
+    }
+    .header__button {
+      box-shadow: 0 0 toRem(20) rgba(0, 0, 0, 0.5);
+    }
+    .header__menu::before {
+      height: toRem(83);
+    }
+  }
+  // .header__container
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(30);
+    align-items: center;
+    padding-block-start: toRem(70);
+    padding-block-end: toRem(54);
+    @media (max-width: toEm(1200)) {
+      padding-block-start: toRem(50);
+      padding-block-end: toRem(35);
+    }
+    @media (max-width: toEm(991.98)) {
+      padding-block-start: toRem(25);
+      padding-block-end: toRem(25);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+    }
+    @media (max-width: toEm(475)) {
+      gap: toRem(20);
+      padding-block-start: toRem(20);
+      padding-block-end: toRem(20);
+    }
+  }
+
+  // .header__body
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: toRem(125);
+  }
+
+  // .header__logo
+
+  &__logo {
+    display: flex;
+    gap: toRem(12);
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    @media (max-width: toEm(1200)) {
+      padding: toRem(7.5) toRem(10);
+      border-radius: toRem(10);
+      background-color: #fff;
+      box-shadow: 0 0 toRem(20) rgba(0, 0, 0, 0.5);
+    }
+    img {
+      max-width: toRem(28);
+      max-height: toRem(28);
+    }
+    span {
+      color: #000;
+      font-size: toRem(18);
+      font-weight: 700;
+    }
+  }
+
+  // .header__menu
+
+  &__menu {
+    @media (max-width: toEm(991.98)) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #fff;
+      overflow-y: auto;
+      transition: width 0.5s;
+      .menu-open & {
+        width: 100%;
+      }
+      &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: toRem(93);
+        background-color: $blueColor;
+        z-index: 2;
+        transition: width 0.5s;
+        @media (max-width: toEm(475)) {
+          height: toRem(83);
+        }
+        .menu-open & {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // .header__button
+
+  &__button {
+    position: relative;
+    z-index: 2;
+    color: $darkBlueColor;
+    font-weight: 700;
+    line-height: 1.56;
+    padding: toRem(9) toRem(46);
+    border-radius: toRem(10);
+    background-color: #fff;
+    transition: all 0.3s;
+    @media (max-width: toEm(1200)) {
+      box-shadow: 0 0 toRem(20) rgba(0, 0, 0, 0.5);
+    }
+    @media (max-width: toEm(991.98)) {
+      justify-self: end;
+    }
+    @media (max-width: toEm(425)) {
+      padding: toRem(9) toRem(25);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 0 toRem(20) rgba(0, 0, 0, 0.5);
+        color: $activeColor;
+      }
+    }
+  }
+}
+.menu {
+  // .menu__items
+
+  &__items {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(40);
+    row-gap: toRem(10);
+    flex-wrap: wrap;
+    @media ((max-width: toEm(1200)) and (min-width: toEm(992))) {
+      background-color: #fff;
+      padding-block: toRem(9);
+      padding-inline: toRem(15);
+      border-radius: toRem(10);
+      box-shadow: 0 0 toRem(20) rgba(0, 0, 0, 0.5);
+    }
+    @media (max-width: toEm(991.98)) {
+      flex-direction: column;
+      font-size: toRem(35);
+      padding-block-start: toRem(103);
+      padding-block-end: toRem(20);
+    }
+    @media (max-width: toEm(475)) {
+      padding-block-start: toRem(93);
+    }
+  }
+
+  // .menu__item
+
+  &__item {
+  }
+
+  // .menu__link
+
+  &__link {
+    color: $darkBlueColor;
+    text-transform: capitalize;
+    transition: color 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $activeColor;
+      }
+    }
+    @media (max-width: toEm(1200)) {
+      color: $darkBlueColor;
+      font-weight: 700;
+      line-height: 1.56;
+    }
+    @media (max-width: toEm(991.98)) {
+      color: #000;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////
+//Burger
+
+.icon-menu {
+  display: none;
+  @media (max-width: toEm(991.98)) {
+    display: block;
+    position: relative;
+    width: toRem(30);
+    height: toRem(18);
+    flex-shrink: 0;
+    z-index: 5;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before,
+    &::after {
+      content: '';
+      transition: all 0.3s ease 0s;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: toRem(2);
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - toRem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - toRem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - toRem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+///////////////////////////////////////
+
+.page {
+  // .page__hero
+
+  &__hero {
+    margin-bottom: toRem(205);
+  }
+}
+
+///////////////////////////////////////
+
+.hero {
+  position: relative;
+  // .hero__container
+
+  &__container {
+    display: flex;
+    gap: toRem(20);
+    @media (max-width: toEm(1200)) {
+      flex-direction: column;
+      gap: toRem(50);
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: toRem(-35);
+      box-shadow: 0px 30px 60px rgba(71, 74, 87, 0.25);
+      width: 150%;
+      height: 150%;
+      background-color: $blueColor;
+      border-radius: toRem(50);
+      transform-origin: left bottom;
+    }
+    &::before {
+      left: calc(50% + toRem(31));
+      transform: skewX(-21deg);
+    }
+    &::after {
+      left: calc(50% + toRem(435));
+      transform: skewX(31deg);
+    }
+  }
+
+  // .hero__content
+
+  &__content {
+    flex: 0 1 toRem(580);
+    position: relative;
+    z-index: 2;
+    @media (max-width: toEm(1200)) {
+      flex-basis: 0;
+    }
+  }
+
+  // .hero__images
+
+  &__images {
+    flex: 0 1 toRem(600);
+    position: relative;
+    z-index: 2;
+    @media (max-width: toEm(1200)) {
+      flex-basis: 0;
+    }
+  }
+}
+.content-hero {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(30);
+  @media (max-width: toEm(1200)) {
+    align-items: center;
+    text-align: center;
+  }
+  @media (max-width: toEm(620)) {
+    gap: toRem(20);
+  }
+
+  // .content-hero__title
+
+  &__title {
+    color: $darkBlueColor;
+    font-size: toRem(76);
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: toRem(-3.04);
+    @media (max-width: toEm(991.98)) {
+      font-size: toRem(60);
+    }
+    @media (max-width: toEm(620)) {
+      font-size: toRem(40);
+    }
+    a {
+      color: $blueColor;
+      text-decoration: underline;
+      transition: color 0.3s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $activeColor;
+        }
+      }
+      @media (max-width: toEm(1200)) {
+        color: #fff;
+        text-shadow: 0 0 toRem(15) rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  // .content-hero__text
+
+  &__text {
+    max-width: toRem(500);
+    line-height: 1.87;
+    p:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+    @media (max-width: toEm(1200)) {
+      font-size: toRem(18);
+      color: $darkBlueColor;
+    }
+    @media (max-width: toEm(620)) {
+      font-size: toRem(16);
+    }
+  }
+
+  // .content-hero__button
+
+  &__button {
+    position: relative;
+    top: 0;
+    align-self: flex-start;
+    margin-top: toRem(4);
+    font-weight: 700;
+    line-height: 1.56;
+    color: #fff;
+    padding: toRem(18) toRem(54);
+    border-radius: toRem(10);
+    background-color: $blueColor;
+    box-shadow: toRem(0) toRem(30) toRem(60) toRem(0) rgba(68, 117, 242, 0.25);
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        top: toRem(5);
+        background-color: $activeColor;
+      }
+    }
+    @media (max-width: toEm(1200)) {
+      align-self: center;
+      box-shadow: 0 0 toRem(10) rgba(0, 0, 0, 0.7);
+    }
+    @media (max-width: toEm(475)) {
+      width: 100%;
+    }
+  }
+}
+.images-hero {
+  display: grid;
+  grid-template-columns: auto repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: toRem(20);
+  @media (max-width: toEm(1200)) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: toRem(30);
+  }
+
+  // .images-hero__item
+
+  &__item {
+    border-radius: toRem(10);
+    box-shadow: 0 toRem(15) toRem(30) 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 0 toRem(20) rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+
+  // .images-hero__image
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .images-hero__item--1
+
+  &__item--1 {
+    grid-row: span 2;
+    max-width: toRem(209);
+    max-height: toRem(302);
+    aspect-ratio: 209 / 302;
+    align-self: end;
+    transform: translate(0, toRem(-5));
+    @media (max-width: toEm(1200)) {
+      justify-self: center;
+    }
+    @media (max-width: toEm(650)) {
+      align-self: center;
+    }
+  }
+
+  // .images-hero__item--2
+
+  &__item--2 {
+    max-width: toRem(143);
+    max-height: toRem(214);
+    aspect-ratio: 143 / 214;
+    transform: translate(toRem(7), 0);
+  }
+
+  // .images-hero__item--3
+
+  &__item--3 {
+    max-width: toRem(150);
+    max-height: toRem(228);
+    aspect-ratio: 150 / 228;
+    justify-self: end;
+    transform: translate(0, toRem(120));
+    @media (max-width: toEm(1200)) {
+      justify-self: center;
+    }
+    @media (max-width: toEm(375)) {
+      transform: translate(0, toRem(80));
+    }
+  }
+
+  // .images-hero__item--4
+
+  &__item--4 {
+    grid-row: span 2;
+    max-width: toRem(108);
+    max-height: toRem(163);
+    aspect-ratio: 108 / 163;
+    align-self: end;
+    justify-self: end;
+    transform: translate(0, toRem(5));
+    @media (max-width: toEm(475)) {
+      transform: translate(toRem(-5), toRem(20));
+    }
+  }
+}
+
+///////////////////////////////////////
