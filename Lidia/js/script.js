@@ -11,7 +11,6 @@ document.addEventListener('click', function (e) {
 
 let header = document.querySelector('header')
 let headerH = header.clientHeight
-console.log(headerH)
 document.onscroll = function () {
   let scroll = window.scrollY
   if (scroll > headerH) {
@@ -21,6 +20,25 @@ document.onscroll = function () {
     header.classList.remove('fixed')
     document.body.removeAttribute('style')
   }
+}
+
+///////////////////////////////////////////////////////
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const goto = anchor.hasAttribute('href')
+      ? anchor.getAttribute('href')
+      : 'body'
+
+    document.querySelector(goto).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  })
 }
 
 ///////////////////////////////////////////////////////
