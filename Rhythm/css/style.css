@@ -723,6 +723,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 .header-store__all {
   color: #868686;
