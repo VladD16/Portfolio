@@ -483,6 +483,11 @@ body {
   &__swiper-slide {
     max-width: toRem(603);
     max-height: toRem(573);
+    @media (any-hover: hover) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
     img {
       width: 100%;
