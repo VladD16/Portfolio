@@ -654,8 +654,6 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 18.1875rem;
           flex: 1 1 18.1875rem;
-  border-radius: 0.25rem;
-  overflow: hidden;
 }
 @media (min-width: 68.75em) {
   .section-facilities__item {
@@ -686,12 +684,17 @@ body {
           align-items: center;
   text-align: center;
   aspect-ratio: 291/286;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 @media (any-hover: hover) {
-  .item-facilities__link:hover .item-facilities__image {
-    -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-            transform: scale(1.05);
+  .item-facilities__link:hover {
+    -webkit-box-shadow: 0 0 0.9375rem rgb(0, 0, 0);
+            box-shadow: 0 0 0.9375rem rgb(0, 0, 0);
   }
 }
 .item-facilities__link::after {
@@ -709,10 +712,6 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .item-facilities__label {
   position: absolute;
