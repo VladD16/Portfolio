@@ -547,11 +547,10 @@ body {
     aspect-ratio: 291 / 286;
     border-radius: toRem(4);
     overflow: hidden;
-    transition: box-shadow 0.3s;
 
     @media (any-hover: hover) {
-      &:hover {
-        box-shadow: 0 0 toRem(15) rgba(0, 0, 0);
+      &:hover .item-facilities__image {
+        transform: scale(1.07);
       }
     }
 
@@ -573,6 +572,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    transition: transform 0.5s;
   }
 
   // .item-facilities__label
