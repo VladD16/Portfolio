@@ -1,0 +1,339 @@
+@use 'sass:math';
+
+// Шрифти
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,regular,500&display=swap');
+
+// Локальні шрифти
+
+// Обнулення
+
+@import '_reset.scss';
+
+// Міксіни
+
+@import '_mixins.scss';
+
+// Кольори
+
+///////////////////////////////////////////////////////////////
+// Налаштування адаптивної сітки
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1280;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+/////////////////////////////////////////////////////////////////////
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #9c9c9c;
+  background-color: #0d0d11;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*='__container'] {
+  max-width: toRem($containerWidth);
+  padding-inline: toRem(15);
+  margin: 0 auto;
+}
+
+///////////////////////////////////////
+
+// Компоненти
+
+// Окремі компоненти
+
+.button {
+  flex-shrink: 0;
+  color: #fff;
+  font-size: toRem(14);
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: toRem(2);
+  border-radius: toRem(50);
+  background: #3d96f4;
+  padding: toRem(16) toRem(29.5);
+  transition: background-color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #0f6ccf;
+    }
+  }
+}
+
+// Окремі сторінки
+
+///////////////////////////////////////
+.menu-open body {
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  z-index: 50;
+
+  // .header__container
+
+  &__container {
+    padding-block: toRem(32);
+    display: flex;
+    align-items: center;
+    gap: toRem(32);
+
+    @media (max-width: toEm(991.98)) {
+      padding-block: toRem(15);
+      gap: toRem(20);
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+
+    img:nth-child(1) {
+      display: none;
+    }
+
+    @media (max-width: toEm(991.98)) {
+      flex: 1 1 auto;
+    }
+    @media (min-width: toEm(550)) {
+      img:nth-child(1) {
+        display: block;
+      }
+      img:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  // .header__menu
+
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  // .header__cart
+
+  &__cart {
+    position: relative;
+    z-index: 2;
+  }
+
+  // .header__button
+
+  &__button {
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: toEm(425)) {
+      padding: toRem(14) toRem(16);
+    }
+  }
+}
+.menu {
+  @media (max-width: toEm(767.98)) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100dvh;
+    background-color: #0d0d11;
+    overflow-y: auto;
+    transition: width 0.5s;
+    .menu-open & {
+      width: 100%;
+    }
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: toRem(82);
+      background-color: #0d0d11;
+      z-index: 2;
+      transition: width 0.5s;
+      border-bottom: toRem(2) solid #3d96f4;
+
+      .menu-open & {
+        width: 100%;
+      }
+    }
+  }
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: toRem(35);
+    row-gap: toRem(10);
+
+    @media (max-width: toEm(991.98)) {
+      column-gap: toRem(15);
+    }
+    @media (max-width: toEm(767.98)) {
+      flex-direction: column;
+      padding-block-start: toRem(100);
+      padding-block-end: toRem(30);
+      font-size: toRem(35);
+    }
+  }
+
+  // .menu__item
+
+  &__item {
+  }
+
+  // .menu__link
+
+  &__link {
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.6;
+    transition: color 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #3d96f4;
+      }
+    }
+  }
+}
+.cart {
+  display: flex;
+  align-items: center;
+  gap: toRem(10);
+  color: #fff;
+  letter-spacing: toRem(0.96);
+  position: relative;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: #3d96f4;
+    }
+  }
+  @media (max-width: toEm(425)) {
+    color: #3d96f4;
+    justify-content: center;
+    margin-inline-end: toRem(7);
+    &::before {
+      content: '';
+      position: absolute;
+      width: toRem(40);
+      height: toRem(50);
+      margin-block-start: toRem(-8);
+      background: url(../img/icons/basket.svg) no-repeat;
+    }
+  }
+
+  // .cart__label
+
+  &__label {
+    display: none;
+
+    @media (min-width: toEm(425)) {
+      display: block;
+      font-size: toRem(17.6);
+      font-weight: 300;
+      line-height: 1.6;
+      transition: color 0.3s;
+    }
+  }
+
+  // .cart__quantity
+
+  &__quantity {
+    font-size: toRem(14);
+    font-weight: 500;
+    transition: color 0.3s;
+
+    @media (min-width: toEm(425)) {
+      border-radius: toRem(30);
+      background-color: rgba(129, 129, 139, 0.3);
+      padding: toRem(10);
+    }
+  }
+}
+
+///////////////////////////////////////
+//Burger
+
+.icon-menu {
+  display: none;
+  @media (max-width: toEm(767.98)) {
+    display: block;
+    position: relative;
+    width: toRem(30);
+    height: toRem(18);
+    flex-shrink: 0;
+    z-index: 5;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before,
+    &::after {
+      content: '';
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: toRem(2);
+      background-color: #fff;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - toRem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - toRem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - toRem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+// =========================================
