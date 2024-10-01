@@ -4,6 +4,8 @@ document.addEventListener('click', function (e) {
   const targetElement = e.target
   if (targetElement.closest('.icon-menu')) {
     document.documentElement.classList.toggle('menu-open')
+  } else if (targetElement.closest('.menu__link')) {
+    document.documentElement.classList.remove('menu-open')
   }
 })
 
@@ -25,6 +27,7 @@ document.onscroll = function () {
 ///////////////////////////////////////////////////////
 
 const anchors = document.querySelectorAll('a[href*="#"]')
+const headerHeight = header.clientHeight
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
@@ -34,9 +37,13 @@ for (let anchor of anchors) {
       ? anchor.getAttribute('href')
       : 'body'
 
-    document.querySelector(goto).scrollIntoView({
+    const targetElement = document.querySelector(goto)
+    const targetPosition =
+      targetElement.getBoundingClientRect().top + window.scrollY - headerHeight
+
+    window.scrollTo({
+      top: targetPosition,
       behavior: 'smooth',
-      block: 'start',
     })
   })
 }
