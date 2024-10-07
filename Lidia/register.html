@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidia - Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="register">
+            <div class="register__container">
+                <a href="index.html" class="register__logo">
+                    <img src="img/icons/Logo.svg" alt="Logo">
+                </a>
+                <div class="register__body body-register">
+                    <div class="body-register__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="index.html" class="breadcrumbs__link">Home</a>
+                            </li>
+                            <li class="breadcrumbs__item active">Sign-up</li>
+                        </ul>
+                    </div>
+                    <div class="body-register__title">Sign-up</div>
+                    <div class="body-register__label">Register yourself to do something on Lidia.</div>
+                    <form class="body-register__form form-register">
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="fullName">Full name</label>
+                            <input class="form-register__input" id="fullName" minlength="3" required autocomplete="off"
+                                name="form[]" type="text">
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="nik">NIK</label>
+                            <input class="form-register__input" id="nik" minlength="3" required autocomplete="off"
+                                name="form[]" type="text">
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="userName">Username</label>
+                            <input class="form-register__input" id="userName" minlength="3" required autocomplete="off"
+                                name="form[]" type="text">
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="email">Email</label>
+                            <input class="form-register__input" id="email" minlength="3" required autocomplete="off"
+                                name="form[]" type="email">
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="phone">Phone</label>
+                            <input class="form-register__input" id="phone" required autocomplete="off" name="form[]"
+                                type="text">
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="born">Born</label>
+                            <input class="form-register__input" id="born" value="1999-01-01" required name="form[]"
+                                type="date">
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="address">Address</label>
+                            <input class="form-register__input" id="address" minlength="3" required autocomplete="off"
+                                name="form[]" type="text">
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label">Gender</label>
+                            <div class="form-register__radio radio">
+                                <div class="radio__line">
+                                    <input class="radio__input" id="gender1" checked value="male" name="form[]"
+                                        type="radio">
+                                    <label class="radio__label" for="gender1">Male</label>
+                                </div>
+                                <div class="radio__line">
+                                    <input class="radio__input" id="gender2" value="female" name="form[]" type="radio">
+                                    <label class="radio__label" for="gender2">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="password">Password</label>
+                            <input class="form-register__input" id="password" minlength="3" required autocomplete="off"
+                                name="form[]" type="password">
+                        </div>
+                        <div class="form-register__field">
+                            <label class="form-register__label" for="confirmPassword">Confirm Password</label>
+                            <input class="form-register__input" id="confirmPassword" minlength="3" required
+                                autocomplete="off" name="form[]" type="password">
+                        </div>
+                        <button class="form-register__button" type="submit">Sign-up</button>
+                    </form>
+                </div>
+                <div class="register__copy">© 2024 Lidia. All rights reserved.</div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

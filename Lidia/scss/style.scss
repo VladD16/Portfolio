@@ -94,8 +94,49 @@ body {
   }
 }
 
+.breadcrumbs {
+  // .breadcrumbs__list
+
+  &__list {
+    display: flex;
+    gap: toRem(18);
+  }
+
+  // .breadcrumbs__item
+
+  &__item {
+    position: relative;
+    line-height: 2;
+    &.active {
+      color: $activeColor;
+    }
+    &:not(:last-child):after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: toRem(-15);
+      width: toRem(10);
+      height: toRem(13);
+      transform: translateY(-50%);
+      background: url(../img/icons/decor-breadcrumbs.svg) no-repeat;
+    }
+  }
+
+  // .breadcrumbs__link
+
+  &__link {
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 ///////////////////////////////////////
 // Окремі сторінки
+@import '_login.scss';
+@import '_register.scss';
 
 ///////////////////////////////////////
 /// Header
@@ -311,6 +352,10 @@ body {
     }
     @media (max-width: toEm(991.98)) {
       color: #000;
+    }
+
+    &.active {
+      color: $activeColor;
     }
   }
 }

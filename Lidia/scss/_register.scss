@@ -1,0 +1,195 @@
+.register {
+  @include adaptiveValue(padding-block-start, 70, 40);
+  padding-block-end: toRem(40);
+
+  // .register__container
+
+  &__container {
+    max-width: toRem(730);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(40);
+  }
+
+  // .register__logo
+
+  &__logo {
+    img {
+      width: toRem(100);
+      aspect-ratio: 1;
+
+      @media (max-width: toEm(767.98)) {
+        width: toRem(70);
+      }
+    }
+  }
+
+  // .register__body
+
+  &__body {
+    width: 100%;
+    align-self: flex-start;
+    padding-inline: toRem(36);
+    padding-block-start: toRem(38);
+    padding-block-end: toRem(20);
+    border-radius: toRem(5);
+    border-top: toRem(1.5) solid $blueColor;
+    background: #fff;
+    box-shadow: 0 toRem(15) toRem(30) 0 rgba(0, 0, 0, 0.1);
+
+    @media (max-width: toEm(767.98)) {
+      padding-inline: toRem(15);
+      padding-block-start: toRem(20);
+    }
+  }
+
+  // .register__copy
+
+  &__copy {
+    font-size: toRem(14);
+  }
+}
+
+.body-register {
+  & > * {
+    margin-bottom: toRem(15);
+  }
+
+  // .body-register__breadcrumbs
+
+  &__breadcrumbs {
+    margin-bottom: toRem(24);
+  }
+
+  // .body-register__title
+
+  &__title {
+    color: $darkBlueColor;
+    font-size: toRem(20);
+    font-weight: 700;
+  }
+
+  // .body-register__label
+
+  &__label {
+    margin-bottom: toRem(40);
+  }
+
+  // .body-register__form
+
+  &__form {
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-register {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: toRem(30);
+  row-gap: toRem(25);
+
+  // .form-register__field
+
+  &__field {
+  }
+
+  // .form-register__label
+
+  &__label {
+    color: $darkBlueColor;
+    font-weight: 700;
+    margin-bottom: toRem(15);
+  }
+
+  // .form-register__input
+
+  &__input {
+    border-radius: toRem(4);
+    border: toRem(1) solid #dedede;
+    height: toRem(40);
+    padding-inline: toRem(15);
+    transition: border-color 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $blueColor;
+      }
+    }
+
+    &:focus {
+      outline: toRem(2) solid $activeColor;
+    }
+  }
+
+  // .form-register__button
+
+  &__button {
+    grid-column: span 2;
+    color: #fff;
+    font-size: toRem(14);
+    font-weight: 700;
+    line-height: 1.78;
+    width: 100%;
+    padding: toRem(10);
+    text-align: center;
+    border-radius: toRem(4);
+    background-color: $blueColor;
+    box-shadow: 0 toRem(15) toRem(30) 0 rgba(68, 117, 242, 0.1);
+    transition: background-color 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $activeColor;
+      }
+    }
+  }
+}
+
+.radio {
+  display: flex;
+  gap: toRem(20);
+
+  // .radio__line
+
+  &__line {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+  }
+
+  // .radio__input
+
+  &__input {
+    appearance: none;
+    width: toRem(20);
+    height: toRem(20);
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: toRem(2) solid #dedede;
+    cursor: pointer;
+    transition: border-color 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $blueColor;
+      }
+    }
+
+    &:checked {
+      border: toRem(5) solid $blueColor;
+    }
+  }
+
+  // .radio__label
+
+  &__label {
+    font-size: toRem(14);
+    font-weight: 700;
+    line-height: 2.28;
+    cursor: pointer;
+  }
+}
