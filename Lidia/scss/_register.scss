@@ -91,6 +91,9 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: toRem(30);
   row-gap: toRem(25);
+  @media (max-width: toEm(767.98)) {
+    grid-template-columns: 1fr;
+  }
 
   // .form-register__field
 
@@ -128,7 +131,6 @@
   // .form-register__button
 
   &__button {
-    grid-column: span 2;
     color: #fff;
     font-size: toRem(14);
     font-weight: 700;
@@ -145,6 +147,10 @@
       &:hover {
         background-color: $activeColor;
       }
+    }
+
+    @media (min-width: toEm(768)) {
+      grid-column: span 2;
     }
   }
 }

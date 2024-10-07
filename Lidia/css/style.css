@@ -469,6 +469,11 @@ body {
           column-gap: 1.875rem;
   row-gap: 1.5625rem;
 }
+@media (max-width: 47.99875em) {
+  .form-register {
+    grid-template-columns: 1fr;
+  }
+}
 .form-register__label {
   color: #181e4b;
   font-weight: 700;
@@ -491,7 +496,6 @@ body {
   outline: 0.125rem solid #4737ff;
 }
 .form-register__button {
-  grid-column: span 2;
   color: #fff;
   font-size: 0.875rem;
   font-weight: 700;
@@ -509,6 +513,11 @@ body {
 @media (any-hover: hover) {
   .form-register__button:hover {
     background-color: #4737ff;
+  }
+}
+@media (min-width: 48em) {
+  .form-register__button {
+    grid-column: span 2;
   }
 }
 
