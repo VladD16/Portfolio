@@ -1,0 +1,40 @@
+[class*='_icon-']::before {
+  font-family: 'icons';
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arrow-up::before {
+  content: '\e900';
+}
+._icon-basket::before {
+  content: '\e901';
+}
+._icon-favorite::before {
+  content: '\e902';
+}
+._icon-filter::before {
+  content: '\e903';
+}
+._icon-person::before {
+  content: '\e904';
+}
+._icon-s-facebook::before {
+  content: '\e906';
+}
+._icon-s-instagram::before {
+  content: '\e907';
+}
+._icon-s-linkedin::before {
+  content: '\e908';
+}
+._icon-s-twitter::before {
+  content: '\e909';
+}
+._icon-submit::before {
+  content: '\e90a';
+}
+._icon-search::before {
+  content: '\e986';
+}
