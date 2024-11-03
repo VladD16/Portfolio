@@ -11,6 +11,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
   <!-- ============================================================================== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -62,7 +63,7 @@
       </div>
     </header>
     <main class="page">
-      <section class="page__hero hero">
+      <section id="top" class="page__hero hero">
         <div class="hero__container">
           <div class="hero__content">
             <h1 class="hero__title">Collections</h1>
@@ -76,17 +77,825 @@
           </div>
           <div class="hero__images">
             <div class="hero__image">
-              <img src="img/hero/main-img.jpg" alt="Image">
+              <img src="img/hero/main-img.webp" alt="Image">
             </div>
           </div>
         </div>
       </section>
+      <div class="page__brands brands">
+        <div class="brands__container">
+          <div class="brands__item">
+            <img src="img/brands/brand-1.webp" alt="Brand Logo">
+          </div>
+          <div class="brands__item">
+            <img src="img/brands/brand-5.webp" alt="Brand Logo">
+          </div>
+          <div class="brands__item">
+            <img src="img/brands/brand-3.webp" alt="Brand Logo">
+          </div>
+          <div class="brands__item">
+            <img src="img/brands/brand-4.webp" alt="Brand Logo">
+          </div>
+          <div class="brands__item">
+            <img src="img/brands/brand-2.webp" alt="Brand Logo">
+          </div>
+        </div>
+      </div>
+      <section class="page__styles styles">
+        <div class="styles__container">
+          <h2 class="styles__title">Explore new and popular styles</h2>
+          <div class="styles__items">
+            <a href="#" class="styles__item item-styles">
+              <img class="item-styles__image" src="img/styles/img-1.webp" alt="Image">
+              <div class="item-styles__info">
+                <h4 class="item-styles__title">manto</h4>
+                <div class="item-styles__quantity"><span>86</span> product</div>
+              </div>
+              <div class="item-styles__stickers stickers">
+                <ul class="stickers__list">
+                  <li class="stickers__item stickers__item--hot">hot</li>
+                  <li class="stickers__item stickers__item--sale">sale</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="styles__item item-styles">
+              <img class="item-styles__image" src="img/styles/img-2.webp" alt="Image">
+              <div class="item-styles__info">
+                <h4 class="item-styles__title">Pants</h4>
+                <div class="item-styles__quantity"><span>200</span> product</div>
+              </div>
+              <div class="item-styles__stickers stickers">
+                <ul class="stickers__list">
+                  <li class="stickers__item stickers__item--hot">hot</li>
+                  <li class="stickers__item stickers__item--sale">sale</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="styles__item item-styles">
+              <img class="item-styles__image" src="img/styles/img-3.webp" alt="Image">
+              <div class="item-styles__info">
+                <h4 class="item-styles__title">coat</h4>
+                <div class="item-styles__quantity"><span>520</span> product</div>
+              </div>
+              <div class="item-styles__stickers stickers">
+                <ul class="stickers__list">
+                  <li class="stickers__item stickers__item--hot">hot</li>
+                  <li class="stickers__item stickers__item--sale">sale</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="styles__item item-styles">
+              <img class="item-styles__image" src="img/styles/img-4.webp" alt="Image">
+              <div class="item-styles__info">
+                <h4 class="item-styles__title">Shirt</h4>
+                <div class="item-styles__quantity"><span>320</span> product</div>
+              </div>
+              <div class="item-styles__stickers stickers">
+                <ul class="stickers__list">
+                  <li class="stickers__item stickers__item--hot">hot</li>
+                  <li class="stickers__item stickers__item--sale">sale</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="styles__item item-styles">
+              <img class="item-styles__image" src="img/styles/img-5.webp" alt="Image">
+              <div class="item-styles__info">
+                <h4 class="item-styles__title">jacket</h4>
+                <div class="item-styles__quantity"><span>103</span> product</div>
+              </div>
+              <div class="item-styles__stickers stickers">
+                <ul class="stickers__list">
+                  <li class="stickers__item stickers__item--hot">hot</li>
+                  <li class="stickers__item stickers__item--sale">sale</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="page__products products">
+        <div class="products__container">
+          <h2 class="products__title title">New Products</h2>
+          <div class="products__tabs tabs-products">
+            <div class="tabs-products__header">
+              <nav class="tabs-products__nav">
+                <button type="button" class="tabs-products__button active" data-filter="all">all products</button>
+                <button type="button" class="tabs-products__button" data-filter="dresses">dresses</button>
+                <button type="button" class="tabs-products__button" data-filter="hoodies">hoodies</button>
+                <button type="button" class="tabs-products__button" data-filter="jackets">jackets</button>
+                <button type="button" class="tabs-products__button" data-filter="bags">bags</button>
+              </nav>
+              <button type="button" class="tabs-products__filter _icon-filter">filter</button>
+            </div>
+            <div class="tabs-products__body">
+              <article class="tabs-products__item item-card" data-category="trousers">
+                <div class="item-card__image">
+                  <a href="#" target="_blank">
+                    <img src="img/products/prod-1.webp" alt="Image">
+                    <div class="item-card__stickers stickers">
+                      <ul class="stickers__list">
+                        <li class="stickers__item stickers__item--hot">hot</li>
+                        <li class="stickers__item stickers__item--sale">sale</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <div class="item-card__actions actions-card">
+                    <div class="actions-card__icons">
+                      <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                      <button type="button" class="actions-card__search _icon-search"></button>
+                    </div>
+                    <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                  </div>
+                </div>
+                <div class="item-card__bottom">
+                  <a href="#" target="_blank" class="item-card__title">
+                    <h4>Adicolor Classics Joggers</h4>
+                  </a>
+                  <div class="item-card__info">
+                    <div class="item-card__category">trouser</div>
+                    <div class="item-card__price price-card">
+                      <div class="price-card__main">$63.85</div>
+                      <!-- <div class="price-card__sale"></div> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="tabs-products__item item-card" data-category="bags">
+                <div class="item-card__image">
+                  <a href="#" target="_blank">
+                    <img src="img/products/prod-2.webp" alt="Image">
+                    <div class="item-card__stickers stickers">
+                      <ul class="stickers__list">
+                        <li class="stickers__item stickers__item--hot">hot</li>
+                        <li class="stickers__item stickers__item--sale">sale</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <div class="item-card__actions actions-card">
+                    <div class="actions-card__icons">
+                      <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                      <button type="button" class="actions-card__search _icon-search"></button>
+                    </div>
+                    <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                  </div>
+                </div>
+                <div class="item-card__bottom">
+                  <a href="#" target="_blank" class="item-card__title">
+                    <h4>Nike Sportswear Futura Luxe</h4>
+                  </a>
+                  <div class="item-card__info">
+                    <div class="item-card__category">Bag</div>
+                    <div class="item-card__price price-card">
+                      <div class="price-card__main">$130.00</div>
+                      <!-- <div class="price-card__sale"></div> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="tabs-products__item item-card" data-category="scarfs">
+                <div class="item-card__image">
+                  <a href="#" target="_blank">
+                    <img src="img/products/prod-3.webp" alt="Image">
+                    <div class="item-card__stickers stickers">
+                      <ul class="stickers__list">
+                        <li class="stickers__item stickers__item--hot">hot</li>
+                        <li class="stickers__item stickers__item--sale">sale</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <div class="item-card__actions actions-card">
+                    <div class="actions-card__icons">
+                      <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                      <button type="button" class="actions-card__search _icon-search"></button>
+                    </div>
+                    <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                  </div>
+                </div>
+                <div class="item-card__bottom">
+                  <a href="#" target="_blank" class="item-card__title">
+                    <h4>Geometric print Scarf</h4>
+                  </a>
+                  <div class="item-card__info">
+                    <div class="item-card__category">scarf</div>
+                    <div class="item-card__price price-card">
+                      <div class="price-card__main">$53.00</div>
+                      <!-- <div class="price-card__sale"></div> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="tabs-products__item item-card" data-category="hoodies">
+                <div class="item-card__image">
+                  <a href="#" target="_blank">
+                    <img src="img/products/prod-4.webp" alt="Image">
+                    <div class="item-card__stickers stickers">
+                      <ul class="stickers__list">
+                        <li class="stickers__item stickers__item--hot">hot</li>
+                        <li class="stickers__item stickers__item--sale">sale</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <div class="item-card__actions actions-card">
+                    <div class="actions-card__icons">
+                      <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                      <button type="button" class="actions-card__search _icon-search"></button>
+                    </div>
+                    <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                  </div>
+                </div>
+                <div class="item-card__bottom">
+                  <a href="#" target="_blank" class="item-card__title">
+                    <h4>Yellow Reserved Hoodie</h4>
+                  </a>
+                  <div class="item-card__info">
+                    <div class="item-card__category">Hoodie</div>
+                    <div class="item-card__price price-card">
+                      <div class="price-card__main">$364.00</div>
+                      <div class="price-card__sale">$155.00</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="tabs-products__item item-card" data-category="dresses">
+                <div class="item-card__image">
+                  <a href="#" target="_blank">
+                    <img src="img/products/prod-5.webp" alt="Image">
+                    <div class="item-card__stickers stickers">
+                      <ul class="stickers__list">
+                        <li class="stickers__item stickers__item--hot">hot</li>
+                        <li class="stickers__item stickers__item--sale">sale</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <div class="item-card__actions actions-card">
+                    <div class="actions-card__icons">
+                      <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                      <button type="button" class="actions-card__search _icon-search"></button>
+                    </div>
+                    <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                  </div>
+                </div>
+                <div class="item-card__bottom">
+                  <a href="#" target="_blank" class="item-card__title">
+                    <h4>Basic Dress Green</h4>
+                  </a>
+                  <div class="item-card__info">
+                    <div class="item-card__category">Dress</div>
+                    <div class="item-card__price price-card">
+                      <div class="price-card__main">$236.00</div>
+                      <!-- <div class="price-card__sale"></div> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="tabs-products__item item-card" data-category="shoes">
+                <div class="item-card__image">
+                  <a href="#" target="_blank">
+                    <img src="img/products/prod-6.webp" alt="Image">
+                    <div class="item-card__stickers stickers">
+                      <ul class="stickers__list">
+                        <li class="stickers__item stickers__item--hot">hot</li>
+                        <li class="stickers__item stickers__item--sale">sale</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <div class="item-card__actions actions-card">
+                    <div class="actions-card__icons">
+                      <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                      <button type="button" class="actions-card__search _icon-search"></button>
+                    </div>
+                    <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                  </div>
+                </div>
+                <div class="item-card__bottom">
+                  <a href="#" target="_blank" class="item-card__title">
+                    <h4>Nike Air Zoom Pegasus</h4>
+                  </a>
+                  <div class="item-card__info">
+                    <div class="item-card__category">shoes</div>
+                    <div class="item-card__price price-card">
+                      <div class="price-card__main">$220.00</div>
+                      <div class="price-card__sale">$198.00</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="tabs-products__item item-card" data-category="jackets">
+                <div class="item-card__image">
+                  <a href="#" target="_blank">
+                    <img src="img/products/prod-7.webp" alt="Image">
+                    <div class="item-card__stickers stickers">
+                      <ul class="stickers__list">
+                        <li class="stickers__item stickers__item--hot">hot</li>
+                        <li class="stickers__item stickers__item--sale">sale</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <div class="item-card__actions actions-card">
+                    <div class="actions-card__icons">
+                      <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                      <button type="button" class="actions-card__search _icon-search"></button>
+                    </div>
+                    <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                  </div>
+                </div>
+                <div class="item-card__bottom">
+                  <a href="#" target="_blank" class="item-card__title">
+                    <h4>Nike Repel Miler</h4>
+                  </a>
+                  <div class="item-card__info">
+                    <div class="item-card__category">jacket</div>
+                    <div class="item-card__price price-card">
+                      <div class="price-card__main">$120.50</div>
+                      <!-- <div class="price-card__sale"></div> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="tabs-products__item item-card" data-category="glasses">
+                <div class="item-card__image">
+                  <a href="#" target="_blank">
+                    <img src="img/products/prod-8.webp" alt="Image">
+                    <div class="item-card__stickers stickers">
+                      <ul class="stickers__list">
+                        <li class="stickers__item stickers__item--hot">hot</li>
+                        <li class="stickers__item stickers__item--sale">sale</li>
+                      </ul>
+                    </div>
+                  </a>
+                  <div class="item-card__actions actions-card">
+                    <div class="actions-card__icons">
+                      <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                      <button type="button" class="actions-card__search _icon-search"></button>
+                    </div>
+                    <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                  </div>
+                </div>
+                <div class="item-card__bottom">
+                  <a href="#" target="_blank" class="item-card__title">
+                    <h4>Nike Sportswear Futura Luxe</h4>
+                  </a>
+                  <div class="item-card__info">
+                    <div class="item-card__category">Glasses</div>
+                    <div class="item-card__price price-card">
+                      <div class="price-card__main">$160.00</div>
+                      <!-- <div class="price-card__sale"></div> -->
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <article class="page__zara zara">
+        <img class="zara__background" src="img/zara/background.webp" alt="Background Image">
+        <div class="zara__container">
+          <div class="zara__content">
+            <h2 class="zara__title">
+              <img src="img/zara/zara-logo.webp" alt="Logo">
+            </h2>
+            <div class="zara__text">
+              <p>
+                Lustrous yet understated. The new evening
+                wear collection exclusively offered at the
+                reopened Giorgio Armani boutique in Los
+                Angeles.
+              </p>
+            </div>
+            <a href="#" target="_blank" class="zara__button">see collection</a>
+          </div>
+        </div>
+      </article>
+      <section class="page__best best">
+        <div class="best__container">
+          <h2 class="best__title title">Best sellers</h2>
+          <div class="best__tabs tabs-best">
+            <div class="tabs-best__header">
+              <nav class="tabs-best__nav">
+                <button type="button" class="tabs-best__button active" data-filter="all">all products</button>
+                <button type="button" class="tabs-best__button" data-filter="dresses">dresses</button>
+                <button type="button" class="tabs-best__button" data-filter="hoodies">hoodies</button>
+                <button type="button" class="tabs-best__button" data-filter="jackets">jackets</button>
+                <button type="button" class="tabs-best__button" data-filter="bags">bags</button>
+              </nav>
+              <button type="button" class="tabs-best__show">show all</button>
+            </div>
+            <!-- Slider main container -->
+            <div class="tabs-best__swiper swiper">
+              <!-- Additional required wrapper -->
+              <div class="tabs-best__swiper-wrapper swiper-wrapper">
+                <!-- Slides -->
+                <article class="tabs-best__swiper-slide swiper-slide item-card" data-category="trousers">
+                  <div class="item-card__image">
+                    <a href="#" target="_blank">
+                      <img src="img/products/prod-1.webp" alt="Image">
+                      <div class="item-card__stickers stickers">
+                        <ul class="stickers__list">
+                          <li class="stickers__item stickers__item--hot">hot</li>
+                          <li class="stickers__item stickers__item--sale">sale</li>
+                        </ul>
+                      </div>
+                    </a>
+                    <div class="item-card__actions actions-card">
+                      <div class="actions-card__icons">
+                        <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                        <button type="button" class="actions-card__search _icon-search"></button>
+                      </div>
+                      <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                    </div>
+                  </div>
+                  <div class="item-card__bottom">
+                    <a href="#" target="_blank" class="item-card__title">
+                      <h4>Adicolor Classics Joggers</h4>
+                    </a>
+                    <div class="item-card__info">
+                      <div class="item-card__category">trouser</div>
+                      <div class="item-card__price price-card">
+                        <div class="price-card__main">$63.85</div>
+                        <!-- <div class="price-card__sale"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="tabs-best__swiper-slide swiper-slide item-card" data-category="bags">
+                  <div class="item-card__image">
+                    <a href="#" target="_blank">
+                      <img src="img/products/prod-2.webp" alt="Image">
+                      <div class="item-card__stickers stickers">
+                        <ul class="stickers__list">
+                          <li class="stickers__item stickers__item--hot">hot</li>
+                          <li class="stickers__item stickers__item--sale">sale</li>
+                        </ul>
+                      </div>
+                    </a>
+                    <div class="item-card__actions actions-card">
+                      <div class="actions-card__icons">
+                        <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                        <button type="button" class="actions-card__search _icon-search"></button>
+                      </div>
+                      <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                    </div>
+                  </div>
+                  <div class="item-card__bottom">
+                    <a href="#" target="_blank" class="item-card__title">
+                      <h4>Nike Sportswear Futura Luxe</h4>
+                    </a>
+                    <div class="item-card__info">
+                      <div class="item-card__category">Bag</div>
+                      <div class="item-card__price price-card">
+                        <div class="price-card__main">$130.00</div>
+                        <!-- <div class="price-card__sale"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="tabs-best__swiper-slide swiper-slide item-card" data-category="scarfs">
+                  <div class="item-card__image">
+                    <a href="#" target="_blank">
+                      <img src="img/products/prod-3.webp" alt="Image">
+                      <div class="item-card__stickers stickers">
+                        <ul class="stickers__list">
+                          <li class="stickers__item stickers__item--hot">hot</li>
+                          <li class="stickers__item stickers__item--sale">sale</li>
+                        </ul>
+                      </div>
+                    </a>
+                    <div class="item-card__actions actions-card">
+                      <div class="actions-card__icons">
+                        <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                        <button type="button" class="actions-card__search _icon-search"></button>
+                      </div>
+                      <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                    </div>
+                  </div>
+                  <div class="item-card__bottom">
+                    <a href="#" target="_blank" class="item-card__title">
+                      <h4>Geometric print Scarf</h4>
+                    </a>
+                    <div class="item-card__info">
+                      <div class="item-card__category">scarf</div>
+                      <div class="item-card__price price-card">
+                        <div class="price-card__main">$53.00</div>
+                        <!-- <div class="price-card__sale"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="tabs-best__swiper-slide swiper-slide item-card" data-category="hoodies">
+                  <div class="item-card__image">
+                    <a href="#" target="_blank">
+                      <img src="img/products/prod-4.webp" alt="Image">
+                      <div class="item-card__stickers stickers">
+                        <ul class="stickers__list">
+                          <li class="stickers__item stickers__item--hot">hot</li>
+                          <li class="stickers__item stickers__item--sale">sale</li>
+                        </ul>
+                      </div>
+                    </a>
+                    <div class="item-card__actions actions-card">
+                      <div class="actions-card__icons">
+                        <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                        <button type="button" class="actions-card__search _icon-search"></button>
+                      </div>
+                      <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                    </div>
+                  </div>
+                  <div class="item-card__bottom">
+                    <a href="#" target="_blank" class="item-card__title">
+                      <h4>Yellow Reserved Hoodie</h4>
+                    </a>
+                    <div class="item-card__info">
+                      <div class="item-card__category">Hoodie</div>
+                      <div class="item-card__price price-card">
+                        <div class="price-card__main">$364.00</div>
+                        <div class="price-card__sale">$155.00</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="tabs-best__swiper-slide swiper-slide item-card" data-category="dresses">
+                  <div class="item-card__image">
+                    <a href="#" target="_blank">
+                      <img src="img/products/prod-5.webp" alt="Image">
+                      <div class="item-card__stickers stickers">
+                        <ul class="stickers__list">
+                          <li class="stickers__item stickers__item--hot">hot</li>
+                          <li class="stickers__item stickers__item--sale">sale</li>
+                        </ul>
+                      </div>
+                    </a>
+                    <div class="item-card__actions actions-card">
+                      <div class="actions-card__icons">
+                        <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                        <button type="button" class="actions-card__search _icon-search"></button>
+                      </div>
+                      <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                    </div>
+                  </div>
+                  <div class="item-card__bottom">
+                    <a href="#" target="_blank" class="item-card__title">
+                      <h4>Basic Dress Green</h4>
+                    </a>
+                    <div class="item-card__info">
+                      <div class="item-card__category">Dress</div>
+                      <div class="item-card__price price-card">
+                        <div class="price-card__main">$236.00</div>
+                        <!-- <div class="price-card__sale"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="tabs-best__swiper-slide swiper-slide item-card" data-category="shoes">
+                  <div class="item-card__image">
+                    <a href="#" target="_blank">
+                      <img src="img/products/prod-6.webp" alt="Image">
+                      <div class="item-card__stickers stickers">
+                        <ul class="stickers__list">
+                          <li class="stickers__item stickers__item--hot">hot</li>
+                          <li class="stickers__item stickers__item--sale">sale</li>
+                        </ul>
+                      </div>
+                    </a>
+                    <div class="item-card__actions actions-card">
+                      <div class="actions-card__icons">
+                        <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                        <button type="button" class="actions-card__search _icon-search"></button>
+                      </div>
+                      <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                    </div>
+                  </div>
+                  <div class="item-card__bottom">
+                    <a href="#" target="_blank" class="item-card__title">
+                      <h4>Nike Air Zoom Pegasus</h4>
+                    </a>
+                    <div class="item-card__info">
+                      <div class="item-card__category">shoes</div>
+                      <div class="item-card__price price-card">
+                        <div class="price-card__main">$220.00</div>
+                        <div class="price-card__sale">$198.00</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="tabs-best__swiper-slide swiper-slide item-card" data-category="jackets">
+                  <div class="item-card__image">
+                    <a href="#" target="_blank">
+                      <img src="img/products/prod-7.webp" alt="Image">
+                      <div class="item-card__stickers stickers">
+                        <ul class="stickers__list">
+                          <li class="stickers__item stickers__item--hot">hot</li>
+                          <li class="stickers__item stickers__item--sale">sale</li>
+                        </ul>
+                      </div>
+                    </a>
+                    <div class="item-card__actions actions-card">
+                      <div class="actions-card__icons">
+                        <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                        <button type="button" class="actions-card__search _icon-search"></button>
+                      </div>
+                      <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                    </div>
+                  </div>
+                  <div class="item-card__bottom">
+                    <a href="#" target="_blank" class="item-card__title">
+                      <h4>Nike Repel Miler</h4>
+                    </a>
+                    <div class="item-card__info">
+                      <div class="item-card__category">jacket</div>
+                      <div class="item-card__price price-card">
+                        <div class="price-card__main">$120.50</div>
+                        <!-- <div class="price-card__sale"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="tabs-best__swiper-slide swiper-slide item-card" data-category="glasses">
+                  <div class="item-card__image">
+                    <a href="#" target="_blank">
+                      <img src="img/products/prod-8.webp" alt="Image">
+                      <div class="item-card__stickers stickers">
+                        <ul class="stickers__list">
+                          <li class="stickers__item stickers__item--hot">hot</li>
+                          <li class="stickers__item stickers__item--sale">sale</li>
+                        </ul>
+                      </div>
+                    </a>
+                    <div class="item-card__actions actions-card">
+                      <div class="actions-card__icons">
+                        <button type="button" class="actions-card__favorite _icon-favorite"></button>
+                        <button type="button" class="actions-card__search _icon-search"></button>
+                      </div>
+                      <button type="button" class="actions-card__shop _icon-basket">shop now</button>
+                    </div>
+                  </div>
+                  <div class="item-card__bottom">
+                    <a href="#" target="_blank" class="item-card__title">
+                      <h4>Nike Sportswear Futura Luxe</h4>
+                    </a>
+                    <div class="item-card__info">
+                      <div class="item-card__category">Glasses</div>
+                      <div class="item-card__price price-card">
+                        <div class="price-card__main">$160.00</div>
+                        <!-- <div class="price-card__sale"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="tabs-best__swiper-button-prev swiper-button-prev _icon-arrow-slider"></div>
+              <div class="tabs-best__swiper-button-next swiper-button-next _icon-arrow-slider"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__follow follow">
+        <div class="follow__container">
+          <h2 class="follow__title title">Follow products and discounts on Instagram</h2>
+          <div class="follow__items">
+            <a class="follow__item _icon-s-instagram" href="#" target="_blank">
+              <img src="img/follow/img-1.webp" alt="Image">
+            </a>
+            <a class="follow__item _icon-s-instagram" href="#" target="_blank">
+              <img src="img/follow/img-2.webp" alt="Image">
+            </a>
+            <a class="follow__item _icon-s-instagram" href="#" target="_blank">
+              <img src="img/follow/img-3.webp" alt="Image">
+            </a>
+            <a class="follow__item _icon-s-instagram" href="#" target="_blank">
+              <img src="img/follow/img-4.webp" alt="Image">
+            </a>
+            <a class="follow__item _icon-s-instagram" href="#" target="_blank">
+              <img src="img/follow/img-5.webp" alt="Image">
+            </a>
+            <a class="follow__item _icon-s-instagram" href="#" target="_blank">
+              <img src="img/follow/img-6.webp" alt="Image">
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="page__subscribe subscribe">
+        <div class="subscribe__container">
+          <h2 class="subscribe__title title">Or subscribe to the newsletter</h2>
+          <form class="subscribe__form form-subscribe" action="#">
+            <input class="form-subscribe__input" type="email" required autocomplete="off" minlength="3"
+              placeholder="Email address...">
+            <button class="form-subscribe__button _icon-submit" type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-
+      <div class="footer__main main-footer">
+        <div class="main-footer__container">
+          <div class="main-footer__info">
+            <img class="main-footer__logo" src="img/icons/logo.svg" alt="Logo">
+            <div class="main-footer__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua
+              </p>
+            </div>
+            <div class="main-footer__social social-footer">
+              <ul class="social-footer__list">
+                <li class="social-footer__item">
+                  <a class="social-footer__link _icon-s-facebook" href="#" target="_blank">
+                  </a>
+                </li>
+                <li class="social-footer__item">
+                  <a class="social-footer__link _icon-s-twitter" href="#" target="_blank">
+                  </a>
+                </li>
+                <li class="social-footer__item">
+                  <a class="social-footer__link _icon-s-linkedin" href="#" target="_blank">
+                  </a>
+                </li>
+                <li class="social-footer__item">
+                  <a class="social-footer__link _icon-s-instagram" href="#" target="_blank">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav class="main-footer__menu menu-footer">
+            <div data-spoilers="525,max" data-one-spoiler class="menu-footer__spoilers">
+              <details class="menu-footer__col">
+                <summary data-spoiler class="menu-footer__title _icon-arrow-slider _active">CATALOG</summary>
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Necklaces</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">hoodies</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Jewelry Box</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">t-shirt</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">jacket</a>
+                  </li>
+                </ul>
+              </details>
+              <details class="menu-footer__col">
+                <summary data-spoiler class="menu-footer__title _icon-arrow-slider">ABOUT US</summary>
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Our Producers</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Sitemap</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">FAQ</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">About Us</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Terms & Conditions</a>
+                  </li>
+                </ul>
+              </details>
+              <details class="menu-footer__col">
+                <summary data-spoiler class="menu-footer__title _icon-arrow-slider">CUSTOMER SERVICES</summary>
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Contact Us</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Track Your Order</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Product Care & Repair</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Book an Appointment</a>
+                  </li>
+                  <li class="menu-footer__item">
+                    <a href="#" class="menu-footer__link">Shipping & Returns</a>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom bottom-footer">
+        <div class="bottom-footer__container">
+          <div class="bottom-footer__copy">© 2022 Coral , Inc.</div>
+          <img class="bottom-footer__pay" src="img/footer/pay.webp" alt="Payment logos">
+          <a href="#top" class="bottom-footer__up _icon-arrow-up">Scroll to top</a>
+        </div>
+      </div>
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/dynamic_adapt.js"></script>
   <script src="js/script.js"></script>
 </body>
