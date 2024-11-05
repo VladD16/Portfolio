@@ -335,7 +335,7 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-@media (any-hover: none) {
+@media (max-width: 61.99875em) {
   .actions-card {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
@@ -1376,7 +1376,7 @@ body.menu-open {
   font-weight: 600;
   text-transform: capitalize;
 }
-@media (any-hover: none) {
+@media (max-width: 61.99875em) {
   .item-styles__info {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
@@ -1893,7 +1893,7 @@ body.menu-open {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-@media (any-hover: none) {
+@media (max-width: 61.99875em) {
   .follow__item::after {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
@@ -1916,7 +1916,7 @@ body.menu-open {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-@media (any-hover: none) {
+@media (max-width: 61.99875em) {
   .follow__item::before {
     -webkit-transform: translate(-50%, -50%) scale(1);
         -ms-transform: translate(-50%, -50%) scale(1);

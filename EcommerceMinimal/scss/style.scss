@@ -208,7 +208,7 @@ $hoverColor: #ff6f61;
   transform: translate(0, 100%);
   opacity: 0;
   transition: all 0.5s;
-  @media (any-hover: none) {
+  @media (max-width: toEm(991.98)) {
     transform: translate(0, 0);
     opacity: 1;
   }
@@ -977,7 +977,7 @@ body {
     font-weight: 600;
     text-transform: capitalize;
 
-    @media (any-hover: none) {
+    @media (max-width: toEm(991.98)) {
       transform: translate(0, 0);
       opacity: 1;
     }
@@ -1468,6 +1468,7 @@ body {
         }
       }
     }
+
     &::after {
       content: '';
       position: absolute;
@@ -1478,7 +1479,7 @@ body {
       background-color: rgba(0, 0, 0, 0.3);
       transform: scale(0);
       transition: transform 0.3s;
-      @media (any-hover: none) {
+      @media (max-width: toEm(991.98)) {
         transform: scale(1);
         background-color: rgba(0, 0, 0, 0.2);
       }
@@ -1492,7 +1493,7 @@ body {
       color: #fff;
       transform: translate(-50%, -50%) scale(0);
       transition: transform 0.3s;
-      @media (any-hover: none) {
+      @media (max-width: toEm(991.98)) {
         transform: translate(-50%, -50%) scale(1);
       }
     }
