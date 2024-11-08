@@ -101,6 +101,34 @@ $hoverColor: #6f00a9;
   }
 }
 
+.marquee {
+  // .marquee__items
+
+  &__items {
+  }
+
+  // .marquee__item
+
+  &__item {
+    font-family: Orbitron;
+    font-size: toRem(20);
+    font-weight: 500;
+    line-height: 1.25;
+    text-transform: capitalize;
+    display: flex;
+    gap: toRem(60);
+    align-items: center;
+
+    &::after {
+      content: '';
+      width: toRem(10);
+      height: toRem(10);
+      border-radius: 50%;
+      background: linear-gradient(90deg, #f00 0%, #42ff00 48.9%, #2400ff 100%);
+    }
+  }
+}
+
 // Окремі сторінки
 
 ///////////////////////////////////////
@@ -232,14 +260,15 @@ $hoverColor: #6f00a9;
   }
 }
 .social-header {
-  @media (max-width: toEm(991.98)) {
-    display: none;
-  }
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   column-gap: toRem(20);
   row-gap: toRem(10);
+
+  @media (max-width: toEm(767.98)) {
+    justify-content: center;
+  }
 
   // .social-header__item
 
@@ -338,6 +367,9 @@ $hoverColor: #6f00a9;
   &__about {
     @include adaptiveValue(padding-block, 120, 40, $widthTo: 768);
     @include adaptiveValue(margin-bottom, 120, 45, $widthTo: 768);
+    @media (max-width: toEm(767.98)) {
+      padding-block: toRem(20);
+    }
   }
 }
 
@@ -356,8 +388,9 @@ $hoverColor: #6f00a9;
       @include adaptiveValue(gap, 224, 100, $widthTo: 768);
     }
     @media (max-width: toEm(767.98)) {
-      display: grid;
-      gap: toRem(20);
+      display: flex;
+      flex-direction: column;
+      gap: toRem(40);
     }
 
     @media (min-width: toEm(768)) {
@@ -597,6 +630,58 @@ $hoverColor: #6f00a9;
       object-fit: contain;
     }
 
+    @media (max-width: toEm(767.98)) {
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        width: 67.79661%; /* 120/177 */
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: linear-gradient(
+          90deg,
+          rgba(151, 0, 255, 0.6) 0%,
+          rgba(87, 255, 28, 0.6) 36.9%,
+          rgba(255, 0, 0, 0.6) 67.4%,
+          rgba(0, 56, 255, 0.6) 100%
+        );
+        opacity: 0.3;
+        filter: blur(25px);
+      }
+
+      &::before {
+        top: 6.071429%; /* 17/280 */
+        left: -40.677966%; /* 72/177 */
+        animation: circle-1-mini 10s linear infinite 0.2s;
+      }
+      &::after {
+        bottom: -2.5%; /* -7/280 */
+        right: -41.242938%; /* -73/177 */
+        animation: circle-2-mini 10s linear infinite 0.2s;
+      }
+    }
+
+    @keyframes circle-1-mini {
+      33% {
+        top: 52.5%; /* 147/280 */
+        left: 73.446328%; /* 130/177 */
+      }
+      66% {
+        top: 52.5%; /* 147/280 */
+        left: -40.677966%; /* 72/177 */
+      }
+    }
+    @keyframes circle-2-mini {
+      33% {
+        bottom: 43.928571%; /* 123/280 */
+        right: 72.881356%; /* 129/177 */
+      }
+      66% {
+        bottom: 43.928571%; /* 123/280 */
+        right: -41.242938%; /* -73/177 */
+      }
+    }
+
     @media (min-width: toEm(768)) {
       &::before {
         content: '';
@@ -663,7 +748,9 @@ $hoverColor: #6f00a9;
 ///////////////////////////////////////
 
 .about {
-  background: url(../img/about/background.jpg) 0 0 / 100% 100% no-repeat;
+  @media (min-width: toEm(768)) {
+    background: url(../img/about/background.jpg) 0 0 / 100% 100% no-repeat;
+  }
 
   // .about__container
 
@@ -702,35 +789,16 @@ $hoverColor: #6f00a9;
     line-height: 2.22;
     letter-spacing: toRem(-0.36);
     text-transform: capitalize;
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
 
     p:not(:last-child) {
       margin-bottom: toRem(15);
     }
-  }
 
-  // .about__items
-
-  &__items {
-  }
-
-  // .about__item
-
-  &__item {
-    font-family: Orbitron;
-    font-size: toRem(20);
-    font-weight: 500;
-    line-height: 1.25;
-    text-transform: capitalize;
-    display: flex;
-    gap: toRem(60);
-    align-items: center;
-
-    &::after {
-      content: '';
-      width: toRem(10);
-      height: toRem(10);
-      border-radius: 50%;
-      background: linear-gradient(90deg, #f00 0%, #42ff00 48.9%, #2400ff 100%);
+    @media (max-width: toEm(525)) {
+      font-size: toRem(16);
     }
   }
 }
