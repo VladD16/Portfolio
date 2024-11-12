@@ -794,7 +794,7 @@ $buttonHover: #0b0045;
         left: -48%; /* -189/376 */
         width: 100.265957%; /* 377/376 */
         height: 62.007874%; /* 315/508 */
-        background: url(../img/hero/lightning-left.png) 0 0 / 100% 100%
+        background: url(../img/hero/lightning-left.webp) 0 0 / 100% 100%
           no-repeat;
       }
       &::after {
@@ -804,7 +804,7 @@ $buttonHover: #0b0045;
         right: -38.829787%; /* -146/376 */
         width: 85.638298%; /* 322/376 */
         height: 56.496063%; /* 287/508 */
-        background: url(../img/hero/lightning-right.png) 0 0 / 100% 100%
+        background: url(../img/hero/lightning-right.webp) 0 0 / 100% 100%
           no-repeat;
       }
     }
@@ -853,7 +853,7 @@ $buttonHover: #0b0045;
 
 .about {
   @media (min-width: toEm(768)) {
-    background: url(../img/about/background.jpg) 0 0 / 100% 100% no-repeat;
+    background: url(../img/about/background.webp) 0 0 / 100% 100% no-repeat;
   }
 
   // .about__container
@@ -920,7 +920,7 @@ $buttonHover: #0b0045;
       left: 0;
       width: 100%;
       height: 100%;
-      background: url(../img/portfolio/bg.png) 0 0 / contain no-repeat;
+      background: url(../img/portfolio/bg.webp) 0 0 / contain no-repeat;
       opacity: 0.05;
     }
   }
