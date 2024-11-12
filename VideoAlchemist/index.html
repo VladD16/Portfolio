@@ -12,6 +12,7 @@
   <link rel="manifest" href="favicon/site.webmanifest">
   <!-- ============================================================================== -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -22,35 +23,35 @@
         <nav class="header__menu menu-header">
           <ul class="menu-header__list">
             <li class="menu-header__item">
-              <a href="#" class="menu-header__link">home</a>
+              <a href="#home" class="menu-header__link">home</a>
             </li>
             <li class="menu-header__item">
-              <a href="#" class="menu-header__link">about</a>
+              <a href="#about" class="menu-header__link">about</a>
             </li>
             <li class="menu-header__item">
-              <a href="#" class="menu-header__link">portfolio</a>
+              <a href="#portfolio" class="menu-header__link">portfolio</a>
             </li>
             <li class="menu-header__item">
-              <a href="#" class="menu-header__link">testimonials</a>
+              <a href="#testimonials" class="menu-header__link">testimonials</a>
             </li>
             <li class="menu-header__item">
-              <a href="#" class="menu-header__link">contact</a>
+              <a href="#contact" class="menu-header__link">contact</a>
             </li>
           </ul>
         </nav>
-        <div data-da=".about__content, 767.98" class="header__social social-header">
-          <a href="#" target="_blank" class="social-header__item _icon-facebook">
+        <div data-da=".about__content, 767.98" class="header__social social">
+          <a href="#" target="_blank" class="social__item _icon-facebook">
           </a>
-          <a href="#" target="_blank" class="social-header__item _icon-linkedin">
+          <a href="#" target="_blank" class="social__item _icon-linkedin">
           </a>
-          <a href="#" target="_blank" class="social-header__item _icon-youtube">
+          <a href="#" target="_blank" class="social__item _icon-youtube">
           </a>
         </div>
         <button type="button" class="header__menu-icon icon-menu"><span></span></button>
       </div>
     </header>
     <main class="page">
-      <section class="page__hero hero">
+      <section id="home" class="page__hero hero">
         <div class="hero__container">
           <div class="hero__content content-hero">
             <div class="content-hero__info">
@@ -82,7 +83,7 @@
           </div>
         </div>
       </section>
-      <section class="page__about about">
+      <section id="about" class="page__about about">
         <div class="about__container">
           <div class="about__content">
             <h2 class="about__title title title--center">About me</h2>
@@ -99,12 +100,175 @@
             <div class="marquee__items" data-marquee data-marquee-pause-mouse-enter data-marquee-speed='700'
               data-marquee-space='60'>
               <div class="marquee__item">Cash cow editing</div>
-              <div class="marquee__item">Reels editng</div>
+              <div class="marquee__item">Reels editing</div>
               <div class="marquee__item">logo animation</div>
               <div class="marquee__item">podcast edit</div>
               <div class="marquee__item">Vlogs editing</div>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="portfolio" class="page__portfolio portfolio">
+        <div class="portfolio__container">
+          <h2 class="portfolio__title title">my best edits</h2>
+          <div class="portfolio__arrow">
+            <!-- If we need navigation buttons -->
+            <div class="portfolio__swiper-button-next swiper-button-next"></div>
+          </div>
+          <!-- Slider main container -->
+          <div class="portfolio__swiper swiper">
+            <!-- Additional required wrapper -->
+            <div class="portfolio__swiper-wrapper swiper-wrapper">
+              <!-- Slides -->
+              <a href="#" target="_blank" class="portfolio__swiper-slide swiper-slide slide">
+                <article>
+                  <div class="slide__image">
+                    <img src="img/portfolio/img-1.jpg" alt="Image">
+                    <div class="slide__label">play video</div>
+                    <div class="slide__icon">
+                      <img src="img/icons/play.svg" alt="Play icon">
+                    </div>
+                  </div>
+                  <h4 class="slide__title">CAsh cow</h4>
+                </article>
+              </a>
+              <a href="#" target="_blank" class="portfolio__swiper-slide swiper-slide slide">
+                <article>
+                  <div class="slide__image">
+                    <img src="img/portfolio/img-2.jpg" alt="Image">
+                    <div class="slide__label">play video</div>
+                    <div class="slide__icon">
+                      <img src="img/icons/play.svg" alt="Play icon">
+                    </div>
+                  </div>
+                  <h4 class="slide__title">Reel</h4>
+                </article>
+              </a>
+              <a href="#" target="_blank" class="portfolio__swiper-slide swiper-slide slide">
+                <article>
+                  <div class="slide__image">
+                    <img src="img/portfolio/img-3.jpg" alt="Image">
+                    <div class="slide__label">play video</div>
+                    <div class="slide__icon">
+                      <img src="img/icons/play.svg" alt="Play icon">
+                    </div>
+                  </div>
+                  <h4 class="slide__title">Vlog</h4>
+                </article>
+              </a>
+              <a href="#" target="_blank" class="portfolio__swiper-slide swiper-slide slide">
+                <article>
+                  <div class="slide__image">
+                    <img src="img/portfolio/img-4.jpg" alt="Image">
+                    <div class="slide__label">play video</div>
+                    <div class="slide__icon">
+                      <img src="img/icons/play.svg" alt="Play icon">
+                    </div>
+                  </div>
+                  <h4 class="slide__title">CAsh cow</h4>
+                </article>
+              </a>
+              <a href="#" target="_blank" class="portfolio__swiper-slide swiper-slide slide">
+                <article>
+                  <div class="slide__image">
+                    <img src="img/portfolio/img-5.jpg" alt="Image">
+                    <div class="slide__label">play video</div>
+                    <div class="slide__icon">
+                      <img src="img/icons/play.svg" alt="Play icon">
+                    </div>
+                  </div>
+                  <h4 class="slide__title">CAsh cow</h4>
+                </article>
+              </a>
+              <a href="#" target="_blank" class="portfolio__swiper-slide swiper-slide slide">
+                <article>
+                  <div class="slide__image">
+                    <img src="img/portfolio/img-6.jpg" alt="Image">
+                    <div class="slide__label">play video</div>
+                    <div class="slide__icon">
+                      <img src="img/icons/play.svg" alt="Play icon">
+                    </div>
+                  </div>
+                  <h4 class="slide__title">Podcast</h4>
+                </article>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="page__testimonials testimonials">
+        <div class="testimonials__container">
+          <h2 class="testimonials__title title title--center">testimonials</h2>
+          <div class="testimonials__items">
+            <article class="testimonials__item">
+              <h4 class="testimonials__name">Marcus</h4>
+              <div class="testimonials__position">Co founder</div>
+              <div class="testimonials__text">
+                <p>
+                  Perfect communication and exceptional skills. This guy is King.
+                </p>
+              </div>
+            </article>
+            <article class="testimonials__item">
+              <h4 class="testimonials__name">peter</h4>
+              <div class="testimonials__position">Manager</div>
+              <div class="testimonials__text">
+                <p>
+                  did a great job. Understood all the requirements.
+                </p>
+              </div>
+            </article>
+            <article class="testimonials__item">
+              <h4 class="testimonials__name">jane</h4>
+              <div class="testimonials__position">CEO</div>
+              <div class="testimonials__text">
+                <p>
+                  Jimmy was wonderful to work with. Will definitely hire him again
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <div class="page__decor-line"></div>
+      <section id="contact" class="page__contact contact">
+        <div class="contact__container">
+          <div class="contact__body">
+            <div class="contact__consult consult">
+              <h2 class="consult__title title">I am ready to consult you</h2>
+              <form class="consult__form form-consult" action="#">
+                <div class="form-consult__field">
+                  <label for="name">My name is</label>
+                  <input type="text" id="name" required placeholder="Name">
+                </div>
+                <div class="form-consult__field">
+                  <label for="message">i am interested in</label>
+                  <input type="text" id="message" required placeholder="message">
+                </div>
+                <button class="form-consult__button" type="submit">Send</button>
+              </form>
+            </div>
+            <div class="contact__connect connect">
+              <h2 class="connect__title title title--center">Connect with me</h2>
+              <div class="connect__items">
+                <a class="connect__item _icon-tel" href="tel:+92455478112">+92 455 478 112</a>
+                <a class="connect__item _icon-location" href="#">defense phase 3, lahore pakistan</a>
+                <a class="connect__item _icon-message" href="mailto:videoeditor@gmail.com">videoeditor@gmail.com</a>
+              </div>
+              <div class="connect__social social">
+                <a href="#" target="_blank" class="social__item _icon-facebook">
+                </a>
+                <a href="#" target="_blank" class="social__item _icon-linkedin">
+                </a>
+                <a href="#" target="_blank" class="social__item _icon-youtube">
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#home" class="contact__to-top to-top">
+            <div class="to-top__label">Go back to the top</div>
+            <div class="to-top__arrow"></div>
+          </a>
         </div>
       </section>
     </main>
@@ -115,6 +279,7 @@
 
   <script src="js/dynamic_adapt.js"></script>
   <script src="js/marquee.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>
