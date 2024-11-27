@@ -82,7 +82,8 @@ body {
 }
 .loaded body {
   transition: opacity 1s;
-  opacity: 1
+  opacity: 1;
+  overflow: auto
 }
 .wrapper {
   min-height: 100%;
@@ -298,7 +299,7 @@ body {
   -webkit-transform: translate(-30%,0);
   transform: translate(-30%,0)
 }
-._watcher-view .hero__title {
+.loaded ._watcher-view .hero__title {
   transition: all .7s 1.2s;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
@@ -319,7 +320,7 @@ body {
   object-fit: cover;
   border-radius: .16875rem
 }
-._watcher-view .hero__main-image {
+.loaded ._watcher-view .hero__main-image {
   transition: all .7s .5s;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
@@ -343,7 +344,7 @@ body {
   -o-object-fit: contain;
   object-fit: contain
 }
-._watcher-view .hero__decor-top {
+.loaded ._watcher-view .hero__decor-top {
   transition: all 1s 1.6s;
   -webkit-transform: scale(1) rotate(0);
   transform: scale(1) rotate(0)
@@ -366,7 +367,7 @@ body {
   -o-object-fit: contain;
   object-fit: contain
 }
-._watcher-view .hero__decor-bottom {
+.loaded ._watcher-view .hero__decor-bottom {
   transition: all 1s 1.6s;
   -webkit-transform: scale(1) rotate(0);
   transform: scale(1) rotate(0)
@@ -389,7 +390,7 @@ body {
   -o-object-fit: contain;
   object-fit: contain
 }
-._watcher-view .hero__decor-figure {
+.loaded ._watcher-view .hero__decor-figure {
   transition: all 1s 1.6s;
   -webkit-transform: scale(1) rotate(0);
   transform: scale(1) rotate(0)
@@ -411,7 +412,7 @@ body {
   object-fit: cover;
   border-radius: 50%
 }
-._watcher-view .hero__circle-image {
+.loaded ._watcher-view .hero__circle-image {
   transition: all .8s .8s;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -426,7 +427,7 @@ body {
 .hero__text p:not(:last-child) {
   margin-bottom: .625rem
 }
-._watcher-view .hero__text {
+.loaded ._watcher-view .hero__text {
   transition: all .7s 1.4s;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
