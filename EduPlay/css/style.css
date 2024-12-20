@@ -803,6 +803,7 @@ body {
 }
 .content-download__text._watcher-view {
   transition: all 1s .8s;
+  will-change: opacity,transform;
   opacity: 1;
   -webkit-transform: translate(0,0);
   transform: translate(0,0)

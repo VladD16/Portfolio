@@ -1,6 +1,6 @@
 (() => {
     var __webpack_modules__ = {
-        144: function(module) {
+        918: function(module) {
             !function(e, t) {
                 true ? module.exports = t() : 0;
             }(0, (function() {
@@ -4273,7 +4273,7 @@
         window.addEventListener("load", (function(e) {
             initSliders();
         }));
-        var lazyload_min = __webpack_require__(144);
+        var lazyload_min = __webpack_require__(918);
         new lazyload_min({
             elements_selector: "[data-src],[data-srcset]",
             class_loaded: "_lazy-loaded",
