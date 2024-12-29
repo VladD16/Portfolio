@@ -225,11 +225,11 @@ h6 {
   width: var(--star-width);
   height: var(--star-height);
   position: relative;
-  background: url(/img/icons/star.svg) 0 0/var(--star-width) no-repeat;
+  background: url(../img/icons/star.svg) 0 0/var(--star-width) no-repeat;
   transition: all .3s
 }
 .rating__item--active {
-  background: url(/img/icons/star-active.svg) 0 0/var(--star-width) no-repeat
+  background: url(../img/icons/star-active.svg) 0 0/var(--star-width) no-repeat
 }
 .rating__item span {
   position: absolute;
@@ -237,7 +237,7 @@ h6 {
   left: 0;
   width: 0%;
   height: var(--star-height);
-  background: url(/img/icons/star-active.svg) 0 0/var(--star-width) no-repeat
+  background: url(../img/icons/star-active.svg) 0 0/var(--star-width) no-repeat
 }
 .rating__item:not(:last-child)::after {
   content: "";
@@ -1631,10 +1631,10 @@ h6 {
 }
 @media (any-hover:hover) {
   [data-rating=set] .rating__items:hover .rating__item {
-    background: url(/img/icons/star-active.svg) 0 0/var(--star-width) no-repeat
+    background: url(../img/icons/star-active.svg) 0 0/var(--star-width) no-repeat
   }
   [data-rating=set] .rating__item:hover~.rating__item {
-    background: url(/img/icons/star.svg) 0 0/var(--star-width) no-repeat
+    background: url(../img/icons/star.svg) 0 0/var(--star-width) no-repeat
   }
   [data-rating=set] .rating__item:hover~.rating__item span {
     display: none
