@@ -479,6 +479,32 @@ h6 {
 .reviews-item>*:last-child {
   margin-bottom: 0
 }
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  -webkit-column-gap: .875rem;
+  -moz-column-gap: .875rem;
+  column-gap: .875rem;
+  row-gap: .5rem;
+  flex-wrap: wrap
+}
+.breadcrumbs__link {
+  color: rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: .5rem;
+  transition: color .3s
+}
+.breadcrumbs__link::before {
+  font-size: .375rem;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s,-webkit-transform .3s;
+  will-change: transform
+}
 .header {
   position: fixed;
   z-index: 50;
@@ -528,7 +554,8 @@ h6 {
   transition: padding-block .2s
 }
 ._header-scroll .main-header__container {
-  padding-block: .9375rem
+  padding-block: .9375rem;
+  border-bottom: .0625rem solid rgba(0,0,0,.1)
 }
 .main-header__logo {
   position: relative;
@@ -566,8 +593,6 @@ h6 {
 .menu__title::before {
   order: 2;
   font-size: .40625rem;
-  -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg);
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s,-webkit-transform .3s
@@ -583,8 +608,8 @@ h6 {
   transition: width .3s
 }
 .menu__title.list-open::before {
-  -webkit-transform: rotate(0);
-  transform: rotate(0)
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg)
 }
 .menu__title.list-open+.menu__sub-list {
   opacity: 1;
@@ -1035,6 +1060,16 @@ h6 {
 .reviews__swiper-button-prev.swiper-button-disabled {
   opacity: .4;
   cursor: default
+}
+.category>*:last-child {
+  -webkit-padding-after: 12.5rem;
+  padding-block-end: 12.5rem
+}
+.category__breadcrumbs {
+  -webkit-padding-before: calc(var(--header-height) + 1.5rem);
+  padding-block-start: calc(var(--header-height) + 1.5rem);
+  -webkit-padding-after: 1.5rem;
+  padding-block-end: 1.5rem
 }
 .swiper {
   overflow: hidden
@@ -1652,6 +1687,13 @@ h6 {
   }
   .item-prod__title:hover {
     color: #3357cd
+  }
+  .breadcrumbs__link:hover {
+    color: #000
+  }
+  .breadcrumbs__link:hover::before {
+    -webkit-transform: translateX(15%) scale(1.2) rotate(-90deg);
+    transform: translateX(15%) scale(1.2) rotate(-90deg)
   }
   .banner-header__text a:hover {
     text-decoration: none

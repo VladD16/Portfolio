@@ -3539,6 +3539,11 @@
                 },
                 992: {
                     slidesPerView: 3,
+                    spaceBetween: 20,
+                    autoHeight: true
+                },
+                1270: {
+                    slidesPerView: 3,
                     spaceBetween: 20
                 }
             },
