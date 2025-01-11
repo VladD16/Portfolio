@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250109103408">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250111140614">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,6 +87,73 @@
 						</li>
 						<li class="breadcrumbs__item">Casual</li>
 					</ul>
+				</div>
+			</div>
+			<div class="category__body body-category">
+				<div class="body-category__container">
+					<aside class="body-category__filter filter-category">
+						<div class="filter-category__header">
+							<h4 class="filter-category__title _icon-filter">Filters</h4>
+							<button type="button" class="filter-category__close _icon-cross"></button>
+						</div>
+						<div class="filter-category__links filter-links">
+							<a href="#" class="filter-links__link _icon-arrow">T-shirts</a>
+							<a href="#" class="filter-links__link _icon-arrow">Shorts</a>
+							<a href="#" class="filter-links__link _icon-arrow">Shirts</a>
+							<a href="#" class="filter-links__link _icon-arrow">Hoodie</a>
+							<a href="#" class="filter-links__link _icon-arrow">Jeans</a>
+						</div>
+						<form action="#" id="filter-form" data-spollers class="filter-category__form form-category">
+							<details data-open class="form-category__item">
+								<summary class="form-category__title _icon-arrow">Price</summary>
+								<div class="form-category__body">
+									<div class="form-category__content">
+										<div class="form-category__range range" id="range">
+										</div>
+									</div>
+								</div>
+							</details>
+							<details data-open class="form-category__item">
+								<summary class="form-category__title _icon-arrow">Colors</summary>
+								<div class="form-category__body">
+									<div class="form-category__content">
+										<div class="form-category__color color-checkbox">
+											<input id="color_1" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="green" name="color">
+											<label for="color_1" class="color-checkbox__label _icon-checked"></label>
+										</div>
+									</div>
+								</div>
+							</details>
+							<details data-open class="form-category__item">
+								<summary class="form-category__title _icon-arrow">Size</summary>
+								<div class="form-category__body">
+									<div class="form-category__content">
+										<div class="form-category__size size-checkbox">
+											<input id="size_1" data-error="Помилка" class="size-checkbox__input" type="checkbox" value="xx-small" name="size">
+											<label for="size_1" class="size-checkbox__label">
+												<span class="size-checkbox__text">XX-Small</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</details>
+							<details data-open class="form-category__item">
+								<summary class="form-category__title _icon-arrow">Dress Style</summary>
+								<div class="form-category__body">
+									<div class="form-category__content">
+										<div class="form-category__links filter-links">
+											<a href="#" class="filter-links__link _icon-arrow">Casual</a>
+											<a href="#" class="filter-links__link _icon-arrow">Formal</a>
+											<a href="#" class="filter-links__link _icon-arrow">Party</a>
+											<a href="#" class="filter-links__link _icon-arrow">Gym</a>
+										</div>
+									</div>
+								</div>
+							</details>
+							<button class="form-category__button" type="submit">Apply Filter</button>
+						</form>
+					</aside>
+					<section class="body-category__content"></section>
 				</div>
 			</div>
 		</main>
@@ -203,7 +270,7 @@
 				</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250109103408"></script>
+	<script src="js/app.min.js?_v=20250111140614"></script>
 </body>
 
 </html>
