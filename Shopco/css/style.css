@@ -761,6 +761,7 @@ h6 {
   cursor: -webkit-grab;
   cursor: grab;
   top: -7px;
+  right: -10px;
   border: none;
   box-shadow: none
 }
@@ -777,9 +778,6 @@ h6 {
   border: none;
   border-radius: 0;
   background: #fff
-}
-.range.noUi-horizontal .noUi-tooltip::before {
-  content: "$"
 }
 .icon-menu {
   display: none
@@ -1685,7 +1683,8 @@ h6 {
   will-change: transform
 }
 .form-category__item:first-child .form-category__content {
-  padding-block: 1.6875rem
+  padding-block: 1.6875rem;
+  margin-inline: .625rem
 }
 .form-category__content {
   -webkit-padding-before: 1.25rem;
@@ -2515,10 +2514,6 @@ h6 {
   }
   .filter-category__close-button {
     display: block
-  }
-  .form-category__item:first-child .form-category__content {
-    -webkit-padding-end: 1.5625rem;
-    padding-inline-end: 1.5625rem
   }
   .header-categoty__filter-button {
     display: block;
