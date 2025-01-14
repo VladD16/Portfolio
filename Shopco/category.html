@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250112102017">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250114144932">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -94,7 +94,7 @@
 					<aside class="body-category__filter filter-category">
 						<div class="filter-category__header">
 							<h4 class="filter-category__title _icon-filter">Filters</h4>
-							<button type="button" class="filter-category__close _icon-cross"></button>
+							<button type="button" class="filter-category__close-button _icon-cross"></button>
 						</div>
 						<div class="filter-category__links filter-links">
 							<a href="#" class="filter-links__link _icon-arrow">T-shirts</a>
@@ -119,25 +119,65 @@
 									<div class="form-category__content">
 										<div class="form-category__color color-checkbox">
 											<input id="color_1" data-error="Помилка" class="color-checkbox__input" checked type="checkbox" value="green" name="color">
-											<label for="color_1" class="color-checkbox__label _icon-checked"></label>
+											<label for="color_1" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/green.svg" alt="Image">
+												</div>
+											</label>
 											<input id="color_2" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_2" class="color-checkbox__label _icon-checked"></label>
-											<input id="color_3" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_3" class="color-checkbox__label _icon-checked"></label>
-											<input id="color_4" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_4" class="color-checkbox__label _icon-checked"></label>
-											<input id="color_5" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_5" class="color-checkbox__label _icon-checked"></label>
-											<input id="color_6" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_6" class="color-checkbox__label _icon-checked"></label>
-											<input id="color_7" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_7" class="color-checkbox__label _icon-checked"></label>
-											<input id="color_8" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_8" class="color-checkbox__label _icon-checked"></label>
-											<input id="color_9" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_9" class="color-checkbox__label _icon-checked"></label>
-											<input id="color_10" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="red" name="color">
-											<label for="color_10" class="color-checkbox__label _icon-checked"></label>
+											<label for="color_2" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/red.svg" alt="Image">
+												</div>
+											</label>
+											<input id="color_3" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="yellow" name="color">
+											<label for="color_3" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/yellow.svg" alt="Image">
+												</div>
+											</label>
+											<input id="color_4" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="orange" name="color">
+											<label for="color_4" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/orange.svg" alt="Image">
+												</div>
+											</label>
+											<input id="color_5" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="blue" name="color">
+											<label for="color_5" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/blue.svg" alt="Image">
+												</div>
+											</label>
+											<input id="color_6" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="dark-blue" name="color">
+											<label for="color_6" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/dark-blue.svg" alt="Image">
+												</div>
+											</label>
+											<input id="color_7" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="violet" name="color">
+											<label for="color_7" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/violet.svg" alt="Image">
+												</div>
+											</label>
+											<input id="color_8" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="pink" name="color">
+											<label for="color_8" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/pink.svg" alt="Image">
+												</div>
+											</label>
+											<input id="color_9" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="white" name="color">
+											<label for="color_9" class="color-checkbox__label light-color _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/white.svg" alt="Image">
+												</div>
+											</label>
+											<input id="color_10" data-error="Помилка" class="color-checkbox__input" type="checkbox" value="black" name="color">
+											<label for="color_10" class="color-checkbox__label _icon-checked">
+												<div class="color-checkbox__image">
+													<img src="img/colors/black.svg" alt="Image">
+												</div>
+											</label>
 										</div>
 									</div>
 								</div>
@@ -203,7 +243,234 @@
 							<button class="form-category__button" type="submit">Apply Filter</button>
 						</form>
 					</aside>
-					<section class="body-category__content"></section>
+					<section class="body-category__content content-category">
+						<div class="content-category__header header-categoty">
+							<h1 class="header-categoty__title">Casual</h1>
+							<div class="header-categoty__actions">
+								<div class="header-categoty__label">Showing 1-10
+									of 100 Products</div>
+								<div data-da=".content-category, 767.98, 1" class="header-categoty__sort sort-categoty">
+									<div class="sort-categoty__title">Sort by:</div>
+									<select class="sort-categoty__select" name="sort" data-class-modif="form">
+										<option value="1" selected>Most Popular</option>
+										<option value="2">Less Popular</option>
+									</select>
+									<button type="button" class="header-categoty__filter-button _icon-filter"></button>
+								</div>
+							</div>
+						</div>
+						<div class="content-category__main main-category">
+							<div class="main-category__items" style="--star-gap: 5px; --star-width: 18.5px; --star-height: 18.5px;">
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-1.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a href="#" target="_blank" class="item-prod__title">
+											<h4>gradient graphic t-shirt</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="3.5" data-rating-size="4" class="rating__body">
+											</div>
+											<div class="rating__value"><span>/5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<!-- <div class="price__sale">$240</div> -->
+											<div class="price__main">$145</div>
+											<!-- <div class="price__discount">-20%</div> -->
+										</div>
+									</div>
+								</article>
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-2.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a href="#" target="_blank" class="item-prod__title">
+											<h4>polo with tipping details</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="4.5" data-rating-size="5" class="rating__body">
+											</div>
+											<div class="rating__value"><span>/5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<!-- <div class="price__sale">$240</div> -->
+											<div class="price__main">$180</div>
+											<!-- <div class="price__discount">-20%</div> -->
+										</div>
+									</div>
+								</article>
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-3.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a href="#" target="_blank" class="item-prod__title">
+											<h4>black striped t-shirt</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="5" data-rating-size="5" class="rating__body">
+											</div>
+											<div class="rating__value"><span>/5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<div class="price__sale">$120</div>
+											<div class="price__main">$150</div>
+											<div class="price__discount">-30%</div>
+										</div>
+									</div>
+								</article>
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-4.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a href="#" target="_blank" class="item-prod__title">
+											<h4>skinny fit jeans</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="3.5" data-rating-size="4" class="rating__body">
+											</div>
+											<div class="rating__value"><span>5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<div class="price__sale">$240</div>
+											<div class="price__main">$260</div>
+											<div class="price__discount">-20%</div>
+										</div>
+									</div>
+								</article>
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-5.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a href="#" target="_blank" class="item-prod__title">
+											<h4>checkered shirt</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="4.5" data-rating-size="5" class="rating__body">
+											</div>
+											<div class="rating__value"><span>5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<!-- <div class="price__sale">$240</div> -->
+											<div class="price__main">$180</div>
+											<!-- <div class="price__discount">-20%</div> -->
+										</div>
+									</div>
+								</article>
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-6.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a href="#" target="_blank" class="item-prod__title">
+											<h4>sleeve striped t-shirt</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="4.5" data-rating-size="5" class="rating__body">
+											</div>
+											<div class="rating__value"><span>5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<div class="price__sale">$130</div>
+											<div class="price__main">$160</div>
+											<div class="price__discount">-30%</div>
+										</div>
+									</div>
+								</article>
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-7.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a class="item-prod__title" href="#" target="_blank">
+											<h4>vertical striped shirt</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="5" data-rating-size="5" class="rating__body">
+											</div>
+											<div class="rating__value"><span>5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<div class="price__sale">$212</div>
+											<div class="price__main">$232</div>
+											<div class="price__discount">-20%</div>
+										</div>
+									</div>
+								</article>
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-8.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a href="#" target="_blank" class="item-prod__title">
+											<h4>courage graphic t-shirt</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="4" data-rating-size="4" class="rating__body">
+											</div>
+											<div class="rating__value"><span>5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<!-- <div class="price__sale">$240</div> -->
+											<div class="price__main">$145</div>
+											<!-- <div class="price__discount">-20%</div> -->
+										</div>
+									</div>
+								</article>
+								<article class="main-category__item-prod item-prod">
+									<a href="#" target="_blank" class="item-prod__image">
+										<img src="img/casual/image-9.webp" alt="Image">
+									</a>
+									<div class="item-prod__info">
+										<a href="#" target="_blank" class="item-prod__title">
+											<h4>loose fit bermuda shorts</h4>
+										</a>
+										<div class="item-prod__rating rating">
+											<div data-rating data-rating-value="3" data-rating-size="3" class="rating__body">
+											</div>
+											<div class="rating__value"><span>5</span></div>
+										</div>
+										<div class="item-prod__price price">
+											<!-- <div class="price__sale">$240</div> -->
+											<div class="price__main">$80</div>
+											<!-- <div class="price__discount">-20%</div> -->
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="content-category__pages pages-category">
+							<a href="#" class="pages-category__previous _icon-arrow-slider">Previous</a>
+							<ul class="pages-category__list">
+								<li class="pages-category__item">
+									<a href="#" class="pages-category__link _active">1</a>
+								</li>
+								<li class="pages-category__item">
+									<a href="#" class="pages-category__link">2</a>
+								</li>
+								<li class="pages-category__item">
+									<a href="#" class="pages-category__link">3</a>
+								</li>
+								<li class="pages-category__item">
+									<a href="#" class="pages-category__link">...</a>
+								</li>
+								<li class="pages-category__item">
+									<a href="#" class="pages-category__link">8</a>
+								</li>
+								<li class="pages-category__item">
+									<a href="#" class="pages-category__link">9</a>
+								</li>
+								<li class="pages-category__item">
+									<a href="#" class="pages-category__link">10</a>
+								</li>
+							</ul>
+							<a href="#" class="pages-category__next _icon-arrow-slider">Next</a>
+						</div>
+					</section>
 				</div>
 			</div>
 		</main>
@@ -320,7 +587,7 @@
 				</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250112102017"></script>
+	<script src="js/app.min.js?_v=20250114144932"></script>
 </body>
 
 </html>
