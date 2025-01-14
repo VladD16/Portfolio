@@ -2491,7 +2491,7 @@ h6 {
   .body-category__filter {
     position: fixed;
     z-index: 10;
-    top: 8.75rem;
+    top: calc(var(--header-height) + 25px);
     left: -100%;
     width: 20rem;
     block-size: calc(100dvh - var(--filter-top));
@@ -2506,6 +2506,12 @@ h6 {
     left: .9375rem;
     opacity: 1;
     visibility: visible
+  }
+  .filter-category__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem
   }
   .filter-category__close-button {
     display: block
@@ -2627,12 +2633,6 @@ h6 {
   }
   .reviews__arrows {
     justify-content: center
-  }
-  .filter-category__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.25rem
   }
   .content-category__header:not(:last-child) {
     margin-bottom: .625rem
