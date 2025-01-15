@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250114164326">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250115112927">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,12 +35,14 @@
 						<a href="home.html">SHOP.CO</a>
 					</div>
 					<div data-da=".main-header__container, 991.98, 0" class="main-header__menu menu">
-						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<button aria-label="close banner" type="button" class="menu__icon icon-menu"><span></span></button>
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li data-spollers="991.98" class="menu__item">
 									<details class="menu__spoller">
-										<summary type="button" class="menu__title _icon-arrow">Shop</summary>
+										<summary class="menu__title">Shop
+											<button aria-label="open submenu" type="button" class="menu__button _icon-arrow"></button>
+										</summary>
 										<ul class="menu__sub-list">
 											<li class="menu__sub-item">
 												<a href="#" class="menu__sub-link">Some link</a>
@@ -68,12 +70,12 @@
 					</div>
 					<form class="main-header__search search-header">
 						<input class="search-header__input" autocomplete="off" type="text" required name="form[]" data-error="Помилка" placeholder="Search for products...">
-						<button class="search-header__button _icon-search" type="submit"></button>
+						<button aria-label="search" class="search-header__button _icon-search" type="submit"></button>
 					</form>
 					<div class="main-header__actions actions-header">
-						<button class="actions-header__item actions-header__item--search _icon-search" type="button"></button>
-						<button class="actions-header__item actions-header__item--basket _icon-basket" type="button"></button>
-						<button class="actions-header__item actions-header__item--account _icon-account" type="button"></button>
+						<button aria-label="search" class="actions-header__item actions-header__item--search _icon-search" type="button"></button>
+						<button aria-label="basket" class="actions-header__item actions-header__item--basket _icon-basket" type="button"></button>
+						<button aria-label="account" class="actions-header__item actions-header__item--account _icon-account" type="button"></button>
 					</div>
 				</div>
 			</div>
@@ -94,7 +96,7 @@
 					<aside class="body-category__filter filter-category">
 						<div class="filter-category__header">
 							<h4 class="filter-category__title _icon-filter">Filters</h4>
-							<button type="button" class="filter-category__close-button _icon-cross"></button>
+							<button aria-label="close filter" type="button" class="filter-category__close-button _icon-cross"></button>
 						</div>
 						<div class="filter-category__links filter-links">
 							<a href="#" class="filter-links__link _icon-arrow">T-shirts</a>
@@ -255,7 +257,7 @@
 										<option value="1" selected>Most Popular</option>
 										<option value="2">Less Popular</option>
 									</select>
-									<button type="button" class="header-categoty__filter-button _icon-filter"></button>
+									<button aria-label="open filter" type="button" class="header-categoty__filter-button _icon-filter"></button>
 								</div>
 							</div>
 						</div>
@@ -263,7 +265,7 @@
 							<div class="main-category__items" style="--star-gap: 5px; --star-width: 18.5px; --star-height: 18.5px;">
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-1.webp" alt="Image">
+										<img src="img/casual/image-1.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a href="#" target="_blank" class="item-prod__title">
@@ -283,7 +285,7 @@
 								</article>
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-2.webp" alt="Image">
+										<img src="img/casual/image-2.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a href="#" target="_blank" class="item-prod__title">
@@ -303,7 +305,7 @@
 								</article>
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-3.webp" alt="Image">
+										<img src="img/casual/image-3.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a href="#" target="_blank" class="item-prod__title">
@@ -323,7 +325,7 @@
 								</article>
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-4.webp" alt="Image">
+										<img src="img/casual/image-4.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a href="#" target="_blank" class="item-prod__title">
@@ -343,7 +345,7 @@
 								</article>
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-5.webp" alt="Image">
+										<img src="img/casual/image-5.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a href="#" target="_blank" class="item-prod__title">
@@ -363,7 +365,7 @@
 								</article>
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-6.webp" alt="Image">
+										<img src="img/casual/image-6.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a href="#" target="_blank" class="item-prod__title">
@@ -383,7 +385,7 @@
 								</article>
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-7.webp" alt="Image">
+										<img src="img/casual/image-7.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a class="item-prod__title" href="#" target="_blank">
@@ -403,7 +405,7 @@
 								</article>
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-8.webp" alt="Image">
+										<img src="img/casual/image-8.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a href="#" target="_blank" class="item-prod__title">
@@ -423,7 +425,7 @@
 								</article>
 								<article class="main-category__item-prod item-prod">
 									<a href="#" target="_blank" class="item-prod__image">
-										<img src="img/casual/image-9.webp" alt="Image">
+										<img src="img/casual/image-9.webp" alt="Product Image">
 									</a>
 									<div class="item-prod__info">
 										<a href="#" target="_blank" class="item-prod__title">
@@ -494,13 +496,13 @@
 							</p>
 						</div>
 						<div class="content-footer__social social-footer">
-							<a href="#" target="_blank" class="social-footer__item social-footer__item--twitter _icon-s-twitter">
+							<a aria-label="twitter" href="#" target="_blank" class="social-footer__item social-footer__item--twitter _icon-s-twitter">
 							</a>
-							<a href="#" target="_blank" class="social-footer__item social-footer__item--facebook _icon-s-facebook">
+							<a aria-label="facebook" href="#" target="_blank" class="social-footer__item social-footer__item--facebook _icon-s-facebook">
 							</a>
-							<a href="#" target="_blank" class="social-footer__item social-footer__item--instagram _icon-s-instagram">
+							<a aria-label="instagram" href="#" target="_blank" class="social-footer__item social-footer__item--instagram _icon-s-instagram">
 							</a>
-							<a href="#" target="_blank" class="social-footer__item social-footer__item--git _icon-s-git">
+							<a aria-label="github" href="#" target="_blank" class="social-footer__item social-footer__item--git _icon-s-git">
 							</a>
 						</div>
 					</div>
@@ -587,7 +589,7 @@
 				</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250114164326"></script>
+	<script src="js/app.min.js?_v=20250115112927"></script>
 </body>
 
 </html>

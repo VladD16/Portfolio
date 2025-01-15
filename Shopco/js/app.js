@@ -5815,9 +5815,12 @@
                 if (document.querySelector(".menu__title")) {
                     const menuTitles = document.querySelectorAll(".menu__title");
                     menuTitles.forEach((title => {
-                        if (title !== targetEl) title.classList.remove("list-open");
+                        if (title !== targetEl.closest(".menu__title")) title.classList.remove("list-open");
                     }));
-                    if (targetEl.classList.contains("menu__title")) targetEl.classList.toggle("list-open");
+                    if (targetEl.closest(".menu__title")) {
+                        let title = targetEl.closest(".menu__title");
+                        title.classList.toggle("list-open");
+                    }
                 }
                 if (document.querySelector(".header__banner")) {
                     const banner = document.querySelector(".header__banner");
