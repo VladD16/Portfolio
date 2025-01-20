@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250119160607">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250120161715">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -192,13 +192,13 @@
 							</div>
 							<div class="form-about__line">
 								<div data-quantity class="form-about__quantity quantity">
-									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+									<button aria-label="minus" data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
 									<div class="quantity__input">
 										<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
 									</div>
-									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+									<button aria-label="plus" data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
 								</div>
-								<button type="submit" class="form-about__button">Add to Cart</button>
+								<button type="submit" class="form-about__button button">Add to Cart</button>
 							</div>
 						</form>
 					</div>
@@ -222,14 +222,14 @@
 										<span class="header-reviews__quantity">(451)</span>
 									</h3>
 									<div data-da=".reviews-tab, 767.98, 1" class="header-reviews__actions">
-										<button type="button" class="header-reviews__button-filter _icon-filter"></button>
+										<button aria-label="filter" type="button" class="header-reviews__button-filter _icon-filter"></button>
 										<div class="header-reviews__sort">
 											<select class="header-reviews__select select" name="sort" data-class-modif="form">
 												<option value="1" selected>Latest</option>
 												<option value="2">Oldest</option>
 											</select>
 										</div>
-										<button data-da=".header-reviews, 767.98, 1" type="button" class="header-reviews__button-write">Write a
+										<button data-da=".header-reviews, 767.98, 1" type="button" class="header-reviews__button-write button">Write a
 											Review</button>
 									</div>
 								</div>
@@ -238,7 +238,7 @@
 										<div class="reviews-item__header">
 											<div data-rating data-rating-value="4.5" data-rating-size="5" class="reviews-item__rating rating">
 											</div>
-											<button type="button" class="reviews-item__button _icon-r-info"></button>
+											<button aria-label="review info" type="button" class="reviews-item__button _icon-r-info"></button>
 										</div>
 										<h6 class="reviews-item__name _icon-checked">Samantha D.</h6>
 										<div class="reviews-item__text">
@@ -256,7 +256,7 @@
 										<div class="reviews-item__header">
 											<div data-rating data-rating-value="4" data-rating-size="4" class="reviews-item__rating rating">
 											</div>
-											<button type="button" class="reviews-item__button _icon-r-info"></button>
+											<button aria-label="review info" type="button" class="reviews-item__button _icon-r-info"></button>
 										</div>
 										<h6 class="reviews-item__name _icon-checked">Alex M.</h6>
 										<div class="reviews-item__text">
@@ -275,7 +275,7 @@
 										<div class="reviews-item__header">
 											<div data-rating data-rating-value="3.5" data-rating-size="4" class="reviews-item__rating rating">
 											</div>
-											<button type="button" class="reviews-item__button _icon-r-info"></button>
+											<button aria-label="review info" type="button" class="reviews-item__button _icon-r-info"></button>
 										</div>
 										<h6 class="reviews-item__name _icon-checked">Ethan R.</h6>
 										<div class="reviews-item__text">
@@ -293,7 +293,7 @@
 										<div class="reviews-item__header">
 											<div data-rating data-rating-value="4" data-rating-size="4" class="reviews-item__rating rating">
 											</div>
-											<button type="button" class="reviews-item__button _icon-r-info"></button>
+											<button aria-label="review info" type="button" class="reviews-item__button _icon-r-info"></button>
 										</div>
 										<h6 class="reviews-item__name _icon-checked">Olivia P.</h6>
 										<div class="reviews-item__text">
@@ -312,7 +312,7 @@
 										<div class="reviews-item__header">
 											<div data-rating data-rating-value="4" data-rating-size="4" class="reviews-item__rating rating">
 											</div>
-											<button type="button" class="reviews-item__button _icon-r-info"></button>
+											<button aria-label="review info" type="button" class="reviews-item__button _icon-r-info"></button>
 										</div>
 										<h6 class="reviews-item__name _icon-checked">Liam K.</h6>
 										<div class="reviews-item__text">
@@ -331,7 +331,7 @@
 										<div class="reviews-item__header">
 											<div data-rating data-rating-value="4.5" data-rating-size="5" class="reviews-item__rating rating">
 											</div>
-											<button type="button" class="reviews-item__button _icon-r-info"></button>
+											<button aria-label="review info" type="button" class="reviews-item__button _icon-r-info"></button>
 										</div>
 										<h6 class="reviews-item__name _icon-checked">Ava H.</h6>
 										<div class="reviews-item__text">
@@ -347,7 +347,7 @@
 									</article>
 								</div>
 								<div class="reviews-tab__button-more">
-									<button type="button">Load More Reviews</button>
+									<button class="button button--white" type="button">Load More Reviews</button>
 								</div>
 							</section>
 							<div class="tabs__body">
@@ -357,6 +357,93 @@
 					</div>
 				</div>
 			</div>
+			<section class="product__also also-product">
+				<div class="also-product__container">
+					<h2 class="also-product__title title title--center">You might also like</h2>
+					<div class="also-product__items" style="--star-gap: 5px; --star-width: 18.5px; --star-height: 18.5px;">
+						<article class="main-category__item-prod item-prod">
+							<a href="#" target="_blank" class="item-prod__image">
+								<img src="img/casual/image-1.webp" alt="Product Image">
+							</a>
+							<div class="item-prod__info">
+								<a href="#" target="_blank" class="item-prod__title">
+									<h4>gradient graphic t-shirt</h4>
+								</a>
+								<div class="item-prod__rating rating">
+									<div data-rating data-rating-value="3.5" data-rating-size="4" class="rating__body">
+									</div>
+									<div class="rating__value"><span>/5</span></div>
+								</div>
+								<div class="item-prod__price price">
+									<!-- <div class="price__sale">$240</div> -->
+									<div class="price__main">$145</div>
+									<!-- <div class="price__discount">-20%</div> -->
+								</div>
+							</div>
+						</article>
+						<article class="main-category__item-prod item-prod">
+							<a href="#" target="_blank" class="item-prod__image">
+								<img src="img/casual/image-2.webp" alt="Product Image">
+							</a>
+							<div class="item-prod__info">
+								<a href="#" target="_blank" class="item-prod__title">
+									<h4>polo with tipping details</h4>
+								</a>
+								<div class="item-prod__rating rating">
+									<div data-rating data-rating-value="4.5" data-rating-size="5" class="rating__body">
+									</div>
+									<div class="rating__value"><span>/5</span></div>
+								</div>
+								<div class="item-prod__price price">
+									<!-- <div class="price__sale">$240</div> -->
+									<div class="price__main">$180</div>
+									<!-- <div class="price__discount">-20%</div> -->
+								</div>
+							</div>
+						</article>
+						<article class="main-category__item-prod item-prod">
+							<a href="#" target="_blank" class="item-prod__image">
+								<img src="img/casual/image-3.webp" alt="Product Image">
+							</a>
+							<div class="item-prod__info">
+								<a href="#" target="_blank" class="item-prod__title">
+									<h4>black striped t-shirt</h4>
+								</a>
+								<div class="item-prod__rating rating">
+									<div data-rating data-rating-value="5" data-rating-size="5" class="rating__body">
+									</div>
+									<div class="rating__value"><span>/5</span></div>
+								</div>
+								<div class="item-prod__price price">
+									<div class="price__sale">$120</div>
+									<div class="price__main">$150</div>
+									<div class="price__discount">-30%</div>
+								</div>
+							</div>
+						</article>
+						<article class="main-category__item-prod item-prod">
+							<a href="#" target="_blank" class="item-prod__image">
+								<img src="img/casual/image-6.webp" alt="Product Image">
+							</a>
+							<div class="item-prod__info">
+								<a href="#" target="_blank" class="item-prod__title">
+									<h4>sleeve striped t-shirt</h4>
+								</a>
+								<div class="item-prod__rating rating">
+									<div data-rating data-rating-value="4.5" data-rating-size="5" class="rating__body">
+									</div>
+									<div class="rating__value"><span>5</span></div>
+								</div>
+								<div class="item-prod__price price">
+									<div class="price__sale">$130</div>
+									<div class="price__main">$160</div>
+									<div class="price__discount">-30%</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -471,7 +558,7 @@
 				</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250119160607"></script>
+	<script src="js/app.min.js?_v=20250120161715"></script>
 </body>
 
 </html>

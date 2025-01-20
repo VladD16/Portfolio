@@ -420,6 +420,10 @@ h6 {
 .sort-categoty .select__option._select-selected {
   background-color: #3357cd
 }
+.sort-categoty .select__option:focus-visible {
+  outline: 0;
+  background-color: #3357cd
+}
 .sort-categoty .select__row {
   display: inline-flex;
   align-items: center
@@ -460,7 +464,8 @@ h6 {
   display: flex;
   min-width: 0;
   align-items: center;
-  padding: .71875rem 1.25rem;
+  padding-inline: 1.25rem;
+  height: 3rem;
   gap: .5rem;
   background-color: #f0f0f0;
   border-radius: 3.875rem;
@@ -525,6 +530,10 @@ h6 {
   transition: background-color .3s
 }
 .reviews-tab .select__option._select-selected {
+  background-color: #3357cd
+}
+.reviews-tab .select__option:focus-visible {
+  outline: 0;
   background-color: #3357cd
 }
 .reviews-tab .select__row {
@@ -932,6 +941,9 @@ h6 {
   border: none;
   box-shadow: none
 }
+.range.noUi-horizontal .noUi-handle:focus-visible {
+  outline: .125rem solid #3357cd
+}
 .noUi-horizontal .noUi-handle::after,
 .noUi-horizontal .noUi-handle::before {
   display: none
@@ -941,7 +953,7 @@ h6 {
   font-family: Satoshi;
   font-size: 14px;
   font-weight: 500;
-  bottom: -120%;
+  bottom: -130%;
   border: none;
   border-radius: 0;
   background: #fff
@@ -1134,11 +1146,23 @@ h6 {
   padding: .9375rem 1.25rem;
   transition: background-color .3s
 }
+.button:focus-visible {
+  outline: 0;
+  background-color: #3357cd
+}
+.button--small {
+  font-size: .875rem
+}
 .button--white {
   color: #000;
   background-color: #fff;
   border: .125rem solid rgba(0,0,0,.1);
   transition: color .3s,background-color .3s
+}
+.button--white:focus-visible {
+  outline: 0;
+  color: #fff;
+  background-color: #3357cd
 }
 .item-prod {
   display: grid;
@@ -1950,16 +1974,6 @@ h6 {
   -webkit-padding-before: 1.25rem;
   padding-block-start: 1.25rem
 }
-.form-category__button {
-  font-size: .875rem;
-  font-weight: 500;
-  border-radius: 3.875rem;
-  background: #000;
-  color: #fff;
-  padding-block: 1rem;
-  padding-inline: 1.5625rem;
-  transition: background-color .3s
-}
 .content-category__header:not(:last-child) {
   margin-bottom: 1rem
 }
@@ -2144,15 +2158,8 @@ h6 {
   margin-bottom: 1rem
 }
 .form-about__button {
-  color: #fff;
-  font-weight: 500;
-  padding: .9375rem 1.25rem;
-  height: 3.25rem;
-  text-align: center;
-  background-color: #000;
-  border-radius: 3.875rem;
   width: 100%;
-  transition: background-color .3s
+  height: 3.25rem
 }
 .reviews-tab__header:not(:last-child) {
   margin-bottom: 1.5rem
@@ -2168,16 +2175,6 @@ h6 {
 .reviews-tab__button-more {
   display: flex;
   justify-content: center
-}
-.reviews-tab__button-more button {
-  padding: 1rem 3.375rem;
-  border-radius: 3.875rem;
-  border: .0625rem solid rgba(0,0,0,.1);
-  min-height: 3.25rem;
-  text-align: center;
-  color: #000;
-  font-weight: 500;
-  transition: color .3s,background-color .3s
 }
 .header-reviews {
   display: flex;
@@ -2215,11 +2212,15 @@ h6 {
 }
 .header-reviews__button-write {
   min-width: 10.375rem;
-  padding: 1rem 1.25rem;
-  border-radius: 3.875rem;
-  background-color: #000;
-  color: #fff;
-  transition: background-color .3s
+  height: 3rem
+}
+.also-product__items {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+  row-gap: 1.875rem
 }
 .noUi-target,
 .noUi-target * {
@@ -2595,6 +2596,9 @@ h6 {
   .product__tabs:not(:last-child) {
     margin-bottom: 4rem
   }
+  .also-product__title:not(:last-child) {
+    margin-bottom: 3.4375rem
+  }
 }
 @media (min-width:82.5em) {
   .hero__image {
@@ -2752,12 +2756,18 @@ h6 {
   .product__tabs:not(:last-child) {
     margin-bottom: 2.5rem
   }
+  .also-product__title:not(:last-child) {
+    margin-bottom: 2.1875rem
+  }
 }
 @media (max-width:71.875em) {
   .new__items {
     grid-template-columns: repeat(3,1fr)
   }
   .top__items {
+    grid-template-columns: repeat(3,1fr)
+  }
+  .also-product__items {
     grid-template-columns: repeat(3,1fr)
   }
 }
@@ -3038,7 +3048,7 @@ h6 {
 }
 @media (max-width:47.99875em) {
   .reviews-tab .select__value {
-    padding: .59375rem 1.25rem
+    height: 2.75rem
   }
   .tabs__title {
     font-size: 1.125rem;
@@ -3106,13 +3116,19 @@ h6 {
     margin-bottom: 2.1875rem
   }
   .new__items {
-    grid-template-columns: repeat(2,1fr)
+    grid-template-columns: repeat(2,1fr);
+    -webkit-column-gap: .9375rem;
+    -moz-column-gap: .9375rem;
+    column-gap: .9375rem
   }
   .top__title:not(:last-child) {
     margin-bottom: 2.1875rem
   }
   .top__items {
-    grid-template-columns: repeat(2,1fr)
+    grid-template-columns: repeat(2,1fr);
+    -webkit-column-gap: .9375rem;
+    -moz-column-gap: .9375rem;
+    column-gap: .9375rem
   }
   .style__wrapper {
     padding-inline: .9375rem
@@ -3206,7 +3222,14 @@ h6 {
     font-size: 1rem
   }
   .header-reviews__button-write {
-    padding: .875rem 1rem
+    height: 2.75rem;
+    padding-block: .3125rem
+  }
+  .also-product__items {
+    grid-template-columns: repeat(2,1fr);
+    -webkit-column-gap: .9375rem;
+    -moz-column-gap: .9375rem;
+    column-gap: .9375rem
   }
 }
 @media (max-width:37.49875em) {
@@ -3280,6 +3303,12 @@ h6 {
     font-size: .75rem
   }
   .main-category__items {
+    grid-template-columns: 1fr
+  }
+  .form-about__button {
+    height: 2.875rem
+  }
+  .also-product__items {
     grid-template-columns: 1fr
   }
 }
@@ -3370,6 +3399,9 @@ h6 {
   }
   .product__tabs:not(:last-child) {
     margin-bottom: clamp(2.5rem ,1.9947368421rem + 2.5263157895vw ,4rem)
+  }
+  .also-product__title:not(:last-child) {
+    margin-bottom: clamp(2.1875rem ,1.7664473684rem + 2.1052631579vw ,3.4375rem)
   }
 }
 @media (min-width:48em)and (max-width:79.375em) {
@@ -3495,9 +3527,6 @@ h6 {
     -webkit-transform: translateX(15%) scale(1.2) rotate(-90deg);
     transform: translateX(15%) scale(1.2) rotate(-90deg)
   }
-  .form-category__button:hover {
-    background-color: #3357cd
-  }
   .pages-category__previous:hover {
     background-color: #f0f0f0
   }
@@ -3518,17 +3547,7 @@ h6 {
   .preview-slider__swiper-slide:hover::before {
     border-color: #3357cd
   }
-  .form-about__button:hover {
-    background-color: #3357cd
-  }
-  .reviews-tab__button-more button:hover {
-    background-color: #3357cd;
-    color: #fff
-  }
   .header-reviews__button-filter:hover {
     background-color: #dedede
-  }
-  .header-reviews__button-write:hover {
-    background-color: #3357cd
   }
 }
