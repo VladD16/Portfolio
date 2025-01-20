@@ -574,6 +574,7 @@ body {
     object-fit: cover;
 
     transition: transform 0.5s;
+    will-change: transform;
   }
 
   // .item-facilities__label
