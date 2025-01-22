@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250121163701">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250122113936">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +69,7 @@
 						</nav>
 					</div>
 					<form class="main-header__search search-header">
-						<input class="search-header__input" autocomplete="off" type="text" required name="form[]" data-error="Помилка" placeholder="Search for products...">
+						<input class="search-header__input" autocomplete="off" type="text" required name="search" data-error="Помилка" placeholder="Search for products...">
 						<button aria-label="search" class="search-header__button _icon-search" type="submit"></button>
 					</form>
 					<div class="main-header__actions actions-header">
@@ -105,7 +105,7 @@
 										<a href="#" class="item-cart__title">
 											<h4>Gradient Graphic T-shirt</h4>
 										</a>
-										<button type="button" class="item-cart__button-delete _icon-delete"></button>
+										<button aria-label="delete" type="button" class="item-cart__button-delete _icon-delete"></button>
 									</div>
 									<div class="item-cart__size">Size: <span>Large</span></div>
 									<div class="item-cart__color">Color: <span>White</span></div>
@@ -118,7 +118,7 @@
 										<div data-quantity class="item-cart__quantity quantity">
 											<button aria-label="minus" data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
 											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												<input data-quantity-value autocomplete="off" type="text" name="productQuantity" value="1">
 											</div>
 											<button aria-label="plus" data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
 										</div>
@@ -134,7 +134,7 @@
 										<a href="#" class="item-cart__title">
 											<h4>Black Striped T-shirt</h4>
 										</a>
-										<button type="button" class="item-cart__button-delete _icon-delete"></button>
+										<button aria-label="delete" type="button" class="item-cart__button-delete _icon-delete"></button>
 									</div>
 									<div class="item-cart__size">Size: <span>Medium</span></div>
 									<div class="item-cart__color">Color: <span>White</span></div>
@@ -147,7 +147,7 @@
 										<div data-quantity class="item-cart__quantity quantity">
 											<button aria-label="minus" data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
 											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												<input data-quantity-value autocomplete="off" type="text" name="productQuantity" value="1">
 											</div>
 											<button aria-label="plus" data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
 										</div>
@@ -163,7 +163,7 @@
 										<a href="#" class="item-cart__title">
 											<h4>SKINNY FIT JEANS</h4>
 										</a>
-										<button type="button" class="item-cart__button-delete _icon-delete"></button>
+										<button aria-label="delete" type="button" class="item-cart__button-delete _icon-delete"></button>
 									</div>
 									<div class="item-cart__size">Size: <span>Large</span></div>
 									<div class="item-cart__color">Color: <span>Blue</span></div>
@@ -176,7 +176,7 @@
 										<div data-quantity class="item-cart__quantity quantity">
 											<button aria-label="minus" data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
 											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+												<input data-quantity-value autocomplete="off" type="text" name="productQuantity" value="1">
 											</div>
 											<button aria-label="plus" data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
 										</div>
@@ -226,7 +226,7 @@
 						<h2>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h2>
 					</div>
 					<form class="top-footer__form form-footer">
-						<input class="form-footer__input" autocomplete="off" required type="email" name="form[]" data-error="Помилка" placeholder="Enter your email address">
+						<input class="form-footer__input" autocomplete="off" required type="email" name="userEmail" data-error="Помилка" placeholder="Enter your email address">
 						<button type="submit" class="form-footer__button button button--white">Subscribe to Newsletter</button>
 					</form>
 				</div>
@@ -332,7 +332,7 @@
 				</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250121163701"></script>
+	<script src="js/app.min.js?_v=20250122113936"></script>
 </body>
 
 </html>
