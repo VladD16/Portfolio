@@ -1976,8 +1976,8 @@ h6 {
   transition: transform .3s;
   transition: transform .3s,-webkit-transform .3s;
   will-change: transform;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg)
+  -webkit-transform: rotate(180deg) translateY(5%);
+  transform: rotate(180deg) translateY(5%)
 }
 .reviews__swiper-button-next.swiper-button-disabled,
 .reviews__swiper-button-prev.swiper-button-disabled {
