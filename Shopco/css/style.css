@@ -1040,20 +1040,20 @@ h6 {
   transition: transform .5s ease 0s,-webkit-transform .5s ease 0s
 }
 ._spoller-init .menu-footer__title::before {
-  -webkit-transform: translate(-75%,-50%) rotate(40deg);
-  transform: translate(-75%,-50%) rotate(40deg)
+  -webkit-transform: translate(-75%,-50%) rotate(35deg);
+  transform: translate(-75%,-50%) rotate(35deg)
 }
 ._spoller-init .menu-footer__title::after {
-  -webkit-transform: translate(0,-50%) rotate(-40deg);
-  transform: translate(0,-50%) rotate(-40deg)
+  -webkit-transform: translate(0,-50%) rotate(-35deg);
+  transform: translate(0,-50%) rotate(-35deg)
 }
 ._spoller-init .menu-footer__title._spoller-active::before {
-  -webkit-transform: translateX(-75%) rotate(-40deg);
-  transform: translateX(-75%) rotate(-40deg)
+  -webkit-transform: translateX(-75%) rotate(-35deg);
+  transform: translateX(-75%) rotate(-35deg)
 }
 ._spoller-init .menu-footer__title._spoller-active::after {
-  -webkit-transform: rotate(40deg);
-  transform: rotate(40deg)
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg)
 }
 .form-category {
   display: grid
@@ -2298,9 +2298,14 @@ h6 {
   gap: 1.25rem
 }
 .body-cart__items {
+  align-self: flex-start;
   border-radius: 1.25rem;
   border: .0625rem solid rgba(0,0,0,.1);
   padding: 1.25rem 1.5rem
+}
+.no-products-message {
+  text-align: center;
+  font-size: 1.125rem
 }
 .item-cart {
   display: flex;

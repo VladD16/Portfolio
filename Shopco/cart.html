@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250122113936">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250123094848">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -94,8 +94,8 @@
 			<section class="cart__body body-cart">
 				<div class="body-cart__container">
 					<h1 class="body-cart__title title title--small">Your cart</h1>
-					<div class="body-cart__content">
-						<div class="body-cart__items">
+					<form action="#" class="body-cart__content">
+						<div id="cart-items" class="body-cart__items">
 							<article class="body-cart__item item-cart">
 								<a href="#" target="_blank" class="item-cart__image">
 									<img src="img/casual/image-1.webp" alt="Image">
@@ -142,7 +142,7 @@
 										<div class="item-cart__price price">
 											<div class="price__sale">$120</div>
 											<div class="price__main">$150</div>
-											<div class="price__discount">-30%</div>
+											<div class="price__discount">-20%</div>
 										</div>
 										<div data-quantity class="item-cart__quantity quantity">
 											<button aria-label="minus" data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
@@ -184,38 +184,37 @@
 								</div>
 							</article>
 						</div>
-						<form class="body-cart__summary summary-cart">
+						<div class="body-cart__summary summary-cart">
 							<h4 class="summary-cart__title">Order Summary</h4>
 							<div class="summary-cart__calculations calculations-summary">
 								<div class="calculations-summary__subtotal">
 									<div class="calculations-summary__title">Subtotal</div>
-									<div class="calculations-summary__sum">$565</div>
+									<div id="subtotal" class="calculations-summary__sum">$0</div>
 								</div>
 								<div class="calculations-summary__discount">
-									<div class="calculations-summary__title">Discount <span>(-20%)</span></div>
-									<div class="calculations-summary__sum calculations-summary__sum--discount">-$113
+									<div class="calculations-summary__title">Discount <span id="discount-percent">(-0%)</span></div>
+									<div id="discount" class="calculations-summary__sum calculations-summary__sum--discount">-$0
 									</div>
 								</div>
 								<div class="calculations-summary__delivery">
 									<div class="calculations-summary__title">Delivery Fee</div>
-									<div class="calculations-summary__sum">$15</div>
+									<div id="delivery" class="calculations-summary__sum">$15</div>
 								</div>
 								<div class="calculations-summary__total">
-									<div class="calculations-summary__title calculations-summary__title--total">
-										Total
+									<div class="calculations-summary__title calculations-summary__title--total">Total
 									</div>
-									<div class="calculations-summary__sum calculations-summary__sum--total">$467</div>
+									<div id="total" class="calculations-summary__sum calculations-summary__sum--total">
+										$467</div>
 								</div>
 							</div>
 							<div class="summary-cart__promo promo-summary">
 								<input autocomplete="off" type="text" name="userPromo" data-error="Помилка" placeholder="Add promo code" class="promo-summary__input">
 								<button type="button" class="promo-summary__button button">Apply</button>
 							</div>
-							<button type="submit" class="summary-cart__checkout-button button _icon-arrow-slider">
-								Go to Checkout
-							</button>
-						</form>
-					</div>
+							<button type="submit" class="summary-cart__checkout-button button _icon-arrow-slider">Go to
+								Checkout</button>
+						</div>
+					</form>
 				</div>
 			</section>
 		</main>
@@ -332,7 +331,7 @@
 				</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250122113936"></script>
+	<script src="js/app.min.js?_v=20250123094848"></script>
 </body>
 
 </html>

@@ -6102,9 +6102,98 @@
         }
         const da = new DynamicAdapt("max");
         da.init();
+        class ShoppingCart {
+            constructor() {
+                this.cartItems = document.getElementById("cart-items");
+                this.subtotalElement = document.getElementById("subtotal");
+                this.discountElement = document.getElementById("discount");
+                this.discountPercentElement = document.getElementById("discount-percent");
+                this.deliveryElement = document.getElementById("delivery");
+                this.totalElement = document.getElementById("total");
+                this.noProductsMessage = "There are no products in the cart";
+                if (this.cartItems && this.subtotalElement && this.discountElement && this.discountPercentElement && this.deliveryElement && this.totalElement) {
+                    this.bindEventListeners();
+                    this.updatePrices();
+                } else console.warn("One or more necessary elements are missing on the page.");
+            }
+            bindEventListeners() {
+                if (this.cartItems) {
+                    this.cartItems.addEventListener("click", (event => {
+                        if (event.target.classList.contains("item-cart__button-delete")) {
+                            const cartItem = event.target.closest(".item-cart");
+                            cartItem.remove();
+                            this.updatePrices();
+                        }
+                    }));
+                    this.cartItems.addEventListener("click", (event => {
+                        if (event.target.hasAttribute("data-quantity-plus") || event.target.hasAttribute("data-quantity-minus")) setTimeout((() => {
+                            this.updatePrices();
+                        }), 50);
+                    }));
+                    this.cartItems.addEventListener("keydown", (event => {
+                        if (event.target.hasAttribute("data-quantity-value") && event.key === "Enter") {
+                            event.preventDefault();
+                            this.updatePrices();
+                        }
+                    }));
+                    this.cartItems.addEventListener("focusout", (event => {
+                        if (event.target.hasAttribute("data-quantity-value")) this.updatePrices();
+                    }));
+                }
+            }
+            updatePrices() {
+                if (!this.cartItems || !this.subtotalElement || !this.discountElement || !this.discountPercentElement || !this.deliveryElement || !this.totalElement) {
+                    console.warn("One or more necessary elements are missing during price update.");
+                    return;
+                }
+                let subtotal = 0;
+                let discountTotal = 0;
+                const cartItemElements = this.cartItems.querySelectorAll(".item-cart");
+                const cartIsEmpty = cartItemElements.length === 0;
+                if (cartIsEmpty) {
+                    this.cartItems.innerHTML = `<p class="no-products-message">${this.noProductsMessage}</p>`;
+                    this.subtotalElement.textContent = `$0.00`;
+                    this.discountElement.textContent = `-$0.00`;
+                    this.discountPercentElement.textContent = `(-0.00%)`;
+                    this.deliveryElement.textContent = `$0.00`;
+                    this.totalElement.textContent = `$0.00`;
+                    return;
+                }
+                cartItemElements.forEach((item => {
+                    const priceElement = item.querySelector(".price__main");
+                    const salePriceElement = item.querySelector(".price__sale");
+                    const quantityInput = item.querySelector('input[name="productQuantity"]');
+                    if (!priceElement || !quantityInput) return;
+                    const price = parseFloat(priceElement.getAttribute("data-original-price")) || parseFloat(priceElement.textContent.replace("$", ""));
+                    const quantity = parseInt(quantityInput.value);
+                    const itemTotal = price * quantity;
+                    priceElement.textContent = `$${itemTotal.toFixed(2)}`;
+                    priceElement.setAttribute("data-original-price", price);
+                    subtotal += itemTotal;
+                    if (salePriceElement) {
+                        const salePrice = parseFloat(salePriceElement.getAttribute("data-original-price")) || parseFloat(salePriceElement.textContent.replace("$", ""));
+                        const discount = (price - salePrice) * quantity;
+                        discountTotal += discount;
+                        const saleItemTotal = salePrice * quantity;
+                        salePriceElement.textContent = `$${saleItemTotal.toFixed(2)}`;
+                        salePriceElement.setAttribute("data-original-price", salePrice);
+                    }
+                }));
+                let delivery = parseFloat(this.deliveryElement.textContent.replace("$", ""));
+                if (subtotal === 0) delivery = 0;
+                const total = subtotal - discountTotal + delivery;
+                const discountPercent = discountTotal / subtotal * 100 || 0;
+                this.subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+                this.discountElement.textContent = `-$${discountTotal.toFixed(2)}`;
+                this.discountPercentElement.textContent = `(-${discountPercent.toFixed(2)}%)`;
+                this.deliveryElement.textContent = `$${delivery.toFixed(2)}`;
+                this.totalElement.textContent = `$${total.toFixed(2)}`;
+            }
+        }
         document.addEventListener("DOMContentLoaded", (() => {
+            new ShoppingCart;
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            checkboxes.forEach((checkbox => {
+            if (checkboxes) checkboxes.forEach((checkbox => {
                 checkbox.addEventListener("keydown", (event => {
                     if (event.key === "Enter") {
                         event.preventDefault();
