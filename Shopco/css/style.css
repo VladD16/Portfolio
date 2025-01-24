@@ -3905,8 +3905,8 @@ h6 {
     transform: scale(1.2)
   }
   .reviews__swiper-button-next:not(.swiper-button-disabled):hover {
-    -webkit-transform: scale(1.2) rotate(180deg);
-    transform: scale(1.2) rotate(180deg)
+    -webkit-transform: scale(1.2) rotate(180deg) translateY(5%);
+    transform: scale(1.2) rotate(180deg) translateY(5%)
   }
   .filter-links__link:hover {
     color: #000
