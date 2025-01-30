@@ -231,22 +231,8 @@ body {
   position: relative;
   background-color: #f8f8f8
 }
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 4;
-  background-color: rgba(27,26,26,.8);
-  backdrop-filter: blur(2.5px);
-  opacity: 0;
-  visibility: hidden
-}
-.catalog-open body::before {
-  opacity: 1;
-  visibility: visible
+.menu-open body {
+  overflow: hidden
 }
 .lock body {
   overflow: hidden;
@@ -505,6 +491,64 @@ body::after {
 .bottom-popup__button:not(:last-child) {
   margin-bottom: 1.25rem
 }
+.menu-footer {
+  display: grid;
+  gap: 15px
+}
+.menu-footer__item {
+  font-size: 1.25rem
+}
+.menu-footer__title {
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  border: 1px solid #eee;
+  padding: .625rem .9375rem;
+  border-radius: .3125rem;
+  position: relative;
+  list-style: none
+}
+.menu-footer__title::-webkit-details-marker,
+.menu-footer__title::marker {
+  display: none
+}
+._spoller-init .menu-footer__title {
+  cursor: pointer
+}
+._spoller-init .menu-footer__title::after,
+._spoller-init .menu-footer__title::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  background-color: #000;
+  height: 2px;
+  width: 15px;
+  transition: -webkit-transform .5s ease 0s;
+  transition: transform .5s ease 0s;
+  transition: transform .5s ease 0s,-webkit-transform .5s ease 0s
+}
+._spoller-init .menu-footer__title::before {
+  -webkit-transform: translate(-75%,-50%) rotate(40deg);
+  transform: translate(-75%,-50%) rotate(40deg)
+}
+._spoller-init .menu-footer__title::after {
+  -webkit-transform: translate(0,-50%) rotate(-40deg);
+  transform: translate(0,-50%) rotate(-40deg)
+}
+._spoller-init .menu-footer__title._spoller-active::before {
+  -webkit-transform: translateX(-75%) rotate(-40deg);
+  transform: translateX(-75%) rotate(-40deg)
+}
+._spoller-init .menu-footer__title._spoller-active::after {
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg)
+}
+.menu-footer__body {
+  padding: 1.25rem;
+  border-radius: .3125rem;
+  border: 1px solid #eee
+}
 .ibg {
   width: 100%;
   height: 100%;
@@ -665,6 +709,23 @@ body::after {
   top: 0;
   transition: top .8s ease 0s
 }
+.header::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(27,26,26,.8);
+  backdrop-filter: blur(2.5px);
+  opacity: 0;
+  visibility: hidden
+}
+.catalog-open .header::before {
+  opacity: 1;
+  visibility: visible
+}
 .top-header {
   position: relative;
   z-index: 6;
@@ -705,8 +766,7 @@ body::after {
   will-change: transform
 }
 .lang-header {
-  position: relative;
-  z-index: 10
+  position: relative
 }
 .lang-header__current {
   font-size: 1.1875rem;
@@ -819,6 +879,9 @@ body::after {
   -moz-column-gap: .9375rem;
   column-gap: .9375rem;
   transition: color .3s
+}
+.item-catalog__title._spoller-active {
+  background-color: #ffbc57
 }
 .item-catalog__icon {
   width: 2.5rem;
@@ -1019,7 +1082,7 @@ body::after {
 }
 .actions-header-main {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   display: flex;
   gap: 1.25rem;
   align-items: center
@@ -1251,6 +1314,16 @@ body::after {
     column-gap: 1.5625rem
   }
 }
+@media (max-width:767.98px) {
+  .submenu-catalog {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out
+  }
+  .submenu-catalog.open {
+    max-height: auto
+  }
+}
 @media (max-width:73.75em) {
   .menu__list {
     -webkit-column-gap: 1.25rem;
@@ -1300,14 +1373,14 @@ body::after {
 @media (max-width:61.99875em) {
   .menu__body {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: 100%;
     left: -100%;
     top: 0;
     overflow: auto;
     background-color: #fff;
-    padding: 9.0625rem .9375rem 1.875rem 1.875rem;
+    padding: 4.6875rem .9375rem 1.875rem 1.875rem;
     transition: left .3s
   }
   .menu__body>*:not(:last-child) {
@@ -1317,12 +1390,11 @@ body::after {
     content: "";
     position: fixed;
     width: 100%;
-    height: 7.8125rem;
+    height: 3.4375rem;
     background-color: #f8f8f8;
     left: -100%;
     top: 0;
-    transition: left .3s;
-    z-index: 5
+    transition: left .3s
   }
   .menu-open .menu__body {
     left: 0
@@ -1412,10 +1484,10 @@ body::after {
 }
 @media (max-width:61.99875em)and (max-width:47.99875em) {
   .menu__body {
-    padding: 9.6875rem .9375rem 1.875rem .9375rem
+    padding: 5rem .9375rem 1.875rem .9375rem
   }
   .menu__body::before {
-    height: 8.4375rem
+    height: 4.0625rem
   }
   .icon-menu span,
   .icon-menu::after,
@@ -1458,21 +1530,16 @@ body::after {
     background: #fff;
     box-shadow: 0 -2px 0 0 #e2e2e2 inset
   }
-  .item-catalog._open .item-catalog__title {
-    background-color: #ffbc57
-  }
-  .item-catalog._open .item-catalog__button::before {
-    color: #000
-  }
   .item-catalog__title {
     padding: .625rem .9375rem .625rem .9375rem
   }
   .item-catalog__button {
     width: 2.5rem
   }
-  .item-catalog__button._spoller-active::before {
+  ._spoller-active .item-catalog__button::before {
     -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg)
+    transform: rotate(-180deg);
+    color: #000
   }
   .item-catalog__button::before {
     font-size: .9375rem;
