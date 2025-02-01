@@ -720,7 +720,7 @@
                 document.documentElement.classList.remove("catalog-open");
                 document.documentElement.classList.remove("lock");
             }
-            if (document.querySelector(".contacts-header__button-phone") || document.querySelector(".contacts-header__button-arrow")) if (isTouchScreen) if (targetElement.closest(".contacts-header__button-phone") || targetElement.closest(".contacts-header__button-arrow")) document.documentElement.classList.toggle("contacts-open"); else if (!targetElement.closest(".contacts-header__button-phone") || !targetElement.closest(".contacts-header__button-arrow")) document.documentElement.classList.remove("contacts-open");
+            if (document.querySelector(".contacts-header__button-phone") || document.querySelector(".contacts-header__button-arrow")) if (targetElement.closest(".contacts-header__button-phone") || targetElement.closest(".contacts-header__button-arrow")) document.documentElement.classList.toggle("contacts-open"); else if (!targetElement.closest(".contacts-header__button-phone") || !targetElement.closest(".contacts-header__button-arrow")) document.documentElement.classList.remove("contacts-open");
             if (document.querySelector(".actions-header-main__item--search-button")) if (targetElement.closest(".actions-header-main__item--search-button")) document.documentElement.classList.toggle("search-open"); else if (!targetElement.closest(".actions-header-main__item--search-button") && !targetElement.closest(".search-header")) document.documentElement.classList.remove("search-open");
             if (document.querySelector(".item-catalog__button")) {
                 const catalogItems = document.querySelectorAll(".item-catalog");
