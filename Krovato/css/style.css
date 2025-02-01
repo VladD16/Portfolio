@@ -989,7 +989,7 @@ body::after {
 }
 .contacts-header {
   position: relative;
-  z-index: 6;
+  z-index: 10;
   display: flex;
   gap: .625rem;
   align-items: center
@@ -1014,6 +1014,10 @@ body::after {
   position: relative;
   z-index: 6;
   max-width: 8.5625rem
+}
+.contacts-open .contacts-header__body {
+  opacity: 1;
+  visibility: visible
 }
 .contacts-header__text {
   position: relative;
@@ -1047,7 +1051,8 @@ body::after {
 }
 .contacts-open .contacts-header__items {
   opacity: 1;
-  visibility: visible
+  visibility: visible;
+  pointer-events: all
 }
 .contacts-header__items::before {
   content: "";
@@ -1404,6 +1409,24 @@ body::after {
     visibility: visible;
     border-radius: 0 .5rem .5rem 0;
     opacity: 1
+  }
+}
+@media ((any-hover:hover) and (min-width:62em)) {
+  .contacts-header:hover .contacts-header__items {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all
+  }
+  .contacts-header:hover .contacts-header__button-arrow {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    color: #ffbc57;
+    cursor: default
+  }
+  .contacts-header:hover .contacts-header__button-phone {
+    background-color: #ffbc57;
+    color: #fff;
+    cursor: default
   }
 }
 @media (min-width:62em) {
@@ -1793,10 +1816,6 @@ body::after {
     visibility: hidden;
     transition: opacity .3s,visibility .3s
   }
-  .contacts-open .contacts-header__body {
-    opacity: 1;
-    visibility: visible
-  }
   .actions-header-main__item--search-button {
     display: block;
     position: relative
@@ -2000,21 +2019,9 @@ body::after {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg)
   }
-  .contacts-header:hover .contacts-header__items {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all
-  }
-  .contacts-header:hover .contacts-header__button-arrow {
-    -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-    color: #ffbc57;
-    cursor: default
-  }
-  .contacts-header:hover .contacts-header__button-phone {
+  .contacts-header__button-phone:hover {
     background-color: #ffbc57;
-    color: #fff;
-    cursor: default
+    color: #fff
   }
   .contacts-header__main-phone:hover {
     text-decoration: underline
