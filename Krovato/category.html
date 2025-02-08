@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250207163908">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250208143403">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -722,62 +722,471 @@
 			</section>
 			<div class="category__content content-category">
 				<div class="content-category__container">
-					<aside class="content-category__filter filter-category">
-						<div class="filter-category__header header-filter-category">
-							<div class="header-filter-category__title _icon-filter">Фільтр пошуку</div>
-							<button aria-label="відкрити / закрити фільтр товарів" type="button" class="header-filter-category__button _icon-arrow">
-							</button>
-						</div>
-						<form action="#" data-spollers class="filter-category__body">
-							<details data-open class="filter-category__item item-filter-category">
-								<summary class="item-filter-category__header">
-									<div class="item-filter-category__title">Ціна, грн</div>
-									<div class="item-filter-category__icon">
-										<span class="_icon-arrow"></span>
-										<span class="_icon-cross"></span>
-									</div>
-								</summary>
-								<div class="item-filter-category__body">
-									<div class="item-filter-category__content content-filter-item">
-										<div class="content-filter-item__price filter-price">
-											<div class="filter-price__body">
-												<input name="price-from" class="filter-price__input filter-price__input--from" type="text">
-												<input name="price-to" class="filter-price__input filter-price__input--to" type="text">
-												<button type="button" class="filter-price__button button">Ок</button>
+					<aside data-spollers class="content-category__filter filter-category">
+						<details data-open class="filter-category__wrapper">
+							<summary class="filter-category__header header-filter-category">
+								<div class="header-filter-category__title _icon-filter">Фільтр пошуку</div>
+								<button aria-label="відкрити / закрити фільтр товарів" type="button" class="header-filter-category__button _icon-arrow">
+								</button>
+							</summary>
+							<div class="filter-category__body-wrapper">
+								<form action="#" data-spollers class="filter-category__body">
+									<details data-open class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Ціна, грн</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
 											</div>
-											<div class="filter-price__range" id="range"></div>
+										</summary>
+										<div class="item-filter-category__body">
+											<div class="item-filter-category__content content-filter-item">
+												<div class="content-filter-item__price filter-price">
+													<div class="filter-price__body">
+														<input name="price-from" class="filter-price__input filter-price__input--from" type="text" autocomplete="off">
+														<input name="price-to" class="filter-price__input filter-price__input--to" type="text" autocomplete="off">
+														<button type="button" class="filter-price__button button">Ок</button>
+													</div>
+													<div class="filter-price__range" id="range"></div>
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-							</details>
-							<details data-open class="filter-category__item item-filter-category">
-								<summary class="item-filter-category__header">
-									<div class="item-filter-category__title">Наявність</div>
-									<div class="item-filter-category__icon">
-										<span class="_icon-arrow"></span>
-										<span class="_icon-cross"></span>
-									</div>
-								</summary>
-								<div class="item-filter-category__body">
-									<div class="item-filter-category__content content-filter-item">
-										<ul class="content-filter-item__list">
-											<li class="content-filter-item__item checkbox">
-												<input id="availability_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="in_stock" name="form[]">
-												<label for="availability_1" class="checkbox__label _icon-check">
-													<span class="checkbox__text">В наявності</span>
-												</label>
-											</li>
-											<li class="content-filter-item__item checkbox">
-												<input id="availability_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="to_order" name="form[]">
-												<label for="availability_2" class="checkbox__label _icon-check">
-													<span class="checkbox__text">Під замовлення</span>
-												</label>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</details>
-						</form>
+									</details>
+									<details data-open class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Наявність</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<div class="item-filter-category__content content-filter-item">
+												<ul class="content-filter-item__list">
+													<li class="content-filter-item__item checkbox">
+														<input checked id="availability_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="in_stock" name="form[]">
+														<label for="availability_1" class="checkbox__label _icon-check">
+															<span class="checkbox__text">В наявності</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="availability_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="to_order" name="form[]">
+														<label for="availability_2" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Під замовлення</span>
+														</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</details>
+									<details data-open class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Виробник</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<div data-showmore class="item-filter-category__content content-filter-item">
+												<ul data-showmore-content="350" class="content-filter-item__list">
+													<li class="content-filter-item__item checkbox">
+														<input checked id="manufacturer_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="Corners" name="form[]">
+														<label for="manufacturer_1" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Corners</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="Estella" name="form[]">
+														<label for="manufacturer_2" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Estella</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_3" data-error="Помилка" class="checkbox__input" type="checkbox" value="Green Line" name="form[]">
+														<label for="manufacturer_3" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Green Line</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input checked id="manufacturer_4" data-error="Помилка" class="checkbox__input" type="checkbox" value="Legko" name="form[]">
+														<label for="manufacturer_4" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Legko</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_5" data-error="Помилка" class="checkbox__input" type="checkbox" value="MiroMark" name="form[]">
+														<label for="manufacturer_5" class="checkbox__label _icon-check">
+															<span class="checkbox__text">MiroMark</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_6" data-error="Помилка" class="checkbox__input" type="checkbox" value="Novelty" name="form[]">
+														<label for="manufacturer_6" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Novelty</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_7" data-error="Помилка" class="checkbox__input" type="checkbox" value="Soft-line" name="form[]">
+														<label for="manufacturer_7" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Soft-line</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_8" data-error="Помилка" class="checkbox__input" type="checkbox" value="Corners" name="form[]">
+														<label for="manufacturer_8" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Corners</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_9" data-error="Помилка" class="checkbox__input" type="checkbox" value="Estella" name="form[]">
+														<label for="manufacturer_9" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Estella</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_10" data-error="Помилка" class="checkbox__input" type="checkbox" value="Green Line" name="form[]">
+														<label for="manufacturer_10" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Green Line</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_11" data-error="Помилка" class="checkbox__input" type="checkbox" value="Legko" name="form[]">
+														<label for="manufacturer_11" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Legko</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_12" data-error="Помилка" class="checkbox__input" type="checkbox" value="MiroMark" name="form[]">
+														<label for="manufacturer_12" class="checkbox__label _icon-check">
+															<span class="checkbox__text">MiroMark</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_13" data-error="Помилка" class="checkbox__input" type="checkbox" value="Novelty" name="form[]">
+														<label for="manufacturer_13" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Novelty</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="manufacturer_14" data-error="Помилка" class="checkbox__input" type="checkbox" value="Soft-line" name="form[]">
+														<label for="manufacturer_14" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Soft-line</span>
+														</label>
+													</li>
+												</ul>
+												<button aria-label="Показати або сховати всі варіанти" data-showmore-button="400" type="button" class="content-filter-item__button">
+													<span>Показати всі</span>
+													<span>Приховати всі</span>
+												</button>
+											</div>
+										</div>
+									</details>
+									<details data-open class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Тип ліжка</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<div data-showmore class="item-filter-category__content content-filter-item">
+												<ul data-showmore-content="350" class="content-filter-item__list">
+													<li class="content-filter-item__item checkbox">
+														<input id="bed_type_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="bed_type_1" name="form[]">
+														<label for="bed_type_1" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Без узголов'я</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input checked id="bed_type_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="bed_type_2" name="form[]">
+														<label for="bed_type_2" class="checkbox__label _icon-check">
+															<span class="checkbox__text">З узголів'ям</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="bed_type_3" data-error="Помилка" class="checkbox__input" type="checkbox" value="bed_type_3" name="form[]">
+														<label for="bed_type_3" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Двоярусні</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input checked id="bed_type_4" data-error="Помилка" class="checkbox__input" type="checkbox" value="bed_type_4" name="form[]">
+														<label for="bed_type_4" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Розкладачки</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="bed_type_5" data-error="Помилка" class="checkbox__input" type="checkbox" value="bed_type_5" name="form[]">
+														<label for="bed_type_5" class="checkbox__label _icon-check">
+															<span class="checkbox__text">Шафи</span>
+														</label>
+													</li>
+												</ul>
+												<button aria-label="Показати або сховати всі варіанти" data-showmore-button="400" type="button" class="content-filter-item__button">
+													<span>Показати всі</span>
+													<span>Приховати всі</span>
+												</button>
+											</div>
+										</div>
+									</details>
+									<details data-open class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Розмір спального місця</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<div data-showmore class="item-filter-category__content content-filter-item">
+												<ul data-showmore-content="350" class="content-filter-item__list">
+													<li class="content-filter-item__item checkbox">
+														<input checked id="size_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_1" name="form[]">
+														<label for="size_1" class="checkbox__label _icon-check">
+															<span class="checkbox__text">200x210 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_2" name="form[]">
+														<label for="size_2" class="checkbox__label _icon-check">
+															<span class="checkbox__text">200x200 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_3" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_3" name="form[]">
+														<label for="size_3" class="checkbox__label _icon-check">
+															<span class="checkbox__text">180x200 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_4" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_4" name="form[]">
+														<label for="size_4" class="checkbox__label _icon-check">
+															<span class="checkbox__text">160x200 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_5" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_5" name="form[]">
+														<label for="size_5" class="checkbox__label _icon-check">
+															<span class="checkbox__text">110x190 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input checked id="size_6" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_6" name="form[]">
+														<label for="size_6" class="checkbox__label _icon-check">
+															<span class="checkbox__text">200x210 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_7" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_7" name="form[]">
+														<label for="size_7" class="checkbox__label _icon-check">
+															<span class="checkbox__text">200x200 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_8" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_8" name="form[]">
+														<label for="size_8" class="checkbox__label _icon-check">
+															<span class="checkbox__text">180x200 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_9" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_9" name="form[]">
+														<label for="size_9" class="checkbox__label _icon-check">
+															<span class="checkbox__text">160x200 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_10" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_10" name="form[]">
+														<label for="size_10" class="checkbox__label _icon-check">
+															<span class="checkbox__text">110x190 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_11" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_11" name="form[]">
+														<label for="size_11" class="checkbox__label _icon-check">
+															<span class="checkbox__text">110x190 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_12" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_12" name="form[]">
+														<label for="size_12" class="checkbox__label _icon-check">
+															<span class="checkbox__text">110x190 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_13" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_13" name="form[]">
+														<label for="size_13" class="checkbox__label _icon-check">
+															<span class="checkbox__text">110x190 см</span>
+														</label>
+													</li>
+													<li class="content-filter-item__item checkbox">
+														<input id="size_14" data-error="Помилка" class="checkbox__input" type="checkbox" value="size_14" name="form[]">
+														<label for="size_14" class="checkbox__label _icon-check">
+															<span class="checkbox__text">110x190 см</span>
+														</label>
+													</li>
+												</ul>
+												<button aria-label="Показати або сховати всі варіанти" data-showmore-button="400" type="button" class="content-filter-item__button">
+													<span>Показати всі</span>
+													<span>Приховати всі</span>
+												</button>
+											</div>
+										</div>
+									</details>
+									<details class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Ширина спального місця</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<!-- <div data-showmore
+                                                class="item-filter-category__content content-filter-item">
+                                                <ul data-showmore-content="350" class="content-filter-item__list">
+                                                    <li class="content-filter-item__item checkbox">
+                                                        <input id="bed_type_1" data-error="Помилка"
+                                                            class="checkbox__input" type="checkbox" value="bed_type_1"
+                                                            name="form[]">
+                                                        <label for="bed_type_1" class="checkbox__label _icon-check">
+                                                            <span class="checkbox__text">Без узголов'я</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <button aria-label="Показати або сховати всі варіанти"
+                                                    data-showmore-button="400" type="button"
+                                                    class="content-filter-item__button">
+                                                    <span>Показати всі</span>
+                                                    <span>Приховати всі</span>
+                                                </button>
+                                            </div> -->
+										</div>
+									</details>
+									<details class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Довжина спального місця</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<!-- <div data-showmore
+                                                class="item-filter-category__content content-filter-item">
+                                                <ul data-showmore-content="350" class="content-filter-item__list">
+                                                    <li class="content-filter-item__item checkbox">
+                                                        <input id="bed_type_1" data-error="Помилка"
+                                                            class="checkbox__input" type="checkbox" value="bed_type_1"
+                                                            name="form[]">
+                                                        <label for="bed_type_1" class="checkbox__label _icon-check">
+                                                            <span class="checkbox__text">Без узголов'я</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <button aria-label="Показати або сховати всі варіанти"
+                                                    data-showmore-button="400" type="button"
+                                                    class="content-filter-item__button">
+                                                    <span>Показати всі</span>
+                                                    <span>Приховати всі</span>
+                                                </button>
+                                            </div> -->
+										</div>
+									</details>
+									<details class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Форма</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<!-- <div data-showmore
+                                                class="item-filter-category__content content-filter-item">
+                                                <ul data-showmore-content="350" class="content-filter-item__list">
+                                                    <li class="content-filter-item__item checkbox">
+                                                        <input id="bed_type_1" data-error="Помилка"
+                                                            class="checkbox__input" type="checkbox" value="bed_type_1"
+                                                            name="form[]">
+                                                        <label for="bed_type_1" class="checkbox__label _icon-check">
+                                                            <span class="checkbox__text">Без узголов'я</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <button aria-label="Показати або сховати всі варіанти"
+                                                    data-showmore-button="400" type="button"
+                                                    class="content-filter-item__button">
+                                                    <span>Показати всі</span>
+                                                    <span>Приховати всі</span>
+                                                </button>
+                                            </div> -->
+										</div>
+									</details>
+									<details class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Матеріал корпусу</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<!-- <div data-showmore
+                                                class="item-filter-category__content content-filter-item">
+                                                <ul data-showmore-content="350" class="content-filter-item__list">
+                                                    <li class="content-filter-item__item checkbox">
+                                                        <input id="bed_type_1" data-error="Помилка"
+                                                            class="checkbox__input" type="checkbox" value="bed_type_1"
+                                                            name="form[]">
+                                                        <label for="bed_type_1" class="checkbox__label _icon-check">
+                                                            <span class="checkbox__text">Без узголов'я</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <button aria-label="Показати або сховати всі варіанти"
+                                                    data-showmore-button="400" type="button"
+                                                    class="content-filter-item__button">
+                                                    <span>Показати всі</span>
+                                                    <span>Приховати всі</span>
+                                                </button>
+                                            </div> -->
+										</div>
+									</details>
+									<details class="filter-category__item item-filter-category">
+										<summary class="item-filter-category__header">
+											<div class="item-filter-category__title">Основа для матраца</div>
+											<div class="item-filter-category__icon">
+												<span class="_icon-arrow"></span>
+												<span class="_icon-cross"></span>
+											</div>
+										</summary>
+										<div class="item-filter-category__body">
+											<!-- <div data-showmore
+                                                class="item-filter-category__content content-filter-item">
+                                                <ul data-showmore-content="350" class="content-filter-item__list">
+                                                    <li class="content-filter-item__item checkbox">
+                                                        <input id="bed_type_1" data-error="Помилка"
+                                                            class="checkbox__input" type="checkbox" value="bed_type_1"
+                                                            name="form[]">
+                                                        <label for="bed_type_1" class="checkbox__label _icon-check">
+                                                            <span class="checkbox__text">Без узголов'я</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <button aria-label="Показати або сховати всі варіанти"
+                                                    data-showmore-button="400" type="button"
+                                                    class="content-filter-item__button">
+                                                    <span>Показати всі</span>
+                                                    <span>Приховати всі</span>
+                                                </button>
+                                            </div> -->
+										</div>
+									</details>
+								</form>
+							</div>
+						</details>
 					</aside>
 					<section class="content-category__body"></section>
 				</div>
@@ -1186,7 +1595,7 @@
 	</div>
 	</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250207163908"></script>
+	<script src="js/app.min.js?_v=20250208143403"></script>
 	<div id="cart-popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
