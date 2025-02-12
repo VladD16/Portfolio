@@ -10765,6 +10765,7 @@
                 thumbs: {
                     swiper: document.querySelector(".info-product__slider-mini")
                 },
+                loop: true,
                 navigation: {
                     prevEl: ".main-slider__swiper-button-prev",
                     nextEl: ".main-slider__swiper-button-next"
@@ -10780,6 +10781,7 @@
                 speed: 800,
                 freeMode: true,
                 watchSlidesProgress: true,
+                loop: true,
                 on: {
                     click: function(swiper) {
                         const firstVisibleIndex = swiper.activeIndex;
