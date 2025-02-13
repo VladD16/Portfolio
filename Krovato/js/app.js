@@ -10755,7 +10755,7 @@
                 on: {}
             });
             if (document.querySelector(".info-product__slider-main")) new swiper_core_Swiper(".info-product__slider-main", {
-                modules: [ Navigation, Thumb ],
+                modules: [ Navigation, Thumb, Pagination ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
@@ -10766,6 +10766,10 @@
                     swiper: document.querySelector(".info-product__slider-mini")
                 },
                 loop: true,
+                pagination: {
+                    el: ".main-slider__swiper-pagination",
+                    clickable: true
+                },
                 navigation: {
                     prevEl: ".main-slider__swiper-button-prev",
                     nextEl: ".main-slider__swiper-button-next"
@@ -10782,6 +10786,16 @@
                 freeMode: true,
                 watchSlidesProgress: true,
                 loop: true,
+                breakpoints: {
+                    480: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    }
+                },
                 on: {
                     click: function(swiper) {
                         const firstVisibleIndex = swiper.activeIndex;
