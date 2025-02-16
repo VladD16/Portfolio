@@ -10923,6 +10923,36 @@
         const da = new DynamicAdapt("max");
         da.init();
         "use strict";
+        document.addEventListener("DOMContentLoaded", (function() {
+            const reviewItems = document.querySelectorAll(".item-product-review");
+            reviewItems.forEach((reviewItem => {
+                const answerButton = reviewItem.querySelector(".item-product-review__button--answer");
+                const reviewsButton = reviewItem.querySelector(".item-product-review__button--reviews");
+                const closeButton = reviewItem.querySelector(".answer-product-review__action-button--close");
+                function toggleActiveClass(button, activeClass, itemClass) {
+                    if (button.classList.contains("--active")) {
+                        button.classList.remove("--active");
+                        reviewItem.classList.remove(itemClass);
+                    } else {
+                        answerButton.classList.remove("--active");
+                        reviewsButton.classList.remove("--active");
+                        reviewItem.classList.remove("answer-active", "reviews-active");
+                        button.classList.add("--active");
+                        reviewItem.classList.add(itemClass);
+                    }
+                }
+                answerButton.addEventListener("click", (function() {
+                    toggleActiveClass(answerButton, "--active", "answer-active");
+                }));
+                reviewsButton.addEventListener("click", (function() {
+                    toggleActiveClass(reviewsButton, "--active", "reviews-active");
+                }));
+                closeButton.addEventListener("click", (function() {
+                    reviewItem.classList.remove("answer-active");
+                    answerButton.classList.remove("--active");
+                }));
+            }));
+        }));
         window.onload = () => {
             const isTouchScreen = window.matchMedia("(any-hover:none)").matches;
             const maxWidth = 768;
@@ -11025,36 +11055,6 @@
                 }
             }));
         };
-        document.addEventListener("DOMContentLoaded", (function() {
-            const reviewItems = document.querySelectorAll(".item-product-review");
-            reviewItems.forEach((reviewItem => {
-                const answerButton = reviewItem.querySelector(".item-product-review__button--answer");
-                const reviewsButton = reviewItem.querySelector(".item-product-review__button--reviews");
-                const closeButton = reviewItem.querySelector(".answer-product-review__action-button--close");
-                function toggleActiveClass(button, activeClass, itemClass) {
-                    if (button.classList.contains("--active")) {
-                        button.classList.remove("--active");
-                        reviewItem.classList.remove(itemClass);
-                    } else {
-                        answerButton.classList.remove("--active");
-                        reviewsButton.classList.remove("--active");
-                        reviewItem.classList.remove("answer-active", "reviews-active");
-                        button.classList.add("--active");
-                        reviewItem.classList.add(itemClass);
-                    }
-                }
-                answerButton.addEventListener("click", (function() {
-                    toggleActiveClass(answerButton, "--active", "answer-active");
-                }));
-                reviewsButton.addEventListener("click", (function() {
-                    toggleActiveClass(reviewsButton, "--active", "reviews-active");
-                }));
-                closeButton.addEventListener("click", (function() {
-                    reviewItem.classList.remove("answer-active");
-                    answerButton.classList.remove("--active");
-                }));
-            }));
-        }));
         window["FLS"] = true;
         addLoadedClass();
         menuInit();
