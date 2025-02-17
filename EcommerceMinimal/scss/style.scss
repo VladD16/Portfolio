@@ -428,6 +428,7 @@ body {
     padding-inline-end: toRem(15);
     transform: scale(0);
     transition: transform 0.5s;
+    will-change: transform;
     @media (max-width: toEm(375)) {
       width: toRem(250);
     }
@@ -1479,6 +1480,7 @@ body {
       background-color: rgba(0, 0, 0, 0.3);
       transform: scale(0);
       transition: transform 0.3s;
+      will-change: transform;
       @media (max-width: toEm(991.98)) {
         transform: scale(1);
         background-color: rgba(0, 0, 0, 0.2);
@@ -1493,6 +1495,7 @@ body {
       color: #fff;
       transform: translate(-50%, -50%) scale(0);
       transition: transform 0.3s;
+      will-change: transform;
       @media (max-width: toEm(991.98)) {
         transform: translate(-50%, -50%) scale(1);
       }
