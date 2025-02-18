@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250216162615">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250218182455">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2127,16 +2127,16 @@
 	</div>
 	</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250216162615"></script>
+	<script src="js/app.min.js?_v=20250218182455"></script>
 	<div id="cart-popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<div class="popup__header header-popup">
-					<h3 class="header-popup__title">Ваш кошик <span>3</span></h3>
+					<h3 class="header-popup__title">Ваш кошик <span id="total-products-popup"></span></h3>
 					<button data-close type="button" class="header-popup__close _icon-cross"></button>
 				</div>
-				<div class="popup__items">
-					<article class="popup__item item-cart">
+				<div id="popup__items" class="popup__items">
+					<article data-item-id="1" class="popup__item item-cart">
 						<a href="#" class="item-cart__image">
 							<img src="img/product/image-1.webp" alt="Зображення товару">
 						</a>
@@ -2161,54 +2161,29 @@
 							<div class="price__main">25 400 грн.</div>
 						</div>
 					</article>
-					<article class="popup__item item-cart">
+					<article data-item-id="2" class="item-cart-products__item item-cart">
 						<a href="#" class="item-cart__image">
-							<img src="img/product/image-1.webp" alt="Зображення товару">
+							<img src="img/product/image-2.webp" alt="Зображення товару">
 						</a>
 						<div class="item-cart__info">
 							<div class="item-cart__size">Розмір: 61 x 184 x 2130 мм
 							</div>
 							<a href="#" class="item-cart__title">
-								<h4>Ліжко Спарта / Sparta з підйомним механізмом</h4>
+								<h4>Ліжко Аргон з підйомним механізмом</h4>
 							</a>
 							<div class="item-cart__in-stock _icon-in-stock">В наявності</div>
 						</div>
 						<button type="button" class="item-cart__delete _icon-cross"></button>
-						<form action="#" data-quantity class="item-cart__quantity quantity">
+						<div data-quantity class="item-cart__quantity quantity">
 							<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
 							<div class="quantity__input">
 								<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
 							</div>
 							<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
-						</form>
+						</div>
 						<div class="item-cart__price price">
 							<!-- <div class="price__sale">15 400 грн.</div> -->
-							<div class="price__main">25 400 грн.</div>
-						</div>
-					</article>
-					<article class="popup__item item-cart">
-						<a href="#" class="item-cart__image">
-							<img src="img/product/image-1.webp" alt="Зображення товару">
-						</a>
-						<div class="item-cart__info">
-							<div class="item-cart__size">Розмір: 61 x 184 x 2130 мм
-							</div>
-							<a href="#" class="item-cart__title">
-								<h4>Ліжко Спарта / Sparta з підйомним механізмом</h4>
-							</a>
-							<div class="item-cart__in-stock _icon-in-stock">В наявності</div>
-						</div>
-						<button type="button" class="item-cart__delete _icon-cross"></button>
-						<form action="#" data-quantity class="item-cart__quantity quantity">
-							<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
-							<div class="quantity__input">
-								<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
-							</div>
-							<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
-						</form>
-						<div class="item-cart__price price">
-							<div class="price__sale">15 400 грн.</div>
-							<div class="price__main">25 400 грн.</div>
+							<div class="price__main">16 400 грн.</div>
 						</div>
 					</article>
 				</div>
