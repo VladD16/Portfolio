@@ -10928,8 +10928,11 @@
                 this.updateTotalProducts();
             }
             initEventListeners() {
-                this.initCartEventListeners("#form-cart__items");
-                this.initCartEventListeners("#popup__items");
+                const formCartItems = document.querySelector("#form-cart__items");
+                if (formCartItems) {
+                    this.initCartEventListeners("#form-cart__items");
+                    this.initCartEventListeners("#popup__items");
+                } else this.initCartEventListeners("#popup__items");
                 document.querySelectorAll(".price__sale, .price__main").forEach((priceElement => {
                     priceElement.dataset.basePrice = priceElement.textContent.replace(/\s/g, "").replace(/[^\d]/g, "");
                 }));
@@ -11023,59 +11026,73 @@
                 }));
             }
             updateTotalProducts() {
-                const totalProducts = Array.from(document.querySelectorAll("#form-cart__items [data-quantity-value]")).reduce(((acc, input) => acc + parseInt(input.value)), 0);
-                const totalProductsPopup = Array.from(document.querySelectorAll("#popup__items [data-quantity-value]")).reduce(((acc, input) => acc + parseInt(input.value)), 0);
+                const formCartItems = document.querySelector("#form-cart__items");
+                const totalProducts = formCartItems ? Array.from(formCartItems.querySelectorAll("[data-quantity-value]")).reduce(((acc, input) => acc + parseInt(input.value)), 0) : 0;
+                const popupCartItems = document.querySelector("#popup__items");
+                const totalProductsPopup = popupCartItems ? Array.from(popupCartItems.querySelectorAll("[data-quantity-value]")).reduce(((acc, input) => acc + parseInt(input.value)), 0) : 0;
                 const totalProductsSum = totalProducts;
-                document.getElementById("total-products").textContent = totalProducts;
-                document.getElementById("total-products-popup").textContent = totalProductsPopup;
-                document.getElementById("products-quantity").textContent = totalProductsSum;
+                if (formCartItems) document.getElementById("total-products").textContent = totalProducts;
+                if (popupCartItems) document.getElementById("total-products-popup").textContent = totalProductsPopup;
+                if (formCartItems) document.getElementById("products-quantity").textContent = totalProductsSum;
                 this.updateProductSum();
                 this.checkEmptyCart();
             }
             updateProductSum() {
-                const totalSum = Array.from(document.querySelectorAll("#form-cart__items .item-cart")).reduce(((acc, cartItem) => {
-                    const quantity = parseInt(cartItem.querySelector("[data-quantity-value]").value);
-                    const priceSaleElement = cartItem.querySelector(".price__sale");
-                    const priceMainElement = cartItem.querySelector(".price__main");
-                    const price = priceSaleElement ? parseFloat(priceSaleElement.dataset.basePrice.replace(/\s/g, "").replace(/[^\d]/g, "")) : parseFloat(priceMainElement.dataset.basePrice.replace(/\s/g, "").replace(/[^\d]/g, ""));
-                    return acc + quantity * price;
-                }), 0);
-                document.getElementById("product-sum").textContent = totalSum.toLocaleString("uk-UA", {
-                    style: "currency",
-                    currency: "UAH"
-                });
-                const deliveryText = document.getElementById("delivery").textContent;
-                const deliveryCost = isNaN(parseFloat(deliveryText.replace(/\s/g, "").replace(/[^\d]/g, ""))) ? 0 : parseFloat(deliveryText.replace(/\s/g, "").replace(/[^\d]/g, ""));
-                const totalSumWithDelivery = totalSum + deliveryCost;
-                document.getElementById("total").textContent = totalSumWithDelivery.toLocaleString("uk-UA", {
-                    style: "currency",
-                    currency: "UAH"
-                });
+                const formCartItems = document.querySelector("#form-cart__items");
+                if (formCartItems) {
+                    const totalSum = formCartItems ? Array.from(formCartItems.querySelectorAll(".item-cart")).reduce(((acc, cartItem) => {
+                        const quantity = parseInt(cartItem.querySelector("[data-quantity-value]").value);
+                        const priceSaleElement = cartItem.querySelector(".price__sale");
+                        const priceMainElement = cartItem.querySelector(".price__main");
+                        const price = priceSaleElement ? parseFloat(priceSaleElement.dataset.basePrice.replace(/\s/g, "").replace(/[^\d]/g, "")) : parseFloat(priceMainElement.dataset.basePrice.replace(/\s/g, "").replace(/[^\d]/g, ""));
+                        return acc + quantity * price;
+                    }), 0) : 0;
+                    document.getElementById("product-sum").textContent = totalSum.toLocaleString("uk-UA", {
+                        style: "currency",
+                        currency: "UAH"
+                    });
+                    const deliveryText = document.getElementById("delivery").textContent;
+                    const deliveryCost = isNaN(parseFloat(deliveryText.replace(/\s/g, "").replace(/[^\d]/g, ""))) ? 0 : parseFloat(deliveryText.replace(/\s/g, "").replace(/[^\d]/g, ""));
+                    const totalSumWithDelivery = totalSum + deliveryCost;
+                    document.getElementById("total").textContent = totalSumWithDelivery.toLocaleString("uk-UA", {
+                        style: "currency",
+                        currency: "UAH"
+                    });
+                }
             }
             checkEmptyCart() {
-                const cartItems = document.querySelectorAll("#form-cart__items .item-cart");
-                const popupItems = document.querySelectorAll("#popup__items .item-cart");
+                const formCartItems = document.querySelector("#form-cart__items");
+                const popupCartItems = document.querySelector("#popup__items");
                 const emptyMessage = '<div class="empty-cart-message">Кошик пустий (: додайте товари</div>';
-                const cartContainer = document.querySelector("#form-cart__items");
-                const emptyMessageElement = cartContainer.querySelector(".empty-cart-message");
-                if (cartItems.length === 0) {
-                    if (!emptyMessageElement) cartContainer.insertAdjacentHTML("beforeend", emptyMessage);
-                } else if (emptyMessageElement) emptyMessageElement.remove();
-                const popupContainer = document.querySelector("#popup__items");
-                const emptyMessageElementPopup = popupContainer.querySelector(".empty-cart-message");
-                if (popupItems.length === 0) {
-                    if (!emptyMessageElementPopup) popupContainer.insertAdjacentHTML("beforeend", emptyMessage);
-                } else if (emptyMessageElementPopup) emptyMessageElementPopup.remove();
+                if (formCartItems) {
+                    const cartItems = formCartItems.querySelectorAll(".item-cart");
+                    const cartContainer = formCartItems;
+                    const emptyMessageElement = cartContainer.querySelector(".empty-cart-message");
+                    if (cartItems.length === 0) {
+                        if (!emptyMessageElement) cartContainer.insertAdjacentHTML("beforeend", emptyMessage);
+                    } else if (emptyMessageElement) emptyMessageElement.remove();
+                }
+                if (popupCartItems) {
+                    const popupItems = popupCartItems.querySelectorAll(".item-cart");
+                    const popupContainer = popupCartItems;
+                    const emptyMessageElementPopup = popupContainer.querySelector(".empty-cart-message");
+                    if (popupItems.length === 0) {
+                        if (!emptyMessageElementPopup) popupContainer.insertAdjacentHTML("beforeend", emptyMessage);
+                    } else if (emptyMessageElementPopup) emptyMessageElementPopup.remove();
+                }
             }
             updateDeliveryOption() {
-                const deliveryInput = document.getElementById("delivery_1");
-                const deliveryText = document.getElementById("delivery");
-                if (deliveryInput && deliveryText) {
-                    const updateText = () => {
-                        if (deliveryInput.checked) deliveryText.textContent = "Безкоштовно"; else deliveryText.textContent = "За тарифами перевізника";
-                    };
-                    updateText();
-                    deliveryInput.addEventListener("change", updateText);
+                const formCartItems = document.querySelector("#form-cart__items");
+                if (formCartItems) {
+                    const deliveryInput = document.getElementById("delivery_1");
+                    const deliveryText = document.getElementById("delivery");
+                    if (deliveryInput && deliveryText) {
+                        const updateText = () => {
+                            if (deliveryInput.checked) deliveryText.textContent = "Безкоштовно"; else deliveryText.textContent = "За тарифами перевізника";
+                        };
+                        updateText();
+                        deliveryInput.addEventListener("change", updateText);
+                    }
                 }
             }
         }
