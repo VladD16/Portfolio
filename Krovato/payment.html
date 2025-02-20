@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Корзина</title>
+	<title>Оплата</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<style>
@@ -594,253 +594,223 @@
 				</div>
 			</div>
 		</header>
-		<main class="cart">
-			<div class="cart__breadcrumbs breadcrumbs">
+		<main class="payment">
+			<div class="payment__breadcrumbs breadcrumbs">
 				<div class="breadcrumbs__container">
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item">
 							<a href="home.html" class="breadcrumbs__link _icon-arrow"><span>Головна</span></a>
 						</li>
-						<li class="breadcrumbs__item">Кошик</li>
+						<li class="breadcrumbs__item">Оплата</li>
 					</ul>
 				</div>
 			</div>
-			<section class="cart__body body-cart">
-				<div class="body-cart__container">
-					<h1 class="body-cart__title title">Оформлення замовлення</h1>
-					<form action="#" class="body-cart__form form-cart">
-						<div class="form-cart__column">
-							<div class="form-cart__item item-cart-info">
-								<div class="item-cart-info__header header-cart-form">
-									<img src="img/icons/cart/icon-info.svg" class="header-cart-form__icon" alt="Іконка інформація">
-									<div class="header-cart-form__title">Інформація про покупця</div>
-								</div>
-								<div class="item-cart-info__inputs">
-									<div class="item-cart-info__inputs-col">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Прізвище" class="item-cart-info__input">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Ім’я" class="item-cart-info__input">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="По батькові" class="item-cart-info__input">
-									</div>
-									<div class="item-cart-info__inputs-col">
-										<input required autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Контактний телефон" class="item-cart-info__input">
-										<input required autocomplete="off" type="email" name="form[]" data-error="Помилка" placeholder="E-mail" class="item-cart-info__input">
-									</div>
-								</div>
-								<div class="item-cart-info__checkbox checkbox">
-									<input id="cart-info_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="cart-info_1">
-									<label for="cart-info_1" class="checkbox__label _icon-check">
-										<span class="checkbox__text">Отримуватиме замовлення інша людина</span>
-									</label>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-delivery">
-								<div class="item-cart-delivery__header header-cart-form">
-									<img src="img/icons/cart/icon-dostavka.svg" class="header-cart-form__icon" alt="Іконка доставки">
-									<div class="header-cart-form__title">Вибір способу доставки</div>
-								</div>
-								<div class="item-cart-delivery__options options">
-									<div class="options__item">
-										<input id="delivery_1" class="options__input" checked type="radio" value="delivery_1" name="delivery">
-										<label for="delivery_1" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-shop.svg" alt="Іконка магазин">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Самовивіз із магазину <span>Безкоштовно</span></p>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="delivery_2" class="options__input" type="radio" value="delivery_2" name="delivery">
-										<label for="delivery_2" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-np.svg" alt="Іконка нова пошта">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Доставка Нова Пошта <span>≈ від 500 грн</span></p>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="delivery_3" class="options__input" type="radio" value="delivery_3" name="delivery">
-										<label for="delivery_3" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-person.svg" alt="Іконка кур'єр">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Доставка кур'єром <span>≈ від 200 грн</span></p>
-										</label>
-									</div>
-								</div>
-								<div class="item-cart-delivery__location location-delivery-item">
-									<div class="location-delivery-item__icon _icon-location"></div>
-									<div class="location-delivery-item__body">
-										<p class="location-delivery-item__schedule">Графік роботи: щодня з 9:00 до 18:00
-										</p>
-										<p class="location-delivery-item__adress">м. Київ, пров. Ізяславський 52, пов. 2
-										</p>
-									</div>
-									<a href="#" target="_blank" class="location-delivery-item__button button _icon-map">На мапі
-									</a>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-pay">
-								<div class="item-cart-pay__header header-cart-form">
-									<img src="img/icons/cart/icon-oplata.svg" class="header-cart-form__icon" alt="Іконка оплати">
-									<div class="header-cart-form__title">Вибір способу оплати</div>
-								</div>
-								<div class="item-cart-pay__options options">
-									<div class="options__item">
-										<input id="pay_1" class="options__input" type="radio" value="pay_1" name="pay">
-										<label for="pay_1" class="options__label _icon-check">
-											<span class="options__text">Готівкою при отриманні (Післясплата)</span>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_2" class="options__input" type="radio" value="pay_2" name="pay">
-										<label for="pay_2" class="options__label _icon-check">
-											<span class="options__text">Оплата карткою на сайті</span>
-											<img src="img/icons/cart/master-card-logo.svg" alt="Логотип mastercard">
-											<img src="img/icons/cart/visa-card-logo.svg" alt="Логотип visa">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_3" class="options__input" checked type="radio" value="pay_3" name="pay">
-										<label for="pay_3" class="options__label _icon-check">
-											<span class="options__text">Privat Pay</span>
-											<img src="img/icons/cart/privat-pay-logo.svg" alt="Логотип privat-pay">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_4" class="options__input" type="radio" value="pay_4" name="pay">
-										<label for="pay_4" class="options__label _icon-check">
-											<span class="options__text">Кредит від Krovato</span>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_5" class="options__input" type="radio" value="pay_6" name="pay">
-										<label for="pay_5" class="options__label _icon-check">
-											<span class="options__text">Оплата частинами ПриватБанк</span>
-											<img src="img/icons/cart/privaty-credit-logo.svg" alt="Логотип privaty-credit">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_6" class="options__input" type="radio" value="pay_6" name="pay">
-										<label for="pay_6" class="options__label _icon-check">
-											<span class="options__text">Оплата частинами МоноБанк</span>
-											<img src="img/icons/cart/mono-bank-logo.svg" alt="Логотип mono-bank">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-comment">
-								<div class="item-cart-comment__header header-cart-form">
-									<img src="img/icons/cart/icon-comment.svg" class="header-cart-form__icon" alt="Іконка коментаря">
-									<div class="header-cart-form__title">Коментар до замовлення</div>
-								</div>
-								<textarea class="item-cart-comment__textarea" placeholder="Ваш коментар" name="comment" id="commet"></textarea>
-							</div>
-						</div>
-						<div class="form-cart__column">
-							<div class="form-cart__item item-cart-products">
-								<div class="item-cart-products__header header-cart-form">
-									<div class="header-cart-form__title">Ваш кошик <span id="total-products"></span>
-									</div>
-								</div>
-								<div id="form-cart__items" class="item-cart-products__items">
-									<article data-item-id="1" class="item-cart-products__item item-cart">
-										<a href="#" class="item-cart__image">
-											<img src="img/product/image-1.webp" alt="Зображення товару">
-										</a>
-										<div class="item-cart__info">
-											<div class="item-cart__size">Розмір: 61 x 184 x 2130 мм
-											</div>
-											<a href="#" class="item-cart__title">
-												<h4>Ліжко Спарта / Sparta з підйомним механізмом</h4>
-											</a>
-											<div class="item-cart__in-stock _icon-in-stock">В наявності</div>
-										</div>
-										<button type="button" class="item-cart__delete _icon-cross"></button>
-										<div data-quantity class="item-cart__quantity quantity">
-											<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
-											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
-											</div>
-											<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
-										</div>
-										<div class="item-cart__price price">
-											<div class="price__sale">15 400 грн.</div>
-											<div class="price__main">25 400 грн.</div>
-										</div>
-									</article>
-									<article data-item-id="2" class="item-cart-products__item item-cart">
-										<a href="#" class="item-cart__image">
-											<img src="img/product/image-2.webp" alt="Зображення товару">
-										</a>
-										<div class="item-cart__info">
-											<div class="item-cart__size">Розмір: 61 x 184 x 2130 мм
-											</div>
-											<a href="#" class="item-cart__title">
-												<h4>Ліжко Аргон з підйомним механізмом</h4>
-											</a>
-											<div class="item-cart__in-stock _icon-in-stock">В наявності</div>
-										</div>
-										<button type="button" class="item-cart__delete _icon-cross"></button>
-										<div data-quantity class="item-cart__quantity quantity">
-											<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
-											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
-											</div>
-											<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
-										</div>
-										<div class="item-cart__price price">
-											<!-- <div class="price__sale">15 400 грн.</div> -->
-											<div class="price__main">16 400 грн.</div>
-										</div>
-									</article>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-promo">
-								<div class="item-cart-promo__label _icon-promo">Є промокод?</div>
-								<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введіть код" class="item-cart-promo__input">
-								<button type="button" class="item-cart-promo__button button">ОК</button>
-							</div>
-							<div class="form-cart__item item-cart-total">
-								<div class="item-cart-total__header header-cart-form">
-									<div class="header-cart-form__title">Разом:</div>
-								</div>
-								<table class="item-cart-total__table">
-									<tr>
-										<td><span id="products-quantity"></span> товари(-ів) на суму:</td>
-										<td id="product-sum">540 269 грн.</td>
-									</tr>
-									<tr>
-										<td>Вартість доставки:</td>
-										<td id="delivery">За тарифами оператора</td>
-									</tr>
-									<tr>
-										<td>До оплати:</td>
-										<td id="total" class="total-price">540 269 грн.</td>
-									</tr>
-								</table>
-								<div class="item-cart-total__checkbox checkbox">
-									<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-									<label for="c_1" class="checkbox__label _icon-check">
-										<span class="checkbox__text">Не
-											передзвонюйте мені для підтвердження замовлення</span>
-									</label>
-								</div>
-								<button type="submit" class="item-cart-total__button button">
-									ОФОРМИТИ ЗАМОВЛЕННЯ
-								</button>
-								<p class="item-cart-total__conditions">
-									Підтверджуючи замовлення, я приймаю умови <a href="#" target="_blank">
-										Угоди користувача</a>
+			<section class="payment__hero hero-section">
+				<div class="hero-section__container">
+					<div class="hero-section__content">
+						<div class="hero-section__body">
+							<h1 class="hero-section__title title">Оплата товару</h1>
+							<div class="hero-section__text">
+								<p>
+									Клієнти Krovato можуть в один клік провести оплату товару на сайті.
+								</p>
+								<p class="hero-section__text--mini">
+									Оплата готівкою при отриманні товару, за безготівковим розрахунком, оплата
+									замовлення онлайн банківською картою Visa або MasterCard або кредит - у нас можливо
+									все!
 								</p>
 							</div>
 						</div>
-					</form>
+						<div class="hero-section__image">
+							<img src="img/payment/hero-image.webp" alt="Зображення способів оплати">
+						</div>
+					</div>
 				</div>
 			</section>
-			<div class="cart__advantages advantages">
+			<section class="payment__opportunities opportunities-payment">
+				<div class="opportunities-payment__container">
+					<h2 class="opportunities-payment__title title">Оплата по Києву:</h2>
+					<div class="opportunities-payment__items">
+						<article class="opportunities-payment__item item-payment-opportunities">
+							<img class="item-payment-opportunities__image" src="img/payment/opportunities/pay-1.svg" alt="Іконка способу оплати">
+							<h4 class="item-payment-opportunities__title">Через термінал</h4>
+							<div class="item-payment-opportunities__text">
+								<p>
+									Ви можете оплатити Ваше замовлення карткою на нашій виставці за адресою: пров.
+									Ізяславський 52, поверх 2
+								</p>
+							</div>
+						</article>
+						<article class="opportunities-payment__item item-payment-opportunities">
+							<img class="item-payment-opportunities__image" src="img/payment/opportunities/pay-2.svg" alt="Іконка способу оплати">
+							<h4 class="item-payment-opportunities__title">На карту ПриватБанку</h4>
+							<div class="item-payment-opportunities__text">
+								<p>
+									Ви можете це зробити через термінал самообслуговування, або Приват24.
+								</p>
+							</div>
+						</article>
+						<article class="opportunities-payment__item item-payment-opportunities">
+							<img class="item-payment-opportunities__image" src="img/payment/opportunities/pay-3.svg" alt="Іконка способу оплати">
+							<h4 class="item-payment-opportunities__title">Безготівкова</h4>
+							<div class="item-payment-opportunities__text">
+								<p>
+									Оплата проводиться в касі відділення будь-якого банку або з розрахункового рахунку
+									Вашої фірми.
+								</p>
+							</div>
+						</article>
+						<article class="opportunities-payment__item item-payment-opportunities">
+							<img class="item-payment-opportunities__image" src="img/payment/opportunities/pay-4.svg" alt="Іконка способу оплати">
+							<h4 class="item-payment-opportunities__title">Післяплатою</h4>
+							<div class="item-payment-opportunities__text">
+								<p>
+									Оплата готівкою безпосередньо при отриманні і перевірці товару від кур'єра.
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="payment__benefits benefits-payment">
+				<div class="benefits-payment__container">
+					<div class="benefits-payment__items">
+						<article class="benefits-payment__item item-payment-benefits">
+							<img class="item-payment-benefits__icon" src="img/payment/benefits/icon-1.svg" alt="Іконка способу оплати">
+							<div class="item-payment-benefits__body">
+								<h4 class="item-payment-benefits__title">Оплата по Україні</h4>
+								<div class="item-payment-benefits__text">
+									<p>
+										Доставка по Україні здійснюється Новою Поштою. Ви можете оплатити Ваше
+										замовлення
+										при отриманні післяплатою. Вартість післяплати 35грн +1-2% від суми.
+										Також Ви можете оплатити Ваше замовлення на карту ПриватБанку, перед відправкою
+										замовлення Вам.
+									</p>
+								</div>
+							</div>
+						</article>
+						<article class="benefits-payment__item item-payment-benefits">
+							<img class="item-payment-benefits__icon" src="img/payment/benefits/icon-2.svg" alt="Іконка способу оплати">
+							<div class="item-payment-benefits__body">
+								<h4 class="item-payment-benefits__title">Кредит\Розстрочка</h4>
+								<div class="item-payment-benefits__text">
+									<p>
+										На нашій виставці, ви можете оплатити Ваше замовлення за допомогою сервісів
+										ПриватБанку "Миттєва Розстрочка" та "Оплата частинами", з мінімальними
+										відсотками.
+									</p>
+								</div>
+							</div>
+						</article>
+						<article class="benefits-payment__item item-payment-benefits">
+							<img class="item-payment-benefits__icon" src="img/payment/benefits/icon-3.svg" alt="Іконка способу оплати">
+							<div class="item-payment-benefits__body">
+								<h4 class="item-payment-benefits__title">Передплата</h4>
+								<div class="item-payment-benefits__text">
+									<p>
+										У зв'язку з частими випадками замовлень "клієнтами", які не збираються забирати
+										їх
+										керівництвом, було прийнято рішення про введення, мінімальної передоплати 20%
+										(на
+										стандартні замовлення). Залишок суми (80%) Ви оплачуєте при отриманні за фактом
+										складання. На нестандартні та великі замовлення передоплата 50%. На нестандартні
+										матраци передплата 100%.
+									</p>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="payment__faq faq">
+				<div class="faq__container">
+					<h2 class="faq__title title title--center">У вас все ще залишилися питання?</h2>
+					<div data-spollers data-one-spoller class="faq__items">
+						<details class="faq__item item-faq">
+							<summary class="item-faq__title _icon-question">
+								Як повернути або обміняти замовлення
+								<div class="item-faq__icon _icon-arrow"></div>
+							</summary>
+							<div class="item-faq__body">
+								<div class="item-faq__text">
+									<p>
+										Ми постараємося Вам допомогти, навіть якщо відповідно до закону України Про
+										захист прав споживачів, при поверненні Покупцем товару або відмові від наданої
+										послуги продавцю подається заява про повернення коштів, до якого обов`язково
+										додається квитанція, товарний або касовий чек, рахунок (розрахунковий документ),
+										який підтверджує покупку товару (надання послуги). У нвс ведеться облік всіх
+										замовлень, тому клієнту достатньо знати номер замовлення, написати заяву і
+										надати дані на кого був оформлений замовлення, що б ми могли ідентифікувати
+										покупку
+									</p>
+								</div>
+							</div>
+						</details>
+						<details data-open class="faq__item item-faq">
+							<summary class="item-faq__title _icon-question">
+								Чи можна повернути/обміняти товар, якщо втрачено чек?
+								<div class="item-faq__icon _icon-arrow"></div>
+							</summary>
+							<div class="item-faq__body">
+								<div class="item-faq__text">
+									<p>
+										Ми постараємося Вам допомогти, навіть якщо відповідно до закону України Про
+										захист прав споживачів, при поверненні Покупцем товару або відмові від наданої
+										послуги продавцю подається заява про повернення коштів, до якого обов`язково
+										додається квитанція, товарний або касовий чек, рахунок (розрахунковий документ),
+										який підтверджує покупку товару (надання послуги). У нвс ведеться облік всіх
+										замовлень, тому клієнту достатньо знати номер замовлення, написати заяву і
+										надати дані на кого був оформлений замовлення, що б ми могли ідентифікувати
+										покупку
+									</p>
+								</div>
+							</div>
+						</details>
+						<details class="faq__item item-faq">
+							<summary class="item-faq__title _icon-question">
+								В який термін будуть повернуті гроші?
+								<div class="item-faq__icon _icon-arrow"></div>
+							</summary>
+							<div class="item-faq__body">
+								<div class="item-faq__text">
+									<p>
+										Ми постараємося Вам допомогти, навіть якщо відповідно до закону України Про
+										захист прав споживачів, при поверненні Покупцем товару або відмові від наданої
+										послуги продавцю подається заява про повернення коштів, до якого обов`язково
+										додається квитанція, товарний або касовий чек, рахунок (розрахунковий документ),
+										який підтверджує покупку товару (надання послуги). У нвс ведеться облік всіх
+										замовлень, тому клієнту достатньо знати номер замовлення, написати заяву і
+										надати дані на кого був оформлений замовлення, що б ми могли ідентифікувати
+										покупку
+									</p>
+								</div>
+							</div>
+						</details>
+						<details class="faq__item item-faq">
+							<summary class="item-faq__title _icon-question">
+								Чи можна повернути кошти на іншу карту?
+								<div class="item-faq__icon _icon-arrow"></div>
+							</summary>
+							<div class="item-faq__body">
+								<div class="item-faq__text">
+									<p>
+										Ми постараємося Вам допомогти, навіть якщо відповідно до закону України Про
+										захист прав споживачів, при поверненні Покупцем товару або відмові від наданої
+										послуги продавцю подається заява про повернення коштів, до якого обов`язково
+										додається квитанція, товарний або касовий чек, рахунок (розрахунковий документ),
+										який підтверджує покупку товару (надання послуги). У нвс ведеться облік всіх
+										замовлень, тому клієнту достатньо знати номер замовлення, написати заяву і
+										надати дані на кого був оформлений замовлення, що б ми могли ідентифікувати
+										покупку
+									</p>
+								</div>
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
+			<div class="payment__advantages advantages">
 				<div class="advantages__container">
 					<div class="advantages__item">
 						<img class="advantages__icon" src="img/icons/advantages/icon-1.svg" alt="Іконка">
