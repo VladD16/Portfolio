@@ -4645,6 +4645,146 @@ body::after {
 .tables-delivery__bottom {
   line-height: 1.87
 }
+.main-page-reviews:not(:last-child) {
+  margin-bottom: 1.875rem
+}
+.main-page-reviews__container {
+  display: grid;
+  grid-template-columns: 1fr 25.625rem;
+  row-gap: 2.5rem;
+  -webkit-column-gap: 1.875rem;
+  -moz-column-gap: 1.875rem;
+  column-gap: 1.875rem
+}
+.main-page-reviews__button-add-review {
+  display: none
+}
+.main-page-reviews__items {
+  display: grid;
+  gap: 1.875rem
+}
+.main-page-reviews__items:not(:last-child) {
+  margin-bottom: 1.875rem
+}
+.main-page-reviews__pages:not(:last-child) {
+  margin-bottom: 1.875rem
+}
+.main-page-reviews__button {
+  margin: 0 auto
+}
+.main-page-reviews__info:not(:last-child) {
+  margin-bottom: 1.875rem
+}
+.nav-page-reviews {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.875rem
+}
+.nav-page-reviews:not(:last-child) {
+  margin-bottom: 2.5rem
+}
+.nav-page-reviews::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: .1875rem;
+  width: 100%;
+  background-color: #fff
+}
+.nav-page-reviews::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: .1875rem;
+  left: var(--after-left,0);
+  width: var(--after-width,0);
+  background-color: #ffbc57;
+  transition: all .3s ease
+}
+.nav-page-reviews__item {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  -webkit-padding-after: 1.25rem;
+  padding-block-end: 1.25rem;
+  transition: color .3s
+}
+.item-page-reviews {
+  padding: 1.875rem;
+  border-radius: .5rem;
+  border: .0625rem solid #e3e2e2;
+  background-color: #fff;
+  box-shadow: -.1875rem .25rem .9375rem 0 rgba(0,0,0,.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem
+}
+.item-page-reviews__header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem
+}
+.item-page-reviews__user {
+  flex-grow: 1
+}
+.item-page-reviews__date {
+  color: #535353;
+  font-size: 1.0625rem;
+  line-height: 1.41
+}
+.item-page-reviews__text {
+  color: #535353;
+  line-height: 1.87
+}
+.item-page-reviews__text p:not(:last-child) {
+  margin-bottom: .625rem
+}
+.item-page-reviews__footer {
+  display: flex;
+  align-items: center;
+  gap: .9375rem
+}
+.item-page-reviews__image {
+  flex-shrink: 0;
+  width: 3.125rem;
+  aspect-ratio: 1;
+  border-radius: 50%
+}
+.item-page-reviews__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+.item-page-reviews__title {
+  color: #535353;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4
+}
+.item-page-reviews__title--link {
+  transition: color .3s
+}
+.body-blog:not(:last-child) {
+  margin-bottom: 1.875rem
+}
+.body-blog__container>* {
+  margin-bottom: 1.875rem
+}
+.body-blog__container>*:last-child {
+  margin-bottom: 0
+}
+.body-blog__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(23.75rem,1fr));
+  gap: 1.875rem
+}
+.body-blog__button {
+  margin: 0 auto
+}
 .noUi-target,
 .noUi-target * {
   -webkit-touch-callout: none;
@@ -6040,6 +6180,12 @@ button.swiper-pagination-bullet {
     font-weight: 600;
     line-height: 1.4
   }
+  .main-page-reviews__title {
+    grid-column: span 2
+  }
+  .body-blog__title {
+    margin-bottom: 2.5rem
+  }
 }
 @media ((any-hover:hover) and (min-width:62em)) {
   .contacts-header:hover .contacts-header__items {
@@ -6223,6 +6369,12 @@ button.swiper-pagination-bullet {
   }
   .invitation-about__text--mini {
     font-size: 1rem
+  }
+  .main-page-reviews__container {
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    grid-template-columns: 1fr 23.125rem
   }
 }
 @media (max-width:79.375em) {
@@ -6631,6 +6783,25 @@ button.swiper-pagination-bullet {
   .tables-delivery__table--mobile {
     display: grid
   }
+  .main-page-reviews__container {
+    grid-template-columns: 1fr;
+    row-gap: 1.875rem
+  }
+  .main-page-reviews__button-add-review {
+    display: block;
+    height: 3.125rem;
+    width: 18.75rem
+  }
+  .main-page-reviews__info {
+    -webkit-margin-before: 1.875rem;
+    margin-block-start: 1.875rem
+  }
+  .body-blog__items {
+    row-gap: 1.5625rem;
+    -webkit-column-gap: .9375rem;
+    -moz-column-gap: .9375rem;
+    column-gap: .9375rem
+  }
 }
 @media (max-width:61.99875em)and (max-width:47.99875em) {
   .menu__body {
@@ -6660,6 +6831,11 @@ button.swiper-pagination-bullet {
 @media (max-width:61.99875em)and (max-width:34.375em) {
   .socials-footer {
     gap: 2.5rem
+  }
+}
+@media (max-width:53.125em) {
+  .body-blog__items {
+    grid-template-columns: repeat(auto-fill,minmax(17.5rem,1fr))
   }
 }
 @media (max-width:47.99875em) {
@@ -6923,6 +7099,12 @@ button.swiper-pagination-bullet {
   }
   .tables-delivery__bottom {
     font-size: .875rem
+  }
+  .item-page-reviews__header {
+    flex-wrap: wrap
+  }
+  .body-blog__items {
+    row-gap: 1.25rem
   }
 }
 @media (max-width:40.62375em) {
@@ -7247,6 +7429,47 @@ button.swiper-pagination-bullet {
   .invitation-about__button {
     width: 100%
   }
+  .main-page-reviews:not(:last-child) {
+    margin-bottom: 1.5625rem
+  }
+  .main-page-reviews__container {
+    gap: 1.25rem
+  }
+  .main-page-reviews__title {
+    text-align: center
+  }
+  .main-page-reviews__button-add-review {
+    width: 100%
+  }
+  .main-page-reviews__button {
+    width: 100%
+  }
+  .nav-page-reviews:not(:last-child) {
+    margin-bottom: 1.25rem
+  }
+  .nav-page-reviews {
+    gap: 1.25rem;
+    justify-content: space-between
+  }
+  .nav-page-reviews__item {
+    font-size: 1.0625rem
+  }
+  .item-page-reviews {
+    padding: 1.25rem .9375rem;
+    gap: 1.25rem
+  }
+  .item-page-reviews__image {
+    width: 2.5rem
+  }
+  .item-page-reviews__title {
+    font-size: 1.0625rem
+  }
+  .body-blog__title {
+    text-align: center
+  }
+  .body-blog__button {
+    width: 100%
+  }
 }
 @media (max-width:26.5625em) {
   .item-cart__title {
@@ -7262,6 +7485,12 @@ button.swiper-pagination-bullet {
   }
   .advantages__item {
     gap: .625rem
+  }
+  .nav-page-reviews {
+    gap: .625rem
+  }
+  .nav-page-reviews__item {
+    font-size: .9375rem
   }
 }
 @media (max-width:61.99875em)and (min-width:48em) {
@@ -7675,5 +7904,11 @@ button.swiper-pagination-bullet {
   .item-cart-total__conditions a:hover {
     color: #eda02d;
     text-decoration: underline
+  }
+  .nav-page-reviews__item:hover {
+    color: #ffbc57
+  }
+  .item-page-reviews__title--link:hover {
+    color: #ffbc57
   }
 }
