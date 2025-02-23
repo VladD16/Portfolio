@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Корзина</title>
+	<title>Стаття</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<style>
@@ -594,253 +594,101 @@
 				</div>
 			</div>
 		</header>
-		<main class="cart">
-			<div class="cart__breadcrumbs breadcrumbs">
+		<main class="article">
+			<div class="article__breadcrumbs breadcrumbs">
 				<div class="breadcrumbs__container">
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item">
 							<a href="home.html" class="breadcrumbs__link _icon-arrow"><span>Головна</span></a>
 						</li>
-						<li class="breadcrumbs__item">Кошик</li>
+						<li class="breadcrumbs__item">
+							<a href="home.html" class="breadcrumbs__link _icon-arrow"><span>Блог</span></a>
+						</li>
+						<li class="breadcrumbs__item">Оформлення вітальні. Які м'які меблі краще вибрати?</li>
 					</ul>
 				</div>
 			</div>
-			<section class="cart__body body-cart">
-				<div class="body-cart__container">
-					<h1 class="body-cart__title title">Оформлення замовлення</h1>
-					<form action="#" class="body-cart__form form-cart">
-						<div class="form-cart__column">
-							<div class="form-cart__item item-cart-info">
-								<div class="item-cart-info__header header-cart-form">
-									<img src="img/icons/cart/icon-info.svg" class="header-cart-form__icon" alt="Іконка інформація">
-									<div class="header-cart-form__title">Інформація про покупця</div>
-								</div>
-								<div class="item-cart-info__inputs">
-									<div class="item-cart-info__inputs-col">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Прізвище" class="item-cart-info__input">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Ім’я" class="item-cart-info__input">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="По батькові" class="item-cart-info__input">
-									</div>
-									<div class="item-cart-info__inputs-col">
-										<input required autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Контактний телефон" class="item-cart-info__input">
-										<input required autocomplete="off" type="email" name="form[]" data-error="Помилка" placeholder="E-mail" class="item-cart-info__input">
-									</div>
-								</div>
-								<div class="item-cart-info__checkbox checkbox">
-									<input id="cart-info_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="cart-info_1">
-									<label for="cart-info_1" class="checkbox__label _icon-check">
-										<span class="checkbox__text">Отримуватиме замовлення інша людина</span>
-									</label>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-delivery">
-								<div class="item-cart-delivery__header header-cart-form">
-									<img src="img/icons/cart/icon-dostavka.svg" class="header-cart-form__icon" alt="Іконка доставки">
-									<div class="header-cart-form__title">Вибір способу доставки</div>
-								</div>
-								<div class="item-cart-delivery__options options">
-									<div class="options__item">
-										<input id="delivery_1" class="options__input" checked type="radio" value="delivery_1" name="delivery">
-										<label for="delivery_1" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-shop.svg" alt="Іконка магазин">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Самовивіз із магазину <span>Безкоштовно</span></p>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="delivery_2" class="options__input" type="radio" value="delivery_2" name="delivery">
-										<label for="delivery_2" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-np.svg" alt="Іконка нова пошта">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Доставка Нова Пошта <span>≈ від 500 грн</span></p>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="delivery_3" class="options__input" type="radio" value="delivery_3" name="delivery">
-										<label for="delivery_3" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-person.svg" alt="Іконка кур'єр">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Доставка кур'єром <span>≈ від 200 грн</span></p>
-										</label>
-									</div>
-								</div>
-								<div class="item-cart-delivery__location location-delivery-item">
-									<div class="location-delivery-item__icon _icon-location"></div>
-									<div class="location-delivery-item__body">
-										<p class="location-delivery-item__schedule">Графік роботи: щодня з 9:00 до 18:00
-										</p>
-										<p class="location-delivery-item__adress">м. Київ, пров. Ізяславський 52, пов. 2
-										</p>
-									</div>
-									<a href="#" target="_blank" class="location-delivery-item__button button _icon-map">На мапі
-									</a>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-pay">
-								<div class="item-cart-pay__header header-cart-form">
-									<img src="img/icons/cart/icon-oplata.svg" class="header-cart-form__icon" alt="Іконка оплати">
-									<div class="header-cart-form__title">Вибір способу оплати</div>
-								</div>
-								<div class="item-cart-pay__options options">
-									<div class="options__item">
-										<input id="pay_1" class="options__input" type="radio" value="pay_1" name="pay">
-										<label for="pay_1" class="options__label _icon-check">
-											<span class="options__text">Готівкою при отриманні (Післясплата)</span>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_2" class="options__input" type="radio" value="pay_2" name="pay">
-										<label for="pay_2" class="options__label _icon-check">
-											<span class="options__text">Оплата карткою на сайті</span>
-											<img src="img/icons/cart/master-card-logo.svg" alt="Логотип mastercard">
-											<img src="img/icons/cart/visa-card-logo.svg" alt="Логотип visa">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_3" class="options__input" checked type="radio" value="pay_3" name="pay">
-										<label for="pay_3" class="options__label _icon-check">
-											<span class="options__text">Privat Pay</span>
-											<img src="img/icons/cart/privat-pay-logo.svg" alt="Логотип privat-pay">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_4" class="options__input" type="radio" value="pay_4" name="pay">
-										<label for="pay_4" class="options__label _icon-check">
-											<span class="options__text">Кредит від Krovato</span>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_5" class="options__input" type="radio" value="pay_6" name="pay">
-										<label for="pay_5" class="options__label _icon-check">
-											<span class="options__text">Оплата частинами ПриватБанк</span>
-											<img src="img/icons/cart/privaty-credit-logo.svg" alt="Логотип privaty-credit">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_6" class="options__input" type="radio" value="pay_6" name="pay">
-										<label for="pay_6" class="options__label _icon-check">
-											<span class="options__text">Оплата частинами МоноБанк</span>
-											<img src="img/icons/cart/mono-bank-logo.svg" alt="Логотип mono-bank">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-comment">
-								<div class="item-cart-comment__header header-cart-form">
-									<img src="img/icons/cart/icon-comment.svg" class="header-cart-form__icon" alt="Іконка коментаря">
-									<div class="header-cart-form__title">Коментар до замовлення</div>
-								</div>
-								<textarea class="item-cart-comment__textarea" placeholder="Ваш коментар" name="comment" id="commet"></textarea>
-							</div>
-						</div>
-						<div class="form-cart__column">
-							<div class="form-cart__item item-cart-products">
-								<div class="item-cart-products__header header-cart-form">
-									<div class="header-cart-form__title">Ваш кошик <span id="total-products"></span>
-									</div>
-								</div>
-								<div id="form-cart__items" class="item-cart-products__items">
-									<article data-item-id="1" class="item-cart-products__item item-cart">
-										<a href="#" class="item-cart__image">
-											<img src="img/product/image-1.webp" alt="Зображення товару">
-										</a>
-										<div class="item-cart__info">
-											<div class="item-cart__size">Розмір: 61 x 184 x 2130 мм
-											</div>
-											<a href="#" class="item-cart__title">
-												<h4>Ліжко Спарта / Sparta з підйомним механізмом</h4>
-											</a>
-											<div class="item-cart__in-stock _icon-in-stock">В наявності</div>
-										</div>
-										<button type="button" class="item-cart__delete _icon-cross"></button>
-										<div data-quantity class="item-cart__quantity quantity">
-											<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
-											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
-											</div>
-											<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
-										</div>
-										<div class="item-cart__price price">
-											<div class="price__sale">15 400 грн.</div>
-											<div class="price__main">25 400 грн.</div>
-										</div>
-									</article>
-									<article data-item-id="2" class="item-cart-products__item item-cart">
-										<a href="#" class="item-cart__image">
-											<img src="img/product/image-2.webp" alt="Зображення товару">
-										</a>
-										<div class="item-cart__info">
-											<div class="item-cart__size">Розмір: 61 x 184 x 2130 мм
-											</div>
-											<a href="#" class="item-cart__title">
-												<h4>Ліжко Аргон з підйомним механізмом</h4>
-											</a>
-											<div class="item-cart__in-stock _icon-in-stock">В наявності</div>
-										</div>
-										<button type="button" class="item-cart__delete _icon-cross"></button>
-										<div data-quantity class="item-cart__quantity quantity">
-											<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
-											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
-											</div>
-											<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
-										</div>
-										<div class="item-cart__price price">
-											<!-- <div class="price__sale">15 400 грн.</div> -->
-											<div class="price__main">16 400 грн.</div>
-										</div>
-									</article>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-promo">
-								<div class="item-cart-promo__label _icon-promo">Є промокод?</div>
-								<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введіть код" class="item-cart-promo__input">
-								<button type="button" class="item-cart-promo__button button">ОК</button>
-							</div>
-							<div class="form-cart__item item-cart-total">
-								<div class="item-cart-total__header header-cart-form">
-									<div class="header-cart-form__title">Разом:</div>
-								</div>
-								<table class="item-cart-total__table">
-									<tr>
-										<td><span id="products-quantity"></span> товари(-ів) на суму:</td>
-										<td id="product-sum">540 269 грн.</td>
-									</tr>
-									<tr>
-										<td>Вартість доставки:</td>
-										<td id="delivery">За тарифами оператора</td>
-									</tr>
-									<tr>
-										<td>До оплати:</td>
-										<td id="total" class="total-price">540 269 грн.</td>
-									</tr>
-								</table>
-								<div class="item-cart-total__checkbox checkbox">
-									<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-									<label for="c_1" class="checkbox__label _icon-check">
-										<span class="checkbox__text">Не
-											передзвонюйте мені для підтвердження замовлення</span>
-									</label>
-								</div>
-								<button type="submit" class="item-cart-total__button button">
-									ОФОРМИТИ ЗАМОВЛЕННЯ
-								</button>
-								<p class="item-cart-total__conditions">
-									Підтверджуючи замовлення, я приймаю умови <a href="#" target="_blank">
-										Угоди користувача</a>
-								</p>
-							</div>
-						</div>
-					</form>
+			<section class="article__body body-article">
+				<div class="body-article__container">
+					<h1 class="body-article__title title">
+						Оформлення вітальні. Які м'які меблі краще вибрати?
+					</h1>
+					<div class="body-article__image">
+						<img src="img/article/hero-image.webp" alt="Приклад декору кімнати">
+					</div>
+					<div class="body-article__text">
+						<p>
+							Вітальня – це основна кімната у кожному будинку. Саме вона служить для прийому гостей,
+							проведення часу всією сім'єю та просто для відпочинку у приємній теплій атмосфері.
+							Оформляючи свій будинок та вітальню зокрема, всі намагаються зробити її максимально зручною,
+							комфортною та красивою. Основним та центральним елементом оформлення вітальні, як і
+							будь-якої іншої кімнати, є м'які меблі.
+						</p>
+						<p>
+							Будь-які меблі для вітальні повинні бути не тільки стильними і красивими, але і
+							функціональними. На таких меблів має бути зручно та приємно відпочивати та приймати гостей.
+							Однак сьогодні існує величезна різноманітність найрізноманітніших м'яких меблів для
+							вітальні, яка підходить для кімнат різних розмірів і форм. На чому варто зупинити свій
+							вибір? Як краще оформити свою вітальню, щоб вам було комфортно, а гості хотіли приходити до
+							вас знову та знову?
+						</p>
+					</div>
+					<h2 class="body-article__sub-title">На сайті інтернет магазину Кровато представлено велику
+						різноманітність м'яких меблів для вітальні, серед яких кожен зможе вибрати для себе найбільш
+						вдалий варіант. У нас ви знайдете:
+					</h2>
+					<ul class="body-article__list">
+						<li>Прямі дивани. Такі дивани вважаються класикою. Вони підходять для віталень будь-яких форм та
+							розмірів. Прямий диван виглядає стильно та лаконічно, на ньому зручно відпочивати, приймати
+							гостей або навіть спати. Прямі дивани можуть стояти біля стіни, так і в центрі кімнати.
+							Багато моделей прямих диванів легко розкладаються, перетворюючись на повноцінне спальне
+							місце. Також більшість диванів мають великі та місткі ніші, які є додатковим місцем для
+							зберігання;
+						</li>
+						<li>
+							Кутові дивани Кутові дивани вважаються найзручнішими та комфортнішими. Вони ідеально
+							підійдуть для приємного проведення часу в колі сім'ї або друзів. Кутові дивани в основному
+							використовуються для оформлення великих віталень, так як вони займають багато місця, і для
+							кімнат з невеликою площею просто не підійдуть;
+						</li>
+						<li>
+							Тахти. Тахта - це одна з варіацій дивана, але стильніша і мінімалістична. Виглядають тахти
+							дуже незвично і можуть підійти для будь-якого інтер'єру. Також тахти більше ніж звичайні
+							дивани підходять для сну, оскільки в їх основі не пружинні блоки, а дерев'яні ламелі або
+							ортопедичні матраци;
+						</li>
+						<li>
+							Крісла. Крісло – це особливий предмет інтер'єру. Сучасні дизайнери не часто використовують
+							його, вважаючи застарілим, проте саме крісла створюють особливий затишок та комфорт у
+							будь-якій кімнаті. Сьогодні існує величезна різноманітність класичних та сучасних моделей
+							крісел, що дозволяє кожному відшукати ідеальне крісло для свого будинку;
+						</li>
+						<li>
+							Набір меблів. Комплект м'яких меблів – це відмінне рішення для тих, хто хоче меблювати свою
+							вітальню не лише диваном, а й кріслами. Існують набори з одним або двома кріслами, із
+							прямими або кутовими диванами. Основна перевага будь-якого готового меблевого гарнітура – це
+							те, що предмети меблів у ньому ідеально поєднуються один з одним, і вам не потрібно буде
+							витрачати свій час та сили на їхній підбір.
+						</li>
+					</ul>
+					<div class="body-article__text">
+						<p>
+							Підбір м'яких меблів для вітальні – це заняття непросте. Однак при виборі та покупці меблів
+							для своєї вітальні пам'ятайте, що якісні м'які меблі повинні бути не тільки красивими, але й
+							зручними для вас і всіх мешканців вашого будинку.
+						</p>
+					</div>
+					<div class="body-article__nav">
+						<a href="#" class="body-article__button body-article__button--prev button _icon-r-arrow">
+							Попередня стаття
+						</a>
+						<a href="#" class="body-article__button body-article__button--next button _icon-r-arrow">
+							Наступна стаття
+						</a>
+					</div>
 				</div>
 			</section>
-			<div class="cart__advantages advantages">
+			<div class="article__advantages advantages">
 				<div class="advantages__container">
 					<div class="advantages__item">
 						<img class="advantages__icon" src="img/icons/advantages/icon-1.svg" alt="Іконка">

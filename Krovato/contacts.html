@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Корзина</title>
+	<title>Контакти</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<style>
@@ -594,253 +594,124 @@
 				</div>
 			</div>
 		</header>
-		<main class="cart">
-			<div class="cart__breadcrumbs breadcrumbs">
+		<main class="contacts">
+			<div class="contacts__breadcrumbs breadcrumbs">
 				<div class="breadcrumbs__container">
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item">
 							<a href="home.html" class="breadcrumbs__link _icon-arrow"><span>Головна</span></a>
 						</li>
-						<li class="breadcrumbs__item">Кошик</li>
+						<li class="breadcrumbs__item">Контакти</li>
 					</ul>
 				</div>
 			</div>
-			<section class="cart__body body-cart">
-				<div class="body-cart__container">
-					<h1 class="body-cart__title title">Оформлення замовлення</h1>
-					<form action="#" class="body-cart__form form-cart">
-						<div class="form-cart__column">
-							<div class="form-cart__item item-cart-info">
-								<div class="item-cart-info__header header-cart-form">
-									<img src="img/icons/cart/icon-info.svg" class="header-cart-form__icon" alt="Іконка інформація">
-									<div class="header-cart-form__title">Інформація про покупця</div>
-								</div>
-								<div class="item-cart-info__inputs">
-									<div class="item-cart-info__inputs-col">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Прізвище" class="item-cart-info__input">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Ім’я" class="item-cart-info__input">
-										<input required autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="По батькові" class="item-cart-info__input">
-									</div>
-									<div class="item-cart-info__inputs-col">
-										<input required autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Контактний телефон" class="item-cart-info__input">
-										<input required autocomplete="off" type="email" name="form[]" data-error="Помилка" placeholder="E-mail" class="item-cart-info__input">
-									</div>
-								</div>
-								<div class="item-cart-info__checkbox checkbox">
-									<input id="cart-info_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="cart-info_1">
-									<label for="cart-info_1" class="checkbox__label _icon-check">
-										<span class="checkbox__text">Отримуватиме замовлення інша людина</span>
-									</label>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-delivery">
-								<div class="item-cart-delivery__header header-cart-form">
-									<img src="img/icons/cart/icon-dostavka.svg" class="header-cart-form__icon" alt="Іконка доставки">
-									<div class="header-cart-form__title">Вибір способу доставки</div>
-								</div>
-								<div class="item-cart-delivery__options options">
-									<div class="options__item">
-										<input id="delivery_1" class="options__input" checked type="radio" value="delivery_1" name="delivery">
-										<label for="delivery_1" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-shop.svg" alt="Іконка магазин">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Самовивіз із магазину <span>Безкоштовно</span></p>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="delivery_2" class="options__input" type="radio" value="delivery_2" name="delivery">
-										<label for="delivery_2" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-np.svg" alt="Іконка нова пошта">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Доставка Нова Пошта <span>≈ від 500 грн</span></p>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="delivery_3" class="options__input" type="radio" value="delivery_3" name="delivery">
-										<label for="delivery_3" class="options__label">
-											<div class="options__image">
-												<img src="img/icons/cart/icon-person.svg" alt="Іконка кур'єр">
-												<img src="img/icons/cart/icon-check-circle.svg" alt="Іконка вибрано">
-											</div>
-											<p class="options__text">Доставка кур'єром <span>≈ від 200 грн</span></p>
-										</label>
-									</div>
-								</div>
-								<div class="item-cart-delivery__location location-delivery-item">
-									<div class="location-delivery-item__icon _icon-location"></div>
-									<div class="location-delivery-item__body">
-										<p class="location-delivery-item__schedule">Графік роботи: щодня з 9:00 до 18:00
-										</p>
-										<p class="location-delivery-item__adress">м. Київ, пров. Ізяславський 52, пов. 2
-										</p>
-									</div>
-									<a href="#" target="_blank" class="location-delivery-item__button button _icon-map">На мапі
+			<section class="contacts__hero hero-contacts">
+				<div class="hero-contacts__container">
+					<h1 class="hero-contacts__title title title--center">Контакти</h1>
+					<address class="hero-contacts__items">
+						<div class="hero-contacts__item item-contacts-hero">
+							<img src="img/contacts/tel.svg" class="item-contacts-hero__icon" alt="Іконка телефону">
+							<div class="item-contacts-hero__body">
+								<div class="item-contacts-hero__label">Телефони:</div>
+								<div class="item-contacts-hero__phones">
+									<a href="tel:+380679294545" class="item-contacts-hero__phone">
+										+38 067 929-45-45
+									</a>
+									<a href="tel:+380501334545" class="item-contacts-hero__phone">
+										+38 050 133-45-45
+									</a>
+									<a href="tel:+380931707545" class="item-contacts-hero__phone">
+										+38 093 170-75-45
 									</a>
 								</div>
 							</div>
-							<div class="form-cart__item item-cart-pay">
-								<div class="item-cart-pay__header header-cart-form">
-									<img src="img/icons/cart/icon-oplata.svg" class="header-cart-form__icon" alt="Іконка оплати">
-									<div class="header-cart-form__title">Вибір способу оплати</div>
+						</div>
+						<div class="hero-contacts__item item-contacts-hero">
+							<img src="img/contacts/mail.svg" class="item-contacts-hero__icon" alt="Іконка пошти">
+							<div class="item-contacts-hero__body">
+								<div class="item-contacts-hero__label">Напишіть нам:</div>
+								<a href="mailto:info.krovato@gmail.com" class="item-contacts-hero__mail">
+									info.krovato@gmail.com
+								</a>
+								<div class="item-contacts-hero__socials">
+									<a aria-label="whatsapp" href="#" target="_blank"><img src="img/icons/s-whatsapp.svg" alt="Логотип whatsapp"></a>
+									<a aria-label="telegram" href="#" target="_blank"><img src="img/icons/s-telegram.svg" alt="Логотип telegram"></a>
+									<a aria-label="viber" href="#" target="_blank"><img src="img/icons/s-viber.svg" alt="Логотип viber"></a>
+									<a aria-label="facebook" href="#" target="_blank"><img src="img/icons/s-facebook.svg" alt="Логотип facebook"></a>
+									<a aria-label="instagram" href="#" target="_blank"><img src="img/icons/s-instagram.svg" alt="Логотип instagram"></a>
 								</div>
-								<div class="item-cart-pay__options options">
-									<div class="options__item">
-										<input id="pay_1" class="options__input" type="radio" value="pay_1" name="pay">
-										<label for="pay_1" class="options__label _icon-check">
-											<span class="options__text">Готівкою при отриманні (Післясплата)</span>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_2" class="options__input" type="radio" value="pay_2" name="pay">
-										<label for="pay_2" class="options__label _icon-check">
-											<span class="options__text">Оплата карткою на сайті</span>
-											<img src="img/icons/cart/master-card-logo.svg" alt="Логотип mastercard">
-											<img src="img/icons/cart/visa-card-logo.svg" alt="Логотип visa">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_3" class="options__input" checked type="radio" value="pay_3" name="pay">
-										<label for="pay_3" class="options__label _icon-check">
-											<span class="options__text">Privat Pay</span>
-											<img src="img/icons/cart/privat-pay-logo.svg" alt="Логотип privat-pay">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_4" class="options__input" type="radio" value="pay_4" name="pay">
-										<label for="pay_4" class="options__label _icon-check">
-											<span class="options__text">Кредит від Krovato</span>
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_5" class="options__input" type="radio" value="pay_6" name="pay">
-										<label for="pay_5" class="options__label _icon-check">
-											<span class="options__text">Оплата частинами ПриватБанк</span>
-											<img src="img/icons/cart/privaty-credit-logo.svg" alt="Логотип privaty-credit">
-										</label>
-									</div>
-									<div class="options__item">
-										<input id="pay_6" class="options__input" type="radio" value="pay_6" name="pay">
-										<label for="pay_6" class="options__label _icon-check">
-											<span class="options__text">Оплата частинами МоноБанк</span>
-											<img src="img/icons/cart/mono-bank-logo.svg" alt="Логотип mono-bank">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-comment">
-								<div class="item-cart-comment__header header-cart-form">
-									<img src="img/icons/cart/icon-comment.svg" class="header-cart-form__icon" alt="Іконка коментаря">
-									<div class="header-cart-form__title">Коментар до замовлення</div>
-								</div>
-								<textarea class="item-cart-comment__textarea" placeholder="Ваш коментар" name="comment" id="commet"></textarea>
 							</div>
 						</div>
-						<div class="form-cart__column">
-							<div class="form-cart__item item-cart-products">
-								<div class="item-cart-products__header header-cart-form">
-									<div class="header-cart-form__title">Ваш кошик <span id="total-products"></span>
-									</div>
-								</div>
-								<div id="form-cart__items" class="item-cart-products__items">
-									<article data-item-id="1" class="item-cart-products__item item-cart">
-										<a href="#" class="item-cart__image">
-											<img src="img/product/image-1.webp" alt="Зображення товару">
-										</a>
-										<div class="item-cart__info">
-											<div class="item-cart__size">Розмір: 61 x 184 x 2130 мм
-											</div>
-											<a href="#" class="item-cart__title">
-												<h4>Ліжко Спарта / Sparta з підйомним механізмом</h4>
-											</a>
-											<div class="item-cart__in-stock _icon-in-stock">В наявності</div>
-										</div>
-										<button type="button" class="item-cart__delete _icon-cross"></button>
-										<div data-quantity class="item-cart__quantity quantity">
-											<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
-											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
-											</div>
-											<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
-										</div>
-										<div class="item-cart__price price">
-											<div class="price__sale">15 400 грн.</div>
-											<div class="price__main">25 400 грн.</div>
-										</div>
-									</article>
-									<article data-item-id="2" class="item-cart-products__item item-cart">
-										<a href="#" class="item-cart__image">
-											<img src="img/product/image-2.webp" alt="Зображення товару">
-										</a>
-										<div class="item-cart__info">
-											<div class="item-cart__size">Розмір: 61 x 184 x 2130 мм
-											</div>
-											<a href="#" class="item-cart__title">
-												<h4>Ліжко Аргон з підйомним механізмом</h4>
-											</a>
-											<div class="item-cart__in-stock _icon-in-stock">В наявності</div>
-										</div>
-										<button type="button" class="item-cart__delete _icon-cross"></button>
-										<div data-quantity class="item-cart__quantity quantity">
-											<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
-											<div class="quantity__input">
-												<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
-											</div>
-											<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
-										</div>
-										<div class="item-cart__price price">
-											<!-- <div class="price__sale">15 400 грн.</div> -->
-											<div class="price__main">16 400 грн.</div>
-										</div>
-									</article>
-								</div>
-							</div>
-							<div class="form-cart__item item-cart-promo">
-								<div class="item-cart-promo__label _icon-promo">Є промокод?</div>
-								<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введіть код" class="item-cart-promo__input">
-								<button type="button" class="item-cart-promo__button button">ОК</button>
-							</div>
-							<div class="form-cart__item item-cart-total">
-								<div class="item-cart-total__header header-cart-form">
-									<div class="header-cart-form__title">Разом:</div>
-								</div>
-								<table class="item-cart-total__table">
-									<tr>
-										<td><span id="products-quantity"></span> товари(-ів) на суму:</td>
-										<td id="product-sum">540 269 грн.</td>
-									</tr>
-									<tr>
-										<td>Вартість доставки:</td>
-										<td id="delivery">За тарифами оператора</td>
-									</tr>
-									<tr>
-										<td>До оплати:</td>
-										<td id="total" class="total-price">540 269 грн.</td>
-									</tr>
-								</table>
-								<div class="item-cart-total__checkbox checkbox">
-									<input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-									<label for="c_1" class="checkbox__label _icon-check">
-										<span class="checkbox__text">Не
-											передзвонюйте мені для підтвердження замовлення</span>
-									</label>
-								</div>
-								<button type="submit" class="item-cart-total__button button">
-									ОФОРМИТИ ЗАМОВЛЕННЯ
-								</button>
-								<p class="item-cart-total__conditions">
-									Підтверджуючи замовлення, я приймаю умови <a href="#" target="_blank">
-										Угоди користувача</a>
+						<div class="hero-contacts__item item-contacts-hero">
+							<img src="img/contacts/location.svg" class="item-contacts-hero__icon" alt="Іконка місцезнаходження">
+							<div class="item-contacts-hero__body">
+								<div class="item-contacts-hero__label">Де ми знаходимось:</div>
+								<p class="item-contacts-hero__text">
+									м. Київ провулок Ізяславський 52, пов. 2
 								</p>
 							</div>
 						</div>
-					</form>
+						<div class="hero-contacts__item item-contacts-hero">
+							<img src="img/contacts/calendar.svg" class="item-contacts-hero__icon" alt="Іконка календаря">
+							<div class="item-contacts-hero__body">
+								<div class="item-contacts-hero__label">Графік роботи:</div>
+								<p class="item-contacts-hero__text">
+									Працюємо щодня з 9:00 до 18:00
+								</p>
+							</div>
+						</div>
+					</address>
+					<div class="hero-contacts__bottom">
+						<div class="hero-contacts__image">
+							<img src="img/contacts/image.webp" alt="Зображення магазину">
+						</div>
+						<iframe class="hero-contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.420327611152!2d30.4237898!3d50.39600369999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c985b50a7e6d%3A0x3d3fa41b01332a2a!2zS3JvdmF0byB8INCc0LDQs9Cw0LfQuNC9INC80LXQsdC70ZbQsiDQmtGA0L7QstCw0YLQviAtINC60YPQv9C40YLQuCDQvNC10LHQu9GWINCyINCa0LjRlNCy0ZYg0L3QtdC00L7RgNC-0LPQviDQtyDQtNC-0YHRgtCw0LLQutC-0Y4!5e0!3m2!1sru!2sua!4v1740305669569!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+					</div>
 				</div>
 			</section>
-			<div class="cart__advantages advantages">
+			<section class="contacts__route route-contacts">
+				<div class="route-contacts__container">
+					<h2 class="route-contacts__title title title--mini title--center">
+						Як дістатися до нашої виставки «Кровато» від метро:
+					</h2>
+					<div class="route-contacts__items">
+						<div class="route-contacts__column">
+							<div class="route-contacts__item">
+								Від ст. м. «Святошино» - маршрутне таксі № 461 виходити на зупинці «Шляхопровід».
+							</div>
+							<div class="route-contacts__item">
+								Від ст. м. «Академмістечко» — маршрутне таксі № 56, 56Д у напрямку Кільцевої дороги,
+								повз
+								завод
+								«Електронмаш», зуп. «Литвиненко-Вольгемут», минаючи поворот на Софіївську Борщагівку та
+								Вишневе,
+								зупинка одразу за Жулянським мостом, виходити на зупинці «Шляхопровід».
+							</div>
+							<div class="route-contacts__item">
+								Від ст. м. «Васильківська» — маршрутне таксі № 208, 56Д, 904 у напрямку Кільцевої
+								дороги,
+								виходити на зупинці «Шляхопровід».
+							</div>
+						</div>
+						<div class="route-contacts__column">
+							<div class="route-contacts__item">
+								Від ст. м (Виставкового центру) — автобус 56 та маршрутне таксі № 208,499,461,904 у
+								напрямку
+								Кільцевої дороги, виходити на зупинці «Шляхопровід».
+							</div>
+							<div class="route-contacts__item">
+								Від м.Вишневе, маршрутним таксі 718, виходити на зупинці (Шляхопровід).
+							</div>
+							<div class="route-contacts__item">
+								Від Севастопольської площі, маршрутне таксі 496, 499, виходити на зупинці (Шляхопровід).
+							</div>
+						</div>
+					</div>
+					<a href="#" class="route-contacts__button button _icon-map">Прокласти маршрут</a>
+				</div>
+			</section>
+			<div class="contacts__advantages advantages">
 				<div class="advantages__container">
 					<div class="advantages__item">
 						<img class="advantages__icon" src="img/icons/advantages/icon-1.svg" alt="Іконка">
