@@ -292,8 +292,6 @@ $hoverColor: #ff6f61;
   align-items: center;
   font-weight: 600;
   text-transform: capitalize;
-  margin-block-end: toRem(10);
-  padding-block-end: toRem(-10);
 
   &:has(.price-card__sale) {
     .price-card__main {
