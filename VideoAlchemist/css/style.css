@@ -1387,6 +1387,10 @@ body {
     height: 1.875rem;
   }
 }
+.portfolio__swiper.swiper {
+  margin: -0.3125rem;
+  padding: 0.3125rem;
+}
 @media (any-hover: hover) {
   .slide:hover .slide__icon {
     -webkit-transform: translate(-50%, -72%);
@@ -1672,6 +1676,8 @@ body {
   position: relative;
 }
 .contact__body {
+  margin: -0.3125rem;
+  padding: 0.3125rem;
   max-width: 75.471698%; /* 960/1272 */
   overflow: hidden;
 }

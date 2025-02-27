@@ -985,7 +985,9 @@ $buttonHover: #0b0045;
 
   // .portfolio__swiper
 
-  &__swiper {
+  &__swiper.swiper {
+    margin: toRem(-5);
+    padding: toRem(5);
   }
 
   // .portfolio__swiper-wrapper
@@ -1230,6 +1232,8 @@ $buttonHover: #0b0045;
   // .contact__body
 
   &__body {
+    margin: toRem(-5);
+    padding: toRem(5);
     max-width: 75.471698%; /* 960/1272 */
     overflow: hidden;
     @media (max-width: toEm(1315)) {
