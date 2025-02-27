@@ -121,13 +121,11 @@ $hoverColor: #ff6f61;
 
   &__image {
     position: relative;
-    overflow: hidden;
     aspect-ratio: 312 / 400;
     background-color: #f2f3f5;
 
     @media (any-hover: hover) {
       &:hover .actions-card {
-        transform: translate(0, 0);
         opacity: 1;
       }
     }
@@ -167,6 +165,10 @@ $hoverColor: #ff6f61;
     &:not(:last-child) {
       margin-bottom: toRem(16);
     }
+    &:focus-visible {
+      outline: none;
+      color: $hoverColor;
+    }
     @media (any-hover: hover) {
       &:hover {
         color: $hoverColor;
@@ -205,16 +207,13 @@ $hoverColor: #ff6f61;
   justify-content: space-between;
   align-items: center;
 
-  transform: translate(0, 100%);
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.2s;
   @media (max-width: toEm(991.98)) {
-    transform: translate(0, 0);
     opacity: 1;
   }
   @media (any-hover: none) {
     &:hover {
-      transform: translate(0, 0);
       opacity: 1;
     }
   }
@@ -808,6 +807,10 @@ body {
     align-items: center;
     gap: toRem(8);
     transition: background-color 0.3s;
+    &:focus-visible {
+      outline: none;
+      background-color: $hoverColor;
+    }
     &::before {
       font-size: toRem(24);
     }
@@ -1108,6 +1111,11 @@ body {
       align-self: flex-start;
     }
 
+    &:focus-visible {
+      outline: none;
+      background-color: $hoverColor;
+    }
+
     @media (any-hover: hover) {
       &:hover {
         background-color: $hoverColor;
@@ -1245,6 +1253,11 @@ body {
     font-size: toRem(29);
     text-transform: capitalize;
     transition: all 0.3s;
+    &:focus-visible {
+      outline: none;
+      background-color: $hoverColor;
+      color: #fff;
+    }
     @media (any-hover: hover) {
       &:hover {
         background-color: $hoverColor;
@@ -1358,6 +1371,10 @@ body {
     @media (min-width: toEm(575)) {
       align-self: flex-start;
     }
+    &:focus-visible {
+      outline: none;
+      background-color: $hoverColor;
+    }
 
     @media (any-hover: hover) {
       &:hover {
@@ -1369,6 +1386,8 @@ body {
   // .tabs-best__swiper
 
   &__swiper {
+    margin: toRem(-5);
+    padding: toRem(5);
   }
 
   // .tabs-best__swiper-wrapper
@@ -1483,7 +1502,7 @@ body {
       height: 100%;
       background-color: rgba(0, 0, 0, 0.3);
       transform: scale(0);
-      transition: transform 0.3s;
+      transition: transform 0.2s;
       will-change: transform;
       @media (max-width: toEm(991.98)) {
         transform: scale(1);
@@ -1498,7 +1517,7 @@ body {
       font-size: toRem(48);
       color: #fff;
       transform: translate(-50%, -50%) scale(0);
-      transition: transform 0.3s;
+      transition: transform 0.2s;
       will-change: transform;
       @media (max-width: toEm(991.98)) {
         transform: translate(-50%, -50%) scale(1);
