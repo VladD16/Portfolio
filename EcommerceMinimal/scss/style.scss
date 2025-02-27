@@ -212,6 +212,12 @@ $hoverColor: #ff6f61;
     transform: translate(0, 0);
     opacity: 1;
   }
+  @media (any-hover: none) {
+    &:hover {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
 
   // .actions-card__icons
 
@@ -286,6 +292,8 @@ $hoverColor: #ff6f61;
   align-items: center;
   font-weight: 600;
   text-transform: capitalize;
+  margin-block-end: toRem(10);
+  padding-block-end: toRem(-10);
 
   &:has(.price-card__sale) {
     .price-card__main {
@@ -1368,8 +1376,6 @@ body {
   // .tabs-best__swiper-wrapper
 
   &__swiper-wrapper {
-    margin-block-end: toRem(10);
-    padding-block-end: toRem(-10);
   }
 
   // .tabs-best__swiper-slide
