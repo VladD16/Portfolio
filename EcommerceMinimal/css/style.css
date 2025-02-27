@@ -1976,6 +1976,10 @@ body.menu-open {
     background-color: #ff6f61;
   }
 }
+.tabs-best__swiper {
+  margin: 0.312rem;
+  padding: -0.312rem;
+}
 .tabs-best__swiper-wrapper {
 }
 .tabs-best__swiper-button-next::before {
