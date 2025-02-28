@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250224135253">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250228120449">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 			<div class="header__top top-header">
 				<div class="top-header__container">
 					<div data-da=".top-header__container, 767.98, 2" class="top-header__menu menu">
-						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<button aria-label="menu" type="button" class="menu__icon icon-menu"><span></span></button>
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li class="menu__item">
@@ -82,11 +82,11 @@
 					</a>
 					<div class="main-header__catalog catalog-header">
 						<button type="button" class="catalog-header__button button-catalog">
-							<div class="button-catalog__icon">
+							<span class="button-catalog__icon">
 								<span class="_icon-catalog"></span>
 								<span class="_icon-catalog-close"></span>
-							</div>
-							<div class="button-catalog__text">Каталог</div>
+							</span>
+							<p class="button-catalog__text">Каталог</p>
 						</button>
 						<div class="catalog-header__items items-catalog my-scroll">
 							<ul data-one-spoller class="items-catalog__list">
@@ -529,17 +529,17 @@
 							<span class="_icon-arrow"></span>
 							<span class="_icon-cross"></span>
 						</button>
-						<ul class="contacts-header__items">
-							<li class="contacts-header__item">
+						<div class="contacts-header__items">
+							<div class="contacts-header__item">
 								<a href="tel:+380501334545" class="contacts-header__link">050 133-45-45
 								</a>
-							</li>
-							<li class="contacts-header__item">
+							</div>
+							<div class="contacts-header__item">
 								<a href="tel:+380931707545" class="contacts-header__link">093 170-75-45
 								</a>
-							</li>
+							</div>
 							<button type="button" class="contacts-header__callback">Передзвоніть мені</button>
-						</ul>
+						</div>
 					</address>
 					<div class="main-header__actions actions-header-main">
 						<button aria-label="відкрити пошук" type="button" class="actions-header-main__item actions-header-main__item--search-button">
@@ -1768,10 +1768,9 @@
 					© KROVATO - Технології сну - 2022. Всі права захищені.
 				</div>
 			</div>
+		</footer>
 	</div>
-	</footer>
-	</div>
-	<script src="js/app.min.js?_v=20250224135253"></script>
+	<script src="js/app.min.js?_v=20250228120449"></script>
 	<div id="cart-popup" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">

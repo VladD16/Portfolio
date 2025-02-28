@@ -304,7 +304,7 @@ body {
   position: relative
 }
 .checkbox:not(:last-child) {
-  margin-bottom: em(5)
+  margin-bottom: .3125rem
 }
 .checkbox__input {
   position: absolute;
@@ -357,7 +357,7 @@ body {
   cursor: pointer
 }
 .item-product-option__radio .options__item:not(:last-child) {
-  margin-bottom: em(5)
+  margin-bottom: .3125rem
 }
 .item-product-option__radio .options__input {
   width: 0;
@@ -2121,6 +2121,17 @@ body::after {
 }
 .header {
   position: relative
+}
+.header._header-scroll {
+  position: fixed;
+  top: -200%;
+  left: 0;
+  width: 100%;
+  z-index: 50
+}
+.header._header-show {
+  top: 0;
+  transition: top .8s ease 0s
 }
 .header::before {
   content: "";
@@ -4134,7 +4145,7 @@ body::after {
 .form-cart__column {
   border-radius: .5rem;
   background-color: #fff;
-  box-shadow: -.1875rem .25rem .9375rem 0p rgba(0,0,0,.06)
+  box-shadow: -.1875rem .25rem .9375rem 0 rgba(0,0,0,.06)
 }
 .form-cart__column:first-child>*:not(:first-child) {
   border-top: .3125rem solid #f8f8f8

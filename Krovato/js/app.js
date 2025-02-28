@@ -10908,13 +10908,20 @@
             let scrollDirection = 0;
             document.addEventListener("windowScroll", (function(e) {
                 const scrollTop = window.scrollY;
+                const headerHeight = header.offsetHeight;
                 if (scrollTop >= startPoint) {
-                    if (!header.classList.contains("_header-scroll")) header.classList.add("_header-scroll");
+                    if (!header.classList.contains("_header-scroll")) {
+                        header.classList.add("_header-scroll");
+                        document.body.style.paddingTop = `${headerHeight}px`;
+                    }
                     if (headerShow) if (scrollTop > scrollDirection) {
                         if (header.classList.contains("_header-show")) header.classList.remove("_header-show");
                     } else if (!header.classList.contains("_header-show")) header.classList.add("_header-show");
                 } else {
-                    if (header.classList.contains("_header-scroll")) header.classList.remove("_header-scroll");
+                    if (header.classList.contains("_header-scroll")) {
+                        header.classList.remove("_header-scroll");
+                        document.body.style.paddingTop = "0";
+                    }
                     if (headerShow && header.classList.contains("_header-show")) header.classList.remove("_header-show");
                 }
                 scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
